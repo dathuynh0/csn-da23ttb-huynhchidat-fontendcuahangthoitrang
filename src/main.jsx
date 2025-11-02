@@ -11,11 +11,11 @@ import NotFound from "./pages/NotFound";
 import Signup from "./components/NavBar/Signup";
 import Admin from "./pages/Admin";
 import Sale from "./pages/Sale";
-import { AuthProvider } from "./AuthContext";
+import { ContextProvider } from "./Context";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <AuthProvider>
+    <ContextProvider>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<App />}>
@@ -31,6 +31,6 @@ createRoot(document.getElementById("root")).render(
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
-    </AuthProvider>
+    </ContextProvider>
   </StrictMode>
 );

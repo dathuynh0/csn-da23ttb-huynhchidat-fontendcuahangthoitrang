@@ -2,12 +2,14 @@ import Banner from "../components/Banner/Banner";
 import ProductCategories from "../components/ProductCategories";
 import { bestseller, nam, nu, phukien } from "../lib/data";
 import { useOutletContext } from "react-router";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import ProDuctItem from "../components/ProductItems";
 import ProductList from "../components/ProductList";
+import { Context } from "../Context";
 
 const HomePage = () => {
-  const { search, handleAddToCart } = useOutletContext();
+  const { search } = useContext(Context);
+  const { handleAddToCart } = useOutletContext();
 
   const lowerCaseSearch = search ? search.toLowerCase() : "";
 
@@ -28,7 +30,7 @@ const HomePage = () => {
     return (
       <>
         <p className="text-center text-2xl mt-4">Kết quả tìm: {search}</p>
-        <ul className="mt-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-6">
+        <ul className="mt-8 mb-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 md:gap-8 gap-x-3 gap-y-4 p-2 w-full lg:w-[80%] mx-auto">
           {filteredProducts.map((item) => (
             <li key={item.id}>
               <ProDuctItem
@@ -42,17 +44,16 @@ const HomePage = () => {
       </>
     );
   }
-  console.log(filteredProducts);
 
   return (
     <>
       <Banner />
       <ProductCategories />
       <ProductList data={bestseller} title="Sản phẩm bán chạy" link="/" />
-      ;
+
       <ProductList data={nam} title="Sản phẩm nam" link="/do-nam" />
-      <ProductList data={nu} title="Sản phẩm nữ" link="/do-nu" />;
-      <ProductList data={phukien} title="Phụ kiện" link="/phu-kien" />;
+      <ProductList data={nu} title="Sản phẩm nữ" link="/do-nu" />
+      <ProductList data={phukien} title="Phụ kiện" link="/phu-kien" />
     </>
   );
 };

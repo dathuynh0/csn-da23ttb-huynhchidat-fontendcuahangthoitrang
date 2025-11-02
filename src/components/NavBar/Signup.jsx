@@ -2,10 +2,12 @@ import React, { useContext, useState } from "react";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { toast } from "sonner";
-import { AuthContext } from "../../AuthContext";
+import { Context } from "../../Context";
+import { Link } from "react-router";
 
 const Signup = () => {
-  const { accounts, setAccounts } = useContext(AuthContext);
+  const { setAccounts } = useContext(Context);
+  const [check, setCheck] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -46,8 +48,8 @@ const Signup = () => {
     };
 
     setAccounts((prevAccount) => [...prevAccount, newUser]);
+    setCheck(true);
     toast.success("Đăng ký thành công");
-    console.log("Danh sách tài khoản:", [...accounts, newUser]);
 
     setFormData({
       name: "",
@@ -56,6 +58,19 @@ const Signup = () => {
       confirmPassword: "",
     });
   };
+
+  if (check) {
+    return (
+      <div className="w-screen h-screen flex items-center justify-center bg-slate-200">
+        <div className="text-lg p-10 md:p-30 bg-white rounded-3xl">
+          <p className="w-full">Bạn đã đăng kí thành công.</p>
+          <Link className="w-full text-blue-500 hover:underline" to="/">
+            Quay về trang chính để đăng nhập.
+          </Link>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <>

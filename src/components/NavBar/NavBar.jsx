@@ -8,32 +8,23 @@ import {
 
 import { useContext, useState } from "react";
 import ResponsiveMenu from "./ResponsiveMenu.jsx";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "../mystyle.css";
 import Signin from "./Signin.jsx";
-import { user } from "../../lib/data.js";
 import { toast } from "sonner";
 import SearchBar from "./SearchBar.jsx";
 import Cart from "./Cart.jsx";
-import { AuthContext } from "../../AuthContext.jsx";
+import { Context } from "../../Context.jsx";
 
-const NavBar = ({
-  search,
-  onSearchChange,
-  data,
-  onMinus,
-  onPlus,
-  onDelete,
-  formattedTotal,
-  cartItems,
-  isSuccess,
-  setIsSuccess,
-}) => {
+const NavBar = ({ data, onMinus, onPlus, onDelete, formattedTotal }) => {
+  const { isSuccess, setIsSuccess } = useContext(Context);
+
   const [checkMobile, setCheck] = useState(false);
   const [checkLogin, setCheckLogin] = useState(false);
   const [checkCart, setCheckCart] = useState(false);
 
-  const { accounts } = useContext(AuthContext);
+  const { accounts } = useContext(Context);
+  const [infoUser, setInfoUser] = useState(null);
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -48,6 +39,7 @@ const NavBar = ({
 
   const handleLogout = () => {
     setIsSuccess(false);
+    toast.success("Đăng xuất thành công");
   };
 
   const handleCheckCart = () => {
@@ -61,23 +53,25 @@ const NavBar = ({
       return;
     }
 
-    const userFlag = accounts.find((acc) => acc.email === email);
+    const checkUser = accounts.find((acc) => acc.email === email);
 
     //check email
-    if (!userFlag) {
-      toast.error("Email này không tồn tại");
+    if (!checkUser) {
+      toast.error("Tài khoản không đúng");
       return;
     }
 
     //check password
-    if (userFlag.password !== password) {
+    if (checkUser.password !== password) {
       toast.error("Mật khẩu không đúng");
       return;
     }
 
     //thành công
+    toast.success(`Đăng nhập thành công.`);
     setIsSuccess(true);
     setCheckLogin(false);
+    setInfoUser(checkUser);
     setEmail("");
     setPassword("");
   };
@@ -92,11 +86,11 @@ const NavBar = ({
     <>
       <nav className="flex justify-between items-center p-6 flex-wrap w-full lg:w-[80%] mx-auto">
         {/* logo */}
-        <a href="/">
+        <Link to="/">
           <p className="text-3xl font-extrabold bg-gradient-to-b from-white/20 to-black inline-block text-transparent bg-clip-text">
             M O D A
           </p>
-        </a>
+        </Link>
 
         {/* item */}
         <div className="hidden lg:block">
@@ -153,13 +147,13 @@ const NavBar = ({
         <div></div>
         {/* search */}
         <div className="w-full order-last mt-4 md:order-none md:w-auto md:mt-0">
-          <SearchBar search={search} onSearchChange={onSearchChange} />
+          <SearchBar />
         </div>
         {/* icon */}
         <div className="flex items-center gap-x-3">
           {isSuccess ? (
             <div className="flex items-center">
-              <p className="text-black mr-2">{user[0].username}</p>
+              <p className="text-black mr-2">{infoUser.name}</p>
               <LogOut
                 onClick={handleLogout}
                 className="size-8 cursor-pointer"
@@ -173,14 +167,14 @@ const NavBar = ({
           )}
 
           <div className="relative">
-            {cartItems.length > 0 && (
+            {data.length > 0 && (
               <span
-                className="absolute -top-2 -right-2 
-                 bg-red-500 text-white text-xs font-bold 
-                 rounded-full w-5 h-5 
+                className="absolute -top-3 -right-3 
+                 bg-red-600 text-white text-xs font-bold 
+                 rounded-full size-6
                  flex items-center justify-center"
               >
-                {cartItems.length}
+                {data.length}
               </span>
             )}
             <ShoppingCartIcon

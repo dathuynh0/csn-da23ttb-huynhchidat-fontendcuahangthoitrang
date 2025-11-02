@@ -1,7 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
-import { Link } from "react-router";
 
 const Signin = ({
   check,
@@ -61,9 +60,9 @@ const Signin = ({
 
               <p className="text-right mt-4 text-base">
                 Bạn chưa có tài khoản?
-                <Link className="text-blue-600 hover:underline" to="/signup">
+                <a className="text-blue-600 hover:underline" href="/signup">
                   Đăng kí ngay
-                </Link>
+                </a>
               </p>
             </div>
           </motion.div>

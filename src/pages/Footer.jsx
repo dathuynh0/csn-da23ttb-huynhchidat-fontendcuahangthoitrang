@@ -16,11 +16,11 @@ const Footer = () => {
       <div className="">
         <div className="flex flex-col md:flex-row md:justify-between items-start gap-10">
           <div className="flex flex-col gap-y-4 w-full md:w-1/3 lg:w-2/5">
-            <a href="/" className="flex items-center gap-x-3 mb-2">
+            <Link to="/" className="flex items-center gap-x-3 mb-2">
               <p className="text-3xl font-extrabold bg-gradient-to-b from-white/20 to-black inline-block text-transparent bg-clip-text">
                 M O D A
               </p>
-            </a>
+            </Link>
             <div className="flex items-start gap-x-3">
               <MapPin className="size-5 mt-1 flex-shrink-0" />
               <p className="text-sm">
@@ -69,46 +69,49 @@ const Footer = () => {
 
           <div className="flex flex-col gap-y-2">
             <h3 className="text-lg font-semibold mb-2">Về MODA</h3>
-            <a
+            <Link
               className="hover:text-blue-600 hover:underline"
-              href="/gioithieu"
+              to="/gioithieu"
             >
               Giới thiệu
-            </a>
-            <a className="hover:text-blue-600 hover:underline" href="/">
+            </Link>
+            <Link className="hover:text-blue-600 hover:underline" to="/">
               Trang chủ
-            </a>
-            <a className="hover:text-blue-600 hover:underline" href="/do-nam">
+            </Link>
+            <Link className="hover:text-blue-600 hover:underline" to="/do-nam">
               Đồ nam
-            </a>
-            <a className="hover:text-blue-600 hover:underline" href="/do-nu">
+            </Link>
+            <Link className="hover:text-blue-600 hover:underline" to="/do-nu">
               Đồ nữ
-            </a>
-            <a className="hover:text-blue-600 hover:underline" href="/phu-kien">
+            </Link>
+            <Link
+              className="hover:text-blue-600 hover:underline"
+              to="/phu-kien"
+            >
               Phụ kiện
-            </a>
+            </Link>
           </div>
 
           <div className="flex flex-col gap-y-2">
             <h3 className="text-lg font-semibold mb-2">Chính sách</h3>
-            <a
+            <Link
               className="hover:text-blue-600 hover:underline"
-              href="/chinh-sach-bao-hanh"
+              to="/chinh-sach-bao-hanh"
             >
               Bảo hành & Đổi trả
-            </a>
-            <a
+            </Link>
+            <Link
               className="hover:text-blue-600 hover:underline"
-              href="/chinh-sach-bao-mat"
+              to="/chinh-sach-bao-mat"
             >
               Bảo mật thông tin
-            </a>
-            <a
+            </Link>
+            <Link
               className="hover:text-blue-600 hover:underline"
-              href="/dieu-khoan-dich-vu"
+              to="/dieu-khoan-dich-vu"
             >
               Điều khoản dịch vụ
-            </a>
+            </Link>
           </div>
         </div>
 
