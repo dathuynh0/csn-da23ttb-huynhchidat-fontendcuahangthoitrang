@@ -1,10 +1,10 @@
 import { nam } from "../lib/data";
-import ProductsName from "../components/ProductsName";
+import ProductsPage from "../components/ProductPage";
 
 const DoNam = () => {
   return (
     <>
-      <ProductsName data={nam} link={"/do-nam"} title={"Sản phẩm nam"} />
+      <ProductsPage data={nam} link={"/do-nam"} title={"Sản phẩm nam"} />
     </>
   );
 };

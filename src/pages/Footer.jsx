@@ -12,7 +12,7 @@ import { Link } from "react-router";
 
 const Footer = () => {
   return (
-    <footer className="min-w-4/5 text-gray-800 p-8 md:p-12">
+    <footer className="w-[80%] text-gray-800 p-8 md:p-12">
       <div className="">
         <div className="flex flex-col md:flex-row md:justify-between items-start gap-10">
           <div className="flex flex-col gap-y-4 w-full md:w-1/3 lg:w-2/5">

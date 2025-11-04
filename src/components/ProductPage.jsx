@@ -4,8 +4,9 @@ import { Link, useOutletContext } from "react-router";
 import ProDuctItem from "./ProductItems";
 import { Button } from "./ui/button";
 import { ArrowDownUp, ChevronRight } from "lucide-react";
+import Pagination from "./Pagination";
 
-const ProductsName = ({ data, title, link }) => {
+const ProductsPage = ({ data, title, link }) => {
   const { handleAddToCart } = useOutletContext();
   const { search } = useContext(Context);
   const lowerCaseSearch = search.toLowerCase();
@@ -18,6 +19,25 @@ const ProductsName = ({ data, title, link }) => {
   const [priceFilter, setPriceFilter] = useState("");
 
   const refSelected = useRef();
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemPerPage = 12;
+
+  const totalPages = Math.ceil(filteredProducts.length / itemPerPage);
+
+  const getCurrentProducts = () => {
+    const startIndex = (currentPage - 1) * itemPerPage;
+    const endIndex = startIndex + itemPerPage;
+    return filteredProducts.slice(startIndex, endIndex);
+  };
+
+  console.log(getCurrentProducts());
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+    // khi đổi trang thì scroll lên đầu trang
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   useEffect(() => {
     setProducts(data);
@@ -124,7 +144,7 @@ const ProductsName = ({ data, title, link }) => {
       <hr />
 
       <ul className="mt-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 lg:gap-8">
-        {filteredProducts.map((item) => (
+        {getCurrentProducts().map((item) => (
           <li key={item.id}>
             <ProDuctItem
               {...item}
@@ -134,8 +154,15 @@ const ProductsName = ({ data, title, link }) => {
           </li>
         ))}
       </ul>
+      <div className="flex items-center justify-center mt-6 w-full">
+        <Pagination
+          currentPage={currentPage}
+          totalPages={totalPages}
+          onPageChange={handlePageChange}
+        />
+      </div>
     </section>
   );
 };
 
-export default ProductsName;
+export default ProductsPage;

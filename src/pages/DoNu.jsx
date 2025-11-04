@@ -1,8 +1,8 @@
 import { nu } from "../lib/data";
-import ProductsName from "../components/ProductsName";
+import ProductsPage from "../components/ProductPage";
 
 const DoNu = () => {
-  return <ProductsName data={nu} link="/do-nu" title={"Sản phẩm nữ"} />;
+  return <ProductsPage data={nu} link="/do-nu" title={"Sản phẩm nữ"} />;
 };
 
 export default DoNu;

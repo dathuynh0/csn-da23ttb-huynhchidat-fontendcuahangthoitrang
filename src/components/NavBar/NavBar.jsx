@@ -19,7 +19,7 @@ import { Context } from "../../Context.jsx";
 const NavBar = ({ data, onMinus, onPlus, onDelete, formattedTotal }) => {
   const { isSuccess, setIsSuccess } = useContext(Context);
 
-  const [checkMobile, setCheck] = useState(false);
+  const [checkMobile, setCheckMobile] = useState(false);
   const [checkLogin, setCheckLogin] = useState(false);
   const [checkCart, setCheckCart] = useState(false);
 
@@ -30,7 +30,7 @@ const NavBar = ({ data, onMinus, onPlus, onDelete, formattedTotal }) => {
   const [password, setPassword] = useState("");
 
   const openMenu = () => {
-    setCheck(!checkMobile);
+    setCheckMobile(!checkMobile);
   };
 
   const handleCheckLogin = () => {
@@ -110,9 +110,14 @@ const NavBar = ({ data, onMinus, onPlus, onDelete, formattedTotal }) => {
                 <ChevronDown />
               </div>
 
-              <div className="absolute top-8 left-0 bg-white rounded-md shadow-md overflow-hidden transition-opacity duration-300  opacity-0 group-hover:opacity-100">
+              <div
+                className="absolute top-full left-0 bg-white rounded-md shadow-md overflow-hidden
+                  opacity-0 invisible pointer-events-none
+                  group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto
+                  transition-all duration-300 z-50"
+              >
                 <ul className="py-4 min-w-[200px] px-4">
-                  <li className="relative group hover:underline">
+                  <li className="hover:underline">
                     <NavLink to="/do-nam/ao">Áo</NavLink>
                   </li>
                   <li className="mt-2 hover:underline">
@@ -127,13 +132,21 @@ const NavBar = ({ data, onMinus, onPlus, onDelete, formattedTotal }) => {
                 <ChevronDown />
               </div>
 
-              <div className="absolute top-8 left-0 bg-white rounded-md shadow-md overflow-hidden transition-opacity duration-300  opacity-0 group-hover:opacity-100">
+              <div
+                className="absolute top-full left-0 bg-white rounded-md shadow-md overflow-hidden 
+                opacity-0 invisible pointer-events-none 
+                group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto
+                transition-all duration-300 z-50"
+              >
                 <ul className="py-4 min-w-[200px] px-4">
-                  <li className="relative group hover:underline">
-                    <NavLink to="/do-nam/ao">Áo</NavLink>
+                  <li className="hover:underline">
+                    <NavLink to="/do-nu/ao">Áo</NavLink>
                   </li>
                   <li className="mt-2 hover:underline">
-                    <NavLink to="/do-nam/quan">Quần</NavLink>
+                    <NavLink to="/do-nu/quan">Quần</NavLink>
+                  </li>
+                  <li className="mt-2 hover:underline">
+                    <NavLink to="/do-nu/vay">Váy</NavLink>
                   </li>
                 </ul>
               </div>

@@ -1,6 +1,11 @@
 import Banner from "../components/Banner/Banner";
 import ProductCategories from "../components/ProductCategories";
-import { bestseller, nam, nu, phukien } from "../lib/data";
+import {
+  bestseller,
+  namHomepage,
+  nuHomePage,
+  phukienHomePage,
+} from "../lib/data";
 import { useOutletContext } from "react-router";
 import { useContext, useEffect, useState } from "react";
 import ProDuctItem from "../components/ProductItems";
@@ -15,7 +20,7 @@ const HomePage = () => {
 
   const [products, setProducts] = useState([]);
 
-  const arr = bestseller.concat(nam, nu, phukien);
+  const arr = bestseller.concat(namHomepage, nuHomePage, phukienHomePage);
 
   useEffect(() => {
     setProducts(arr);
@@ -51,9 +56,9 @@ const HomePage = () => {
       <ProductCategories />
       <ProductList data={bestseller} title="Sản phẩm bán chạy" link="/" />
 
-      <ProductList data={nam} title="Sản phẩm nam" link="/do-nam" />
-      <ProductList data={nu} title="Sản phẩm nữ" link="/do-nu" />
-      <ProductList data={phukien} title="Phụ kiện" link="/phu-kien" />
+      <ProductList data={namHomepage} title="Sản phẩm nam" link="/do-nam" />
+      <ProductList data={nuHomePage} title="Sản phẩm nữ" link="/do-nu" />
+      <ProductList data={phukienHomePage} title="Phụ kiện" link="/phu-kien" />
     </>
   );
 };
