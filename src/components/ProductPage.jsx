@@ -6,7 +6,7 @@ import { Button } from "./ui/button";
 import { ArrowDownUp, ChevronRight } from "lucide-react";
 import Pagination from "./Pagination";
 
-const ProductsPage = ({ data, title, link }) => {
+const ProductsPage = ({ data, name, title, link, title2, link2 }) => {
   const { handleAddToCart } = useOutletContext();
   const { search } = useContext(Context);
   const lowerCaseSearch = search.toLowerCase();
@@ -98,20 +98,26 @@ const ProductsPage = ({ data, title, link }) => {
     setPriceFilter(value);
   };
 
+  const show = getCurrentProducts();
+
   return (
     <section className="pt-8 px-2 pb-8 w-full lg:w-[80%] mx-auto">
       <div className="flex items-center">
-        <Link to="/" className="text-md hover:text-blue-500 hover:underline">
+        <Link to="/" className="hover:underline">
           Trang chủ
         </Link>
-        <ChevronRight className="size-6" />
-        <Link to={link} className="text-md hover:text-blue-500 hover:underline">
+        <ChevronRight className="inline-block mx-2 h-4 w-4" />
+        <Link to={link} className="hover:underline">
           {title}
+        </Link>
+        <ChevronRight className="inline-block mx-2 h-4 w-4" />
+        <Link to={link2} className="hover:underline">
+          {title2}
         </Link>
       </div>
 
       <hr className="mt-2" />
-      <h2 className="text-4xl font-bold mt-8">{title}</h2>
+      <h2 className="text-4xl font-bold mt-8">{name}</h2>
 
       <div className="mt-4 mb-4 flex items-center justify-between">
         <div className="flex items-center justify-center">
@@ -144,7 +150,7 @@ const ProductsPage = ({ data, title, link }) => {
       <hr />
 
       <ul className="mt-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 lg:gap-8">
-        {getCurrentProducts().map((item) => (
+        {show.map((item) => (
           <li key={item.id}>
             <ProDuctItem
               {...item}

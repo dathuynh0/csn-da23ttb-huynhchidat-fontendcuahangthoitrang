@@ -118,10 +118,10 @@ const NavBar = ({ data, onMinus, onPlus, onDelete, formattedTotal }) => {
               >
                 <ul className="py-4 min-w-[200px] px-4">
                   <li className="hover:underline">
-                    <NavLink to="/do-nam/ao">Áo</NavLink>
+                    <NavLink to="/do-nam/ao-nam">Áo</NavLink>
                   </li>
                   <li className="mt-2 hover:underline">
-                    <NavLink to="/do-nam/quan">Quần</NavLink>
+                    <NavLink to="/do-nam/quan-nam">Quần</NavLink>
                   </li>
                 </ul>
               </div>
@@ -140,13 +140,13 @@ const NavBar = ({ data, onMinus, onPlus, onDelete, formattedTotal }) => {
               >
                 <ul className="py-4 min-w-[200px] px-4">
                   <li className="hover:underline">
-                    <NavLink to="/do-nu/ao">Áo</NavLink>
+                    <NavLink to="/do-nu/ao-nu">Áo</NavLink>
                   </li>
                   <li className="mt-2 hover:underline">
-                    <NavLink to="/do-nu/quan">Quần</NavLink>
+                    <NavLink to="/do-nu/quan-nu">Quần</NavLink>
                   </li>
                   <li className="mt-2 hover:underline">
-                    <NavLink to="/do-nu/vay">Váy</NavLink>
+                    <NavLink to="/do-nu/vay-nu">Váy</NavLink>
                   </li>
                 </ul>
               </div>

@@ -41,7 +41,7 @@ const Cart = ({
                   return (
                     <li className="mb-4" key={item.id}>
                       <ShoppingCartItem
-                        image={item.image}
+                        image={item.images[0]}
                         name={item.name}
                         price={item.price}
                         number={item.number}

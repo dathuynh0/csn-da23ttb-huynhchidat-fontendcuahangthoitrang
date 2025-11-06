@@ -55,7 +55,6 @@ const HomePage = () => {
       <Banner />
       <ProductCategories />
       <ProductList data={bestseller} title="Sản phẩm bán chạy" link="/" />
-
       <ProductList data={namHomepage} title="Sản phẩm nam" link="/do-nam" />
       <ProductList data={nuHomePage} title="Sản phẩm nữ" link="/do-nu" />
       <ProductList data={phukienHomePage} title="Phụ kiện" link="/phu-kien" />

@@ -25,7 +25,7 @@ const ResponsiveMenu = ({ open, openMenu }) => {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ duration: 0.3 }}
-              className="absolute top-0 right-0 left-[40%] inset-0 z-20"
+              className="absolute top-0 right-0 left-[30%] inset-0 z-20"
             >
               <div className="text-xl uppercase font-semibold bg-gray-300 text-black w-full h-full overflow-y-auto pt-10 pb-10 px-6">
                 <div className="flex justify-end">
@@ -63,10 +63,10 @@ const ResponsiveMenu = ({ open, openMenu }) => {
                           className="flex flex-col items-center gap-4 mt-4 text-lg overflow-hidden"
                         >
                           <li className="hover:text-amber-200 transition-colors">
-                            <NavLink to="/do-nam/ao">Áo</NavLink>
+                            <NavLink to="/do-nam/ao-nam">Áo</NavLink>
                           </li>
                           <li className="hover:text-amber-200 transition-colors">
-                            <NavLink to="/do-nam/quan">Quần</NavLink>
+                            <NavLink to="/do-nam/quan-nam">Quần</NavLink>
                           </li>
                         </motion.ul>
                       )}
@@ -93,10 +93,13 @@ const ResponsiveMenu = ({ open, openMenu }) => {
                           className="flex flex-col items-center gap-4 mt-4 text-lg overflow-hidden"
                         >
                           <li className="hover:text-amber-200 transition-colors">
-                            <NavLink to="/do-nu/ao">Áo</NavLink>
+                            <NavLink to="/do-nu/ao-nu">Áo</NavLink>
                           </li>
                           <li className="hover:text-amber-200 transition-colors">
-                            <NavLink to="/do-nu/quan">Quần</NavLink>
+                            <NavLink to="/do-nu/quan-nu">Quần</NavLink>
+                          </li>
+                          <li className="hover:text-amber-200 transition-colors">
+                            <NavLink to="/do-nu/vay-nu">Váy</NavLink>
                           </li>
                         </motion.ul>
                       )}

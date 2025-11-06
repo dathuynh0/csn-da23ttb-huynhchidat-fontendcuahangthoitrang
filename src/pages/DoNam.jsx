@@ -4,7 +4,12 @@ import ProductsPage from "../components/ProductPage";
 const DoNam = () => {
   return (
     <>
-      <ProductsPage data={nam} link={"/do-nam"} title={"Sản phẩm nam"} />
+      <ProductsPage
+        data={nam}
+        name="Sản phẩm nam"
+        link={"/do-nam"}
+        title={"Sản phẩm nam"}
+      />
     </>
   );
 };

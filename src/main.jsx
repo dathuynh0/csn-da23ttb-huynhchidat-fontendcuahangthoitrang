@@ -12,6 +12,9 @@ import Signup from "./components/NavBar/Signup";
 import Admin from "./pages/Admin";
 import Sale from "./pages/Sale";
 import { ContextProvider } from "./Context";
+import Ao from "./components/ProductNam/Ao";
+import Quan from "./components/ProductNam/Quan";
+import ProductDetail from "./components/ProductDetail";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -25,6 +28,10 @@ createRoot(document.getElementById("root")).render(
             <Route path="/do-nam" element={<DoNam />} />
             <Route path="/do-nu" element={<DoNu />} />
             <Route path="/phu-kien" element={<PhuKien />} />
+
+            <Route path="/do-nam/ao-nam" element={<Ao />} />
+            <Route path="/do-nam/quan-nam" element={<Quan />} />
+            <Route path="/products/chi-tiet/:id" element={<ProductDetail />} />
           </Route>
 
           <Route path="/admin" element={<Admin />} />

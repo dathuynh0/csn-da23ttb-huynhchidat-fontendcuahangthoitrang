@@ -21,7 +21,7 @@ const Footer = () => {
                 M O D A
               </p>
             </Link>
-            <div className="flex items-start gap-x-3">
+            <div className="flex items-center gap-x-3">
               <MapPin className="size-5 mt-1 flex-shrink-0" />
               <p className="text-sm">
                 Ấp Trà Ốp, Xã Tân An, Huyện Càng Long, Tỉnh Trà Vinh

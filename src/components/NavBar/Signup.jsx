@@ -3,17 +3,18 @@ import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { toast } from "sonner";
 import { Context } from "../../Context";
-import { Link } from "react-router";
+import { useNavigate } from "react-router";
 
 const Signup = () => {
   const { setAccounts } = useContext(Context);
-  const [check, setCheck] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     password: "",
     confirmPassword: "",
   });
+
+  const navigate = useNavigate();
 
   //cập nhật state
   const handleChange = (e) => {
@@ -48,8 +49,8 @@ const Signup = () => {
     };
 
     setAccounts((prevAccount) => [...prevAccount, newUser]);
-    setCheck(true);
     toast.success("Đăng ký thành công");
+    navigate("/");
 
     setFormData({
       name: "",
@@ -58,19 +59,6 @@ const Signup = () => {
       confirmPassword: "",
     });
   };
-
-  if (check) {
-    return (
-      <div className="w-screen h-screen flex items-center justify-center bg-slate-200">
-        <div className="text-lg p-10 md:p-30 bg-white rounded-3xl">
-          <p className="w-full">Bạn đã đăng kí thành công.</p>
-          <Link className="w-full text-blue-500 hover:underline" to="/">
-            Quay về trang chính để đăng nhập.
-          </Link>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <>

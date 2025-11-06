@@ -17,7 +17,7 @@ function App() {
         setCartItems([...cartItems, { ...productAdd }]);
         toast.success("Thêm vào giỏ hàng thành công!");
       } else {
-        toast.error("Thêm thất bại. Sản phẩm đã được thêm");
+        toast.error("Thêm thất bại. Sản phẩm đã tồn tại trong giỏ hàng");
       }
     } else {
       toast.error("Thêm thất bại! Bạn chưa đăng nhập vui lòng đăng nhập");
