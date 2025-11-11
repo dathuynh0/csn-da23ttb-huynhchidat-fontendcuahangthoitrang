@@ -87,94 +87,91 @@ export const bestseller = [
     sizes: ["S", "M", "L", "XL"],
     number: 1,
   },
-];
-
-export const namHomepage = [
   {
-    id: "ao-thoi-trang-mat-me-phu-hop-mac-vao-mua-dong",
+    id: "ao-so-mi-lua-to-tam-co-duc-phom-dang-cong-so-1",
     images: [
-      "https://yame.vn/cdn/shop/files/ao-polo-the-minimalist-001-xanh-den-1174885416.jpg?v=1760774688&width=165",
-      "https://yame.vn/cdn/shop/files/ao-khoac-jean-the-original-m039-xanh-d-ng-1184461421.jpg?v=1760792443&width=360",
+      "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400",
+      "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=400",
     ],
-    name: "Áo thời trang mát mẻ phù hợp mặc vào mùa đông",
-    price: "315.000",
+    name: "Áo sơ mi lụa tơ tằm cổ đức, phom dáng công sở.",
+    price: "750.000",
     sizes: ["S", "M", "L", "XL"],
     number: 1,
   },
   {
-    id: "thuong-hieu-den-tu-viet-nam-co-mat-lau-nam-tren-thi-truong",
+    id: "ao-phong-thun-cotton-100-in-hoa-tiet-phong-cach-duong-pho-1",
     images: [
-      "https://yame.vn/cdn/shop/files/ao-polo-the-minimalist-001-xanh-den-1174885416.jpg?v=1760774688&width=165",
-      "https://yame.vn/cdn/shop/files/ao-khoac-jean-the-original-m039-xanh-d-ng-1184461421.jpg?v=1760792443&width=360",
+      "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400",
+      "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=400",
     ],
-    name: "Thương hiệu đến từ Việt Nam có mặt lâu năm trên thị trường",
-    price: "249.000",
+    name: "Áo phông (thun) cotton 100%, in họa tiết phong cách đường phố.",
+    price: "299.000",
     sizes: ["S", "M", "L", "XL"],
     number: 1,
   },
   {
-    id: "ao-thun-cotton-premium-100-co-gian-4-chieu-form-rong-tay-lo-unisex-dinh-luong-vai-250gsm",
+    id: "ao-khoac-bomber-kaki-lot-du-theu-noi-logo-nguc-1",
     images: [
-      "https://yame.vn/cdn/shop/files/ao-polo-the-minimalist-001-xanh-den-1174885416.jpg?v=1760774688&width=165",
-      "https://yame.vn/cdn/shop/files/ao-khoac-jean-the-original-m039-xanh-d-ng-1184461421.jpg?v=1760792443&width=360",
+      "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400",
+      "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=400",
     ],
-    name: "Áo Thun Cotton Premium 100% Co Giãn 4 Chiều, Form Rộng Tay Lỡ Unisex, Định Lượng Vải 250gsm",
-    price: "390.000",
+    name: "Áo khoác bomber kaki lót dù, thêu nổi logo ngực.",
+    price: "920.000",
     sizes: ["S", "M", "L", "XL"],
     number: 1,
   },
   {
-    id: "ao-so-mi-lua-satin-cao-cap-dang-suong-co-duc-cai-nut-phong-cach-cong-so-thanh-lich-mau-moi-2025",
+    id: "giay-the-thao-sneaker-da-that-de-cao-su-luu-hoa-1",
     images: [
-      "https://yame.vn/cdn/shop/files/ao-polo-the-minimalist-001-xanh-den-1174885416.jpg?v=1760774688&width=165",
-      "https://yame.vn/cdn/shop/files/ao-khoac-jean-the-original-m039-xanh-d-ng-1184461421.jpg?v=1760792443&width=360",
+      "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400",
+      "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=400",
     ],
-    name: "Áo Sơ Mi Lụa Satin Cao Cấp Dáng Suông, Cổ Đức Cài Nút, Phong Cách Công Sở Thanh Lịch Mẫu Mới 2025",
-    price: "550.000",
+    name: "Giày thể thao (sneaker) da thật, đế cao su lưu hóa.",
+    price: "1.150.000",
     sizes: ["S", "M", "L", "XL"],
     number: 1,
   },
   {
-    id: "ao-khoac-hoodie-ni-bong-day-dan-co-mu-hai-lop-form-rong-dang-ulzzang-hoa-tiet-in-noi-ben-dep",
+    id: "ao-hoodie-ni-long-form-rong-co-mu-hai-lop-keo-khoa-1",
     images: [
-      "https://yame.vn/cdn/shop/files/ao-polo-the-minimalist-001-xanh-den-1174885416.jpg?v=1760774688&width=165",
-      "https://yame.vn/cdn/shop/files/ao-khoac-jean-the-original-m039-xanh-d-ng-1184461421.jpg?v=1760792443&width=360",
+      "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400",
+      "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=400",
     ],
-    name: "Áo Khoác Hoodie Nỉ Bông Dày Dặn Có Mũ Hai Lớp, Form Rộng Dáng Ulzzang, Họa Tiết In Nổi Bền Đẹp",
-    price: "420.000",
+    name: "Áo hoodie nỉ bông form rộng, có mũ hai lớp, kéo khóa.",
+    price: "699.000",
     sizes: ["S", "M", "L", "XL"],
     number: 1,
   },
   {
-    id: "ao-khoac-bomber-kaki-du-hai-lop-chan-bong-khoa-keo-dong-chac-chan-bo-chun-gau-ao-chong-gio",
+    id: "ao-len-co-lo-nam-soi-det-kim-day-dan-phom-om-1",
     images: [
-      "https://yame.vn/cdn/shop/files/ao-polo-the-minimalist-001-xanh-den-1174885416.jpg?v=1760774688&width=165",
-      "https://yame.vn/cdn/shop/files/ao-khoac-jean-the-original-m039-xanh-d-ng-1184461421.jpg?v=1760792443&width=360",
+      "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400",
+      "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=400",
     ],
-    name: "Áo Khoác Bomber Kaki Dù Hai Lớp Chần Bông, Khóa Kéo Đồng Chắc Chắn, Bo Chun Gấu Áo Chống Gió",
-    price: "799.000",
+    name: "Áo len cổ lọ nam, sợi dệt kim dày dặn, phom ôm.",
+    price: "450.000",
     sizes: ["S", "M", "L", "XL"],
     number: 1,
   },
   {
-    id: "ao-polo-nam-the-thao-vai-ca-sau-cvc-co-be-phoi-vien-tinh-te-tham-hut-mo-hoi-tot",
+    id: "quan-legging-the-thao-nu-cap-cao-ho-tro-nang-mong-1",
     images: [
-      "https://yame.vn/cdn/shop/files/ao-polo-the-minimalist-001-xanh-den-1174885416.jpg?v=1760774688&width=165",
-      "https://yame.vn/cdn/shop/files/ao-khoac-jean-the-original-m039-xanh-d-ng-1184461421.jpg?v=1760792443&width=360",
+      "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400",
+      "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=400",
     ],
-    name: "Áo Polo Nam Thể Thao Vải Cá Sấu CVC, Cổ Bẻ Phối Viền Tinh Tế, Thấm Hút Mồ Hôi Tốt",
-    price: "340.000",
+    name: "Quần legging thể thao nữ, cạp cao, hỗ trợ nâng mông.",
+    price: "120.000",
     sizes: ["S", "M", "L", "XL"],
     number: 1,
   },
   {
-    id: "ao-len-cardigan-dang-ngan-co-v-hoa-tiet-theu-hoa-noi-chat-len-long-tho-mem-mai-phong-cach-han-quoc",
+    id: "chan-vay-chu-a-ngan-chat-lieu-kaki-co-quan-bao-ho-ben-trong-1",
     images: [
-      "https://yame.vn/cdn/shop/files/ao-polo-the-minimalist-001-xanh-den-1174885416.jpg?v=1760774688&width=165",
-      "https://yame.vn/cdn/shop/files/ao-khoac-jean-the-original-m039-xanh-d-ng-1184461421.jpg?v=1760792443&width=360",
+      "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400",
+      "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=400",
     ],
-    name: "Áo Len Cardigan Dáng Ngắn Cổ V, Họa Tiết Thêu Hoa Nổi, Chất Len Lông Thỏ Mềm Mại Phong Cách Hàn Quốc",
-    price: "680.000",
+    name: "Chân váy chữ A ngắn, chất liệu kaki, có quần bảo hộ bên trong.",
+    price: "185.000",
     sizes: ["S", "M", "L", "XL"],
     number: 1,
   },
@@ -369,6 +366,10 @@ export const nam = [
     images: [
       "https://yame.vn/cdn/shop/files/ao-polo-the-minimalist-001-xanh-den-1174885416.jpg?v=1760774688&width=165",
       "https://yame.vn/cdn/shop/files/ao-khoac-jean-the-original-m039-xanh-d-ng-1184461421.jpg?v=1760792443&width=360",
+      "https://yame.vn/cdn/shop/files/ao-thun-seventy-seven-13-den-1174883530.jpg?v=1760777397&width=324",
+      "https://yame.vn/cdn/shop/files/ao-polo-the-minimalist-001-xanh-den-1174885416.jpg?v=1760774688&width=165",
+      "https://yame.vn/cdn/shop/files/ao-khoac-jean-the-original-m039-xanh-d-ng-1184461421.jpg?v=1760792443&width=360",
+      "https://yame.vn/cdn/shop/files/ao-thun-seventy-seven-13-den-1174883530.jpg?v=1760777397&width=324",
     ],
     name: "Áo thời trang mát mẻ phù hợp mặc vào mùa đông",
     price: "315.000",
@@ -380,6 +381,7 @@ export const nam = [
     images: [
       "https://yame.vn/cdn/shop/files/ao-polo-the-minimalist-001-xanh-den-1174885416.jpg?v=1760774688&width=165",
       "https://yame.vn/cdn/shop/files/ao-khoac-jean-the-original-m039-xanh-d-ng-1184461421.jpg?v=1760792443&width=360",
+      "https://yame.vn/cdn/shop/files/ao-thun-seventy-seven-13-den-1174883530.jpg?v=1760777397&width=324",
     ],
     name: "Thương hiệu đến từ Việt Nam có mặt lâu năm trên thị trường",
     price: "249.000",
@@ -391,6 +393,7 @@ export const nam = [
     images: [
       "https://yame.vn/cdn/shop/files/ao-polo-the-minimalist-001-xanh-den-1174885416.jpg?v=1760774688&width=165",
       "https://yame.vn/cdn/shop/files/ao-khoac-jean-the-original-m039-xanh-d-ng-1184461421.jpg?v=1760792443&width=360",
+      "https://yame.vn/cdn/shop/files/ao-thun-seventy-seven-13-den-1174883530.jpg?v=1760777397&width=324",
     ],
     name: "Áo Thun Cotton Premium 100% Co Giãn 4 Chiều, Form Rộng Tay Lỡ Unisex, Định Lượng Vải 250gsm",
     price: "390.000",
@@ -402,6 +405,7 @@ export const nam = [
     images: [
       "https://yame.vn/cdn/shop/files/ao-polo-the-minimalist-001-xanh-den-1174885416.jpg?v=1760774688&width=165",
       "https://yame.vn/cdn/shop/files/ao-khoac-jean-the-original-m039-xanh-d-ng-1184461421.jpg?v=1760792443&width=360",
+      "https://yame.vn/cdn/shop/files/ao-thun-seventy-seven-13-den-1174883530.jpg?v=1760777397&width=324",
     ],
     name: "Áo Sơ Mi Lụa Satin Cao Cấp Dáng Suông, Cổ Đức Cài Nút, Phong Cách Công Sở Thanh Lịch Mẫu Mới 2025",
     price: "550.000",
@@ -413,6 +417,7 @@ export const nam = [
     images: [
       "https://yame.vn/cdn/shop/files/ao-polo-the-minimalist-001-xanh-den-1174885416.jpg?v=1760774688&width=165",
       "https://yame.vn/cdn/shop/files/ao-khoac-jean-the-original-m039-xanh-d-ng-1184461421.jpg?v=1760792443&width=360",
+      "https://yame.vn/cdn/shop/files/ao-thun-seventy-seven-13-den-1174883530.jpg?v=1760777397&width=324",
     ],
     name: "Áo Khoác Hoodie Nỉ Bông Dày Dặn Có Mũ Hai Lớp, Form Rộng Dáng Ulzzang, Họa Tiết In Nổi Bền Đẹp",
     price: "420.000",
@@ -424,6 +429,7 @@ export const nam = [
     images: [
       "https://yame.vn/cdn/shop/files/ao-polo-the-minimalist-001-xanh-den-1174885416.jpg?v=1760774688&width=165",
       "https://yame.vn/cdn/shop/files/ao-khoac-jean-the-original-m039-xanh-d-ng-1184461421.jpg?v=1760792443&width=360",
+      "https://yame.vn/cdn/shop/files/ao-thun-seventy-seven-13-den-1174883530.jpg?v=1760777397&width=324",
     ],
     name: "Áo Khoác Bomber Kaki Dù Hai Lớp Chần Bông, Khóa Kéo Đồng Chắc Chắn, Bo Chun Gấu Áo Chống Gió",
     price: "799.000",
@@ -435,6 +441,7 @@ export const nam = [
     images: [
       "https://yame.vn/cdn/shop/files/ao-polo-the-minimalist-001-xanh-den-1174885416.jpg?v=1760774688&width=165",
       "https://yame.vn/cdn/shop/files/ao-khoac-jean-the-original-m039-xanh-d-ng-1184461421.jpg?v=1760792443&width=360",
+      "https://yame.vn/cdn/shop/files/ao-thun-seventy-seven-13-den-1174883530.jpg?v=1760777397&width=324",
     ],
     name: "Áo Polo Nam Thể Thao Vải Cá Sấu CVC, Cổ Bẻ Phối Viền Tinh Tế, Thấm Hút Mồ Hôi Tốt",
     price: "340.000",
@@ -446,6 +453,7 @@ export const nam = [
     images: [
       "https://yame.vn/cdn/shop/files/ao-polo-the-minimalist-001-xanh-den-1174885416.jpg?v=1760774688&width=165",
       "https://yame.vn/cdn/shop/files/ao-khoac-jean-the-original-m039-xanh-d-ng-1184461421.jpg?v=1760792443&width=360",
+      "https://yame.vn/cdn/shop/files/ao-thun-seventy-seven-13-den-1174883530.jpg?v=1760777397&width=324",
     ],
     name: "Áo Len Cardigan Dáng Ngắn Cổ V, Họa Tiết Thêu Hoa Nổi, Chất Len Lông Thỏ Mềm Mại Phong Cách Hàn Quốc",
     price: "680.000",
@@ -453,10 +461,11 @@ export const nam = [
     number: 1,
   },
   {
-    id: "ao-thoi-trang-mat-me-phu-hop-mac-vao-mua-dong-2",
+    id: "ao-thoi-trang-mat-me-phu-hop-mac-vao-mua-dong-1",
     images: [
       "https://yame.vn/cdn/shop/files/ao-polo-the-minimalist-001-xanh-den-1174885416.jpg?v=1760774688&width=165",
       "https://yame.vn/cdn/shop/files/ao-khoac-jean-the-original-m039-xanh-d-ng-1184461421.jpg?v=1760792443&width=360",
+      "https://yame.vn/cdn/shop/files/ao-thun-seventy-seven-13-den-1174883530.jpg?v=1760777397&width=324",
     ],
     name: "Áo thời trang mát mẻ phù hợp mặc vào mùa đông",
     price: "315.000",
@@ -464,10 +473,11 @@ export const nam = [
     number: 1,
   },
   {
-    id: "thuong-hieu-den-tu-viet-nam-co-mat-lau-nam-tren-thi-truong-2",
+    id: "thuong-hieu-den-tu-viet-nam-co-mat-lau-nam-tren-thi-truong-1",
     images: [
       "https://yame.vn/cdn/shop/files/ao-polo-the-minimalist-001-xanh-den-1174885416.jpg?v=1760774688&width=165",
       "https://yame.vn/cdn/shop/files/ao-khoac-jean-the-original-m039-xanh-d-ng-1184461421.jpg?v=1760792443&width=360",
+      "https://yame.vn/cdn/shop/files/ao-thun-seventy-seven-13-den-1174883530.jpg?v=1760777397&width=324",
     ],
     name: "Thương hiệu đến từ Việt Nam có mặt lâu năm trên thị trường",
     price: "249.000",
@@ -475,10 +485,11 @@ export const nam = [
     number: 1,
   },
   {
-    id: "ao-thun-cotton-premium-100-co-gian-4-chieu-form-rong-tay-lo-unisex-dinh-luong-vai-250gsm-2",
+    id: "ao-thun-cotton-premium-100-co-gian-4-chieu-form-rong-tay-lo-unisex-dinh-luong-vai-250gsm-1",
     images: [
       "https://yame.vn/cdn/shop/files/ao-polo-the-minimalist-001-xanh-den-1174885416.jpg?v=1760774688&width=165",
       "https://yame.vn/cdn/shop/files/ao-khoac-jean-the-original-m039-xanh-d-ng-1184461421.jpg?v=1760792443&width=360",
+      "https://yame.vn/cdn/shop/files/ao-thun-seventy-seven-13-den-1174883530.jpg?v=1760777397&width=324",
     ],
     name: "Áo Thun Cotton Premium 100% Co Giãn 4 Chiều, Form Rộng Tay Lỡ Unisex, Định Lượng Vải 250gsm",
     price: "390.000",
@@ -486,10 +497,11 @@ export const nam = [
     number: 1,
   },
   {
-    id: "ao-so-mi-lua-satin-cao-cap-dang-suong-co-duc-cai-nut-phong-cach-cong-so-thanh-lich-mau-moi-2025-2",
+    id: "ao-so-mi-lua-satin-cao-cap-dang-suong-co-duc-cai-nut-phong-cach-cong-so-thanh-lich-mau-moi-2025-1",
     images: [
       "https://yame.vn/cdn/shop/files/ao-polo-the-minimalist-001-xanh-den-1174885416.jpg?v=1760774688&width=165",
       "https://yame.vn/cdn/shop/files/ao-khoac-jean-the-original-m039-xanh-d-ng-1184461421.jpg?v=1760792443&width=360",
+      "https://yame.vn/cdn/shop/files/ao-thun-seventy-seven-13-den-1174883530.jpg?v=1760777397&width=324",
     ],
     name: "Áo Sơ Mi Lụa Satin Cao Cấp Dáng Suông, Cổ Đức Cài Nút, Phong Cách Công Sở Thanh Lịch Mẫu Mới 2025",
     price: "550.000",
@@ -497,10 +509,11 @@ export const nam = [
     number: 1,
   },
   {
-    id: "ao-khoac-hoodie-ni-bong-day-dan-co-mu-hai-lop-form-rong-dang-ulzzang-hoa-tiet-in-noi-ben-dep-2",
+    id: "ao-khoac-hoodie-ni-bong-day-dan-co-mu-hai-lop-form-rong-dang-ulzzang-hoa-tiet-in-noi-ben-dep-1",
     images: [
       "https://yame.vn/cdn/shop/files/ao-polo-the-minimalist-001-xanh-den-1174885416.jpg?v=1760774688&width=165",
       "https://yame.vn/cdn/shop/files/ao-khoac-jean-the-original-m039-xanh-d-ng-1184461421.jpg?v=1760792443&width=360",
+      "https://yame.vn/cdn/shop/files/ao-thun-seventy-seven-13-den-1174883530.jpg?v=1760777397&width=324",
     ],
     name: "Áo Khoác Hoodie Nỉ Bông Dày Dặn Có Mũ Hai Lớp, Form Rộng Dáng Ulzzang, Họa Tiết In Nổi Bền Đẹp",
     price: "420.000",
@@ -508,10 +521,11 @@ export const nam = [
     number: 1,
   },
   {
-    id: "ao-khoac-bomber-kaki-du-hai-lop-chan-bong-khoa-keo-dong-chac-chan-bo-chun-gau-ao-chong-gio-2",
+    id: "ao-khoac-bomber-kaki-du-hai-lop-chan-bong-khoa-keo-dong-chac-chan-bo-chun-gau-ao-chong-gio-1",
     images: [
       "https://yame.vn/cdn/shop/files/ao-polo-the-minimalist-001-xanh-den-1174885416.jpg?v=1760774688&width=165",
       "https://yame.vn/cdn/shop/files/ao-khoac-jean-the-original-m039-xanh-d-ng-1184461421.jpg?v=1760792443&width=360",
+      "https://yame.vn/cdn/shop/files/ao-thun-seventy-seven-13-den-1174883530.jpg?v=1760777397&width=324",
     ],
 
     name: "Áo Khoác Bomber Kaki Dù Hai Lớp Chần Bông, Khóa Kéo Đồng Chắc Chắn, Bo Chun Gấu Áo Chống Gió",
@@ -520,10 +534,11 @@ export const nam = [
     number: 1,
   },
   {
-    id: "ao-polo-nam-the-thao-vai-ca-sau-cvc-co-be-phoi-vien-tinh-te-tham-hut-mo-hoi-tot-2",
+    id: "ao-polo-nam-the-thao-vai-ca-sau-cvc-co-be-phoi-vien-tinh-te-tham-hut-mo-hoi-tot-1",
     images: [
       "https://yame.vn/cdn/shop/files/ao-polo-the-minimalist-001-xanh-den-1174885416.jpg?v=1760774688&width=165",
       "https://yame.vn/cdn/shop/files/ao-khoac-jean-the-original-m039-xanh-d-ng-1184461421.jpg?v=1760792443&width=360",
+      "https://yame.vn/cdn/shop/files/ao-thun-seventy-seven-13-den-1174883530.jpg?v=1760777397&width=324",
     ],
     name: "Áo Polo Nam Thể Thao Vải Cá Sấu CVC, Cổ Bẻ Phối Viền Tinh Tế, Thấm Hút Mồ Hôi Tốt",
     price: "340.000",
@@ -531,104 +546,14 @@ export const nam = [
     number: 1,
   },
   {
-    id: "ao-len-cardigan-dang-ngan-co-v-hoa-tiet-theu-hoa-noi-chat-len-long-tho-mem-mai-phong-cach-han-quoc-2",
+    id: "ao-len-cardigan-dang-ngan-co-v-hoa-tiet-theu-hoa-noi-chat-len-long-tho-mem-mai-phong-cach-han-quoc-1",
     images: [
       "https://yame.vn/cdn/shop/files/ao-polo-the-minimalist-001-xanh-den-1174885416.jpg?v=1760774688&width=165",
       "https://yame.vn/cdn/shop/files/ao-khoac-jean-the-original-m039-xanh-d-ng-1184461421.jpg?v=1760792443&width=360",
+      "https://yame.vn/cdn/shop/files/ao-thun-seventy-seven-13-den-1174883530.jpg?v=1760777397&width=324",
     ],
     name: "Áo Len Cardigan Dáng Ngắn Cổ V, Họa Tiết Thêu Hoa Nổi, Chất Len Lông Thỏ Mềm Mại Phong Cách Hàn Quốc",
     price: "680.000",
-    sizes: ["S", "M", "L", "XL"],
-    number: 1,
-  },
-];
-
-export const nuHomePage = [
-  {
-    id: "dam-hoa-nhi-vintage-dang-chu-a-co-vuong-chat-vai-voan-to-xop-co-lop-lot-tay-bong-nhe-nhang-nu-tinh",
-    images: [
-      "https://content.pancake.vn/1/s727x970/0f/7a/46/86/50ab1e990c4e8ff2ef2e4daf49e7b527c4267e8ba2baabb627177caf-w:4125-h:5500-l:11656951-t:image/jpeg.jpeg",
-      "https://content.pancake.vn/1/s727x970/10/f4/6b/24/139818059b7bbce6d3b8d80f25ef37e860fd0801e819b58ab0bce02a-w:4125-h:5500-l:15099721-t:image/jpeg.jpeg",
-    ],
-    name: "Đầm Hoa Nhí Vintage Dáng Chữ A Cổ Vuông, Chất Vải Voan Tơ Xốp Có Lớp Lót, Tay Bồng Nhẹ Nhàng Nữ Tính",
-    price: "410.000",
-    sizes: ["S", "M", "L", "XL"],
-    number: 1,
-  },
-  {
-    id: "chan-vay-tennis-xep-ly-ngan-dang-xoe-co-quan-bao-ho-ben-trong-tien-loi-vai-kaki-mem-min",
-    images: [
-      "https://content.pancake.vn/1/s727x970/0f/7a/46/86/50ab1e990c4e8ff2ef2e4daf49e7b527c4267e8ba2baabb627177caf-w:4125-h:5500-l:11656951-t:image/jpeg.jpeg",
-      "https://content.pancake.vn/1/s727x970/10/f4/6b/24/139818059b7bbce6d3b8d80f25ef37e860fd0801e819b58ab0bce02a-w:4125-h:5500-l:15099721-t:image/jpeg.jpeg",
-    ],
-    name: "Chân Váy Tennis Xếp Ly Ngắn Dáng Xòe, Có Quần Bảo Hộ Bên Trong Tiện Lợi, Vải Kaki Mềm Mịn",
-    price: "250.000",
-    sizes: ["S", "M", "L", "XL"],
-    number: 1,
-  },
-  {
-    id: "dam-maxi-voan-lua-hai-day-di-bien-hoa-tiet-tropical-he-ho-lung-quyen-ru-co-dem-nguc",
-    images: [
-      "https://content.pancake.vn/1/s727x970/0f/7a/46/86/50ab1e990c4e8ff2ef2e4daf49e7b527c4267e8ba2baabb627177caf-w:4125-h:5500-l:11656951-t:image/jpeg.jpeg",
-      "https://content.pancake.vn/1/s727x970/10/f4/6b/24/139818059b7bbce6d3b8d80f25ef37e860fd0801e819b58ab0bce02a-w:4125-h:5500-l:15099721-t:image/jpeg.jpeg",
-    ],
-    name: "Đầm Maxi Voan Lụa Hai Dây Đi Biển, Họa Tiết Tropical Hè, Hở Lưng Quyến Rũ Có Đệm Ngực",
-    price: "530.000",
-    sizes: ["S", "M", "L", "XL"],
-    number: 1,
-  },
-  {
-    id: "chan-vay-but-chi-dai-xe-ta-sau-cap-cao-ton-dang-chat-umi-co-gian-phu-hop-di-lam-di-tiec",
-    images: [
-      "https://content.pancake.vn/1/s727x970/0f/7a/46/86/50ab1e990c4e8ff2ef2e4daf49e7b527c4267e8ba2baabb627177caf-w:4125-h:5500-l:11656951-t:image/jpeg.jpeg",
-      "https://content.pancake.vn/1/s727x970/10/f4/6b/24/139818059b7bbce6d3b8d80f25ef37e860fd0801e819b58ab0bce02a-w:4125-h:5500-l:15099721-t:image/jpeg.jpeg",
-    ],
-    name: "Chân Váy Bút Chì Dài Xẻ Tà Sau, Cạp Cao Tôn Dáng, Chất Umi Co Giãn, Phù Hợp Đi Làm, Đi Tiệc",
-    price: "320.000",
-    sizes: ["S", "M", "L", "XL"],
-    number: 1,
-  },
-  {
-    id: "dam-bodycon-co-yem-du-tiec-sang-trong-chat-lieu-thun-gan-om-sat-thiet-ke-ho-lung-goi-cam",
-    images: [
-      "https://content.pancake.vn/1/s727x970/0f/7a/46/86/50ab1e990c4e8ff2ef2e4daf49e7b527c4267e8ba2baabb627177caf-w:4125-h:5500-l:11656951-t:image/jpeg.jpeg",
-      "https://content.pancake.vn/1/s727x970/10/f4/6b/24/139818059b7bbce6d3b8d80f25ef37e860fd0801e819b58ab0bce02a-w:4125-h:5500-l:15099721-t:image/jpeg.jpeg",
-    ],
-    name: "Đầm Bodycon Cổ Yếm Dự Tiệc Sang Trọng, Chất Liệu Thun Gân Ôm Sát, Thiết Kế Hở Lưng Gợi Cảm",
-    price: "499.000",
-    sizes: ["S", "M", "L", "XL"],
-    number: 1,
-  },
-  {
-    id: "chan-vay-jean-dai-chu-a-xe-giua-chat-bo-denim-day-dan-ton-dang-phong-cach-retro-hong-kong",
-    images: [
-      "https://content.pancake.vn/1/s727x970/0f/7a/46/86/50ab1e990c4e8ff2ef2e4daf49e7b527c4267e8ba2baabb627177caf-w:4125-h:5500-l:11656951-t:image/jpeg.jpeg",
-      "https://content.pancake.vn/1/s727x970/10/f4/6b/24/139818059b7bbce6d3b8d80f25ef37e860fd0801e819b58ab0bce02a-w:4125-h:5500-l:15099721-t:image/jpeg.jpeg",
-    ],
-    name: "Chân Váy Jean Dài Chữ A Xẻ Giữa, Chất Bò Denim Dày Dặn Tôn Dáng, Phong Cách Retro Hong Kong",
-    price: "385.000",
-    sizes: ["S", "M", "L", "XL"],
-    number: 1,
-  },
-  {
-    id: "ao-khoac-blazer-nu-2-lop-dang-rong-vai-dem-hang-thiet-ke-cao-cap-kieu-dang-cong-so-han-quoc",
-    images: [
-      "https://content.pancake.vn/1/s727x970/0f/7a/46/86/50ab1e990c4e8ff2ef2e4daf49e7b527c4267e8ba2baabb627177caf-w:4125-h:5500-l:11656951-t:image/jpeg.jpeg",
-      "https://content.pancake.vn/1/s727x970/10/f4/6b/24/139818059b7bbce6d3b8d80f25ef37e860fd0801e819b58ab0bce02a-w:4125-h:5500-l:15099721-t:image/jpeg.jpeg",
-    ],
-    name: "Áo Khoác Blazer Nữ 2 Lớp Dáng Rộng Vai Đệm, Hàng Thiết Kế Cao Cấp, Kiểu Dáng Công Sở Hàn Quốc",
-    price: "820.000",
-    sizes: ["S", "M", "L", "XL"],
-    number: 1,
-  },
-  {
-    id: "ao-khoac-bomber-kaki-du-hai-lop-chan-bong-khoa-keo-dong-chac-chan-bo-chun-gau-ao-chong-gio",
-    images: [
-      "https://content.pancake.vn/1/s727x970/0f/7a/46/86/50ab1e990c4e8ff2ef2e4daf49e7b527c4267e8ba2baabb627177caf-w:4125-h:5500-l:11656951-t:image/jpeg.jpeg",
-      "https://content.pancake.vn/1/s727x970/10/f4/6b/24/139818059b7bbce6d3b8d80f25ef37e860fd0801e819b58ab0bce02a-w:4125-h:5500-l:15099721-t:image/jpeg.jpeg",
-    ],
-    name: "Áo Khoác Bomber Kaki Dù Hai Lớp Chần Bông, Khóa Kéo Đồng Chắc Chắn, Bo Chun Gấu Áo Chống Gió",
-    price: "799.000",
     sizes: ["S", "M", "L", "XL"],
     number: 1,
   },
@@ -713,12 +638,12 @@ export const aoNu = [
     number: 1,
   },
   {
-    id: "ao-khoac-bomber-kaki-du-hai-lop-chan-bong-khoa-keo-dong-chac-chan-bo-chun-gau-ao-chong-gio",
+    id: "vay-thoi-trang-cao-cap-den-tu-han-quoc",
     images: [
       "https://content.pancake.vn/1/s727x970/0f/7a/46/86/50ab1e990c4e8ff2ef2e4daf49e7b527c4267e8ba2baabb627177caf-w:4125-h:5500-l:11656951-t:image/jpeg.jpeg",
       "https://content.pancake.vn/1/s727x970/10/f4/6b/24/139818059b7bbce6d3b8d80f25ef37e860fd0801e819b58ab0bce02a-w:4125-h:5500-l:15099721-t:image/jpeg.jpeg",
     ],
-    name: "Áo Khoác Bomber Kaki Dù Hai Lớp Chần Bông, Khóa Kéo Đồng Chắc Chắn, Bo Chun Gấu Áo Chống Gió",
+    name: "Váy thời trang cao cấp đến từ Hàn Quốc thích hợp mặc dự tiệc",
     price: "799.000",
     sizes: ["S", "M", "L", "XL"],
     number: 1,
@@ -882,12 +807,12 @@ export const nu = [
     number: 1,
   },
   {
-    id: "ao-khoac-bomber-kaki-du-hai-lop-chan-bong-khoa-keo-dong-chac-chan-bo-chun-gau-ao-chong-gio",
+    id: "vay-thoi-trang-cao-cap-den-tu-han-quoc-thich-hop-mac-du-tiec",
     images: [
       "https://content.pancake.vn/1/s727x970/0f/7a/46/86/50ab1e990c4e8ff2ef2e4daf49e7b527c4267e8ba2baabb627177caf-w:4125-h:5500-l:11656951-t:image/jpeg.jpeg",
       "https://content.pancake.vn/1/s727x970/10/f4/6b/24/139818059b7bbce6d3b8d80f25ef37e860fd0801e819b58ab0bce02a-w:4125-h:5500-l:15099721-t:image/jpeg.jpeg",
     ],
-    name: "Áo Khoác Bomber Kaki Dù Hai Lớp Chần Bông, Khóa Kéo Đồng Chắc Chắn, Bo Chun Gấu Áo Chống Gió",
+    name: "Váy thời trang cao cấp đến từ Hàn Quốc thích hợp mặc dự tiệc",
     price: "799.000",
     sizes: ["S", "M", "L", "XL"],
     number: 1,
@@ -972,7 +897,7 @@ export const nu = [
   },
 ];
 
-export const phukienHomePage = [
+export const phukien = [
   {
     id: "non-mu-luoi-trai-one-piece-wano",
     images: [
@@ -1061,11 +986,8 @@ export const phukienHomePage = [
     sizes: ["S", "M", "L", "XL"],
     number: 1,
   },
-];
-
-export const phukien = [
   {
-    id: "non-mu-luoi-trai-one-piece-wano",
+    id: "non-mu-luoi-trai-one-piece-wano-1",
     images: [
       "https://yame.vn/cdn/shop/files/non-one-piece-wano-35-be-1174879806.jpg?v=1760788984&width=360",
       "https://yame.vn/cdn/shop/files/tui-deo-one-piece-wano-32-be-1174880843.jpg?v=1760787968&width=360",
@@ -1076,7 +998,7 @@ export const phukien = [
     number: 1,
   },
   {
-    id: "tui-deo-cheo-one-piece-wano",
+    id: "tui-deo-cheo-one-piece-wano-1",
     images: [
       "https://yame.vn/cdn/shop/files/non-one-piece-wano-35-be-1174879806.jpg?v=1760788984&width=360",
       "https://yame.vn/cdn/shop/files/tui-deo-one-piece-wano-32-be-1174880843.jpg?v=1760787968&width=360",
@@ -1087,7 +1009,7 @@ export const phukien = [
     number: 1,
   },
   {
-    id: "kinh-ram-gong-vuong-chong-uv",
+    id: "kinh-ram-gong-vuong-chong-uv-1",
     images: [
       "https://yame.vn/cdn/shop/files/non-one-piece-wano-35-be-1174879806.jpg?v=1760788984&width=360",
       "https://yame.vn/cdn/shop/files/tui-deo-one-piece-wano-32-be-1174880843.jpg?v=1760787968&width=360",
@@ -1098,7 +1020,7 @@ export const phukien = [
     number: 1,
   },
   {
-    id: "that-lung-da-nam-khoa-tu-dong",
+    id: "that-lung-da-nam-khoa-tu-dong-1",
     images: [
       "https://yame.vn/cdn/shop/files/non-one-piece-wano-35-be-1174879806.jpg?v=1760788984&width=360",
       "https://yame.vn/cdn/shop/files/tui-deo-one-piece-wano-32-be-1174880843.jpg?v=1760787968&width=360",
@@ -1109,7 +1031,7 @@ export const phukien = [
     number: 1,
   },
   {
-    id: "vi-da-bo-that-dang-dung-ngang",
+    id: "vi-da-bo-that-dang-dung-ngang-1",
     images: [
       "https://yame.vn/cdn/shop/files/non-one-piece-wano-35-be-1174879806.jpg?v=1760788984&width=360",
       "https://yame.vn/cdn/shop/files/tui-deo-one-piece-wano-32-be-1174880843.jpg?v=1760787968&width=360",
@@ -1120,7 +1042,7 @@ export const phukien = [
     number: 1,
   },
   {
-    id: "vong-tay-lac-tay-bac",
+    id: "vong-tay-lac-tay-bac-1",
     images: [
       "https://yame.vn/cdn/shop/files/non-one-piece-wano-35-be-1174879806.jpg?v=1760788984&width=360",
       "https://yame.vn/cdn/shop/files/tui-deo-one-piece-wano-32-be-1174880843.jpg?v=1760787968&width=360",
@@ -1131,7 +1053,7 @@ export const phukien = [
     number: 1,
   },
   {
-    id: "khan-choang-co-lua-len",
+    id: "khan-choang-co-lua-len-1",
     images: [
       "https://yame.vn/cdn/shop/files/non-one-piece-wano-35-be-1174879806.jpg?v=1760788984&width=360",
       "https://yame.vn/cdn/shop/files/tui-deo-one-piece-wano-32-be-1174880843.jpg?v=1760787968&width=360",
@@ -1142,7 +1064,7 @@ export const phukien = [
     number: 1,
   },
   {
-    id: "balo-laptop-chong-soc-truot-nuoc",
+    id: "balo-laptop-chong-soc-truot-nuoc-1",
     images: [
       "https://yame.vn/cdn/shop/files/non-one-piece-wano-35-be-1174879806.jpg?v=1760788984&width=360",
       "https://yame.vn/cdn/shop/files/tui-deo-one-piece-wano-32-be-1174880843.jpg?v=1760787968&width=360",

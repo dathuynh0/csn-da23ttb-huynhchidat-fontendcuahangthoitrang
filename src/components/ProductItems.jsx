@@ -1,11 +1,21 @@
 import { ShoppingCart } from "lucide-react";
 import { Button } from "./ui/button";
 import { Link } from "react-router";
+import { useContext } from "react";
+import { Context } from "../Context";
 
 const ProDuctItem = ({ images, name, price, product, onAddToCart }) => {
+  const { setSearch } = useContext(Context);
+
+  const handleLinkClick = () => {
+    setTimeout(() => {
+      setSearch("");
+    }, 50);
+  };
+
   return (
-    <div className="group flex flex-col overflow-hidden lg:h-[27.5rem] border-none rounded-md bg-white hover:shadow-lg hover:translate-y-[-0.5rem] transition-all duration-300">
-      <Link to={`/products/chi-tiet/${product.id}`}>
+    <div className="group flex flex-col overflow-hidden border-none bg-white hover:shadow-lg hover:translate-y-[-0.5rem] transition-all duration-300">
+      <Link onClick={handleLinkClick} to={`/products/chi-tiet/${product.id}`}>
         <div className="relative w-full aspect-square overflow-hidden">
           <img
             className="w-full h-full object-cover transition-opacity duration-300 opacity-100 group-hover:opacity-0"
@@ -18,12 +28,12 @@ const ProDuctItem = ({ images, name, price, product, onAddToCart }) => {
             alt={name}
           />
         </div>
-        <h3 className="m-2 md:m-3 text-sm md:text-lg font-light leading-snug line-clamp-2 min-h-[2.5rem] md:min-h-[3.1rem]">
+        <h3 className="m-2 md:m-3 text-sm md:text-lg font-light leading-snug line-clamp-2 min-h-[2.5rem] md:min-h-[3rem]">
           {name}
         </h3>
       </Link>
 
-      <div className="flex items-center justify-between w-ful p-2">
+      <div className="flex items-center justify-between w-full p-2">
         <span className="text-sm md:text-lg font-light line-clamp-1 whitespace-nowrap inline-block mr-2">
           {price} VND
         </span>

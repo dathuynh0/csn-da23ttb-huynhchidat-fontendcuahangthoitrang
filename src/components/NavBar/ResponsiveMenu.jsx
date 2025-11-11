@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
-import { ChevronDown, X } from "lucide-react";
+import { ChevronDown, Shirt, X } from "lucide-react";
 import { NavLink } from "react-router";
 
 const ResponsiveMenu = ({ open, openMenu }) => {
@@ -21,20 +21,17 @@ const ResponsiveMenu = ({ open, openMenu }) => {
               onClick={openMenu}
             />
             <motion.div
-              initial={{ x: "100%" }}
+              initial={{ x: "-100%" }}
               animate={{ x: 0 }}
-              exit={{ x: "100%" }}
+              exit={{ x: "-100%" }}
               transition={{ duration: 0.3 }}
-              className="absolute top-0 right-0 left-[30%] inset-0 z-20"
+              className="absolute top-0 left-0 right-[30%] inset-0 z-20"
             >
-              <div className="text-xl uppercase font-semibold bg-gray-300 text-black w-full h-full overflow-y-auto pt-10 pb-10 px-6">
+              <div className="text-xl uppercase font-medium bg-gray-300 text-black w-full h-full pt-10 pb-10 px-10">
                 <div className="flex justify-end">
-                  <X
-                    onClick={openMenu}
-                    className="size-8 cursor-pointer lg:hidden"
-                  />
+                  <X onClick={openMenu} className="size-7 cursor-pointer" />
                 </div>
-                <ul className="mt-8 flex flex-col justify-center items-center gap-10">
+                <ul className="mt-8 flex flex-col justify-center gap-8">
                   <li>
                     <NavLink to="/">Trang chủ</NavLink>
                   </li>
@@ -43,7 +40,7 @@ const ResponsiveMenu = ({ open, openMenu }) => {
                   </li>
 
                   <li className="w-full relative">
-                    <div className="flex items-center justify-center gap-2 cursor-pointer">
+                    <div className="flex items-center gap-2 cursor-pointer">
                       <NavLink to="/do-nam">Đồ nam</NavLink>
                       <ChevronDown
                         onClick={() => setDropdownNamOpen(!dropdownNamOpen)}
@@ -53,27 +50,19 @@ const ResponsiveMenu = ({ open, openMenu }) => {
                       />
                     </div>
 
-                    <AnimatePresence>
-                      {dropdownNamOpen && (
-                        <motion.ul
-                          initial={{ opacity: 0, height: 0 }}
-                          animate={{ opacity: 1, height: "auto" }}
-                          exit={{ opacity: 0, height: 0 }}
-                          transition={{ duration: 0.3 }}
-                          className="flex flex-col items-center gap-4 mt-4 text-lg overflow-hidden"
-                        >
-                          <li className="hover:text-amber-200 transition-colors">
-                            <NavLink to="/do-nam/ao-nam">Áo</NavLink>
-                          </li>
-                          <li className="hover:text-amber-200 transition-colors">
-                            <NavLink to="/do-nam/quan-nam">Quần</NavLink>
-                          </li>
-                        </motion.ul>
-                      )}
-                    </AnimatePresence>
+                    {dropdownNamOpen && (
+                      <div className="ml-2 flex flex-col gap-4 mt-4 text-lg overflow-hidden">
+                        <li className="border-b">
+                          <NavLink to="/do-nam/ao-nam">Áo</NavLink>
+                        </li>
+                        <li className="border-b">
+                          <NavLink to="/do-nam/quan-nam">Quần</NavLink>
+                        </li>
+                      </div>
+                    )}
                   </li>
                   <li className="w-full">
-                    <div className="flex items-center justify-center gap-2 cursor-pointer">
+                    <div className="flex items-center gap-2 cursor-pointer">
                       <NavLink to="/do-nu">Đồ nữ</NavLink>
                       <ChevronDown
                         onClick={() => setDropdownNuOpen(!dropdownNuOpen)}
@@ -83,27 +72,19 @@ const ResponsiveMenu = ({ open, openMenu }) => {
                       />
                     </div>
 
-                    <AnimatePresence>
-                      {dropdownNuOpen && (
-                        <motion.ul
-                          initial={{ opacity: 0, height: 0 }}
-                          animate={{ opacity: 1, height: "auto" }}
-                          exit={{ opacity: 0, height: 0 }}
-                          transition={{ duration: 0.3 }}
-                          className="flex flex-col items-center gap-4 mt-4 text-lg overflow-hidden"
-                        >
-                          <li className="hover:text-amber-200 transition-colors">
-                            <NavLink to="/do-nu/ao-nu">Áo</NavLink>
-                          </li>
-                          <li className="hover:text-amber-200 transition-colors">
-                            <NavLink to="/do-nu/quan-nu">Quần</NavLink>
-                          </li>
-                          <li className="hover:text-amber-200 transition-colors">
-                            <NavLink to="/do-nu/vay-nu">Váy</NavLink>
-                          </li>
-                        </motion.ul>
-                      )}
-                    </AnimatePresence>
+                    {dropdownNuOpen && (
+                      <div className="ml-2 flex flex-col gap-4 mt-4 text-lg overflow-hidden">
+                        <li className="border-b">
+                          <NavLink to="/do-nu/ao-nu">Áo</NavLink>
+                        </li>
+                        <li className="border-b">
+                          <NavLink to="/do-nu/quan-nu">Quần</NavLink>
+                        </li>
+                        <li className="border-b">
+                          <NavLink to="/do-nu/vay">Váy</NavLink>
+                        </li>
+                      </div>
+                    )}
                   </li>
                   <li>
                     <NavLink to="/phu-kien">Phụ kiện</NavLink>

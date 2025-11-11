@@ -1,7 +1,7 @@
 import { phukien } from "../lib/data";
 import ProductsPage from "../components/ProductPage";
 
-const PhuKien = () => {
+const Other = () => {
   return (
     <ProductsPage
       data={phukien}
@@ -12,4 +12,4 @@ const PhuKien = () => {
   );
 };
 
-export default PhuKien;
+export default Other;

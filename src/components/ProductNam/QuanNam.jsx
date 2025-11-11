@@ -1,7 +1,7 @@
 import ProductsPage from "../ProductPage";
 import { quanNam } from "../../lib/data";
 
-const Quan = () => {
+const QuanNam = () => {
   return (
     <ProductsPage
       data={quanNam}
@@ -14,4 +14,4 @@ const Quan = () => {
   );
 };
 
-export default Quan;
+export default QuanNam;

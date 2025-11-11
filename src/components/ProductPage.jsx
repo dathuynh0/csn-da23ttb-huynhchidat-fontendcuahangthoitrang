@@ -1,5 +1,4 @@
-import { Context } from "../Context";
-import { useContext, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link, useOutletContext } from "react-router";
 import ProDuctItem from "./ProductItems";
 import { Button } from "./ui/button";
@@ -8,8 +7,6 @@ import Pagination from "./Pagination";
 
 const ProductsPage = ({ data, name, title, link, title2, link2 }) => {
   const { handleAddToCart } = useOutletContext();
-  const { search } = useContext(Context);
-  const lowerCaseSearch = search.toLowerCase();
 
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
@@ -66,16 +63,9 @@ const ProductsPage = ({ data, name, title, link, title2, link2 }) => {
       result = result.filter((item) => clearPrice(item.price) > 1000000);
     }
 
-    // filter theo search
-    if (search) {
-      result = result.filter((item) =>
-        item.name.toLowerCase().includes(lowerCaseSearch)
-      );
-    }
-
     //set lai state
     setFilteredProducts(result);
-  }, [lowerCaseSearch, search, products, priceFilter]);
+  }, [products, priceFilter]);
 
   const handleSort = () => {
     const sortProducts = [...filteredProducts];
@@ -102,7 +92,7 @@ const ProductsPage = ({ data, name, title, link, title2, link2 }) => {
 
   return (
     <section className="pt-8 px-2 pb-8 w-full lg:w-[80%] mx-auto">
-      <div className="flex items-center">
+      <div className="flex items-center text-xs lg:text-base">
         <Link to="/" className="hover:underline">
           Trang chủ
         </Link>
@@ -149,7 +139,7 @@ const ProductsPage = ({ data, name, title, link, title2, link2 }) => {
 
       <hr />
 
-      <ul className="mt-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 lg:gap-8">
+      <ul className="mt-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 lg:gap-6">
         {show.map((item) => (
           <li key={item.id}>
             <ProDuctItem

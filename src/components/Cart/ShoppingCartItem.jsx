@@ -1,20 +1,24 @@
 import { Minus, Plus, Trash } from "lucide-react";
 import { Button } from "../ui/button";
+import { useState } from "react";
 
 const ShoppingCartItem = ({
   image,
   price,
   name,
+  sizes,
   number,
   onPlus,
   onMinus,
   onDelete,
 }) => {
+  const [indexCurrentSize, setIndexCurrentSize] = useState(0);
+
   return (
     <>
-      <div className="  flex flex-col md:flex-row items-start md:items-center justify-between gap-6 w-full p-4 shadow-lg">
+      <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 w-full p-4 shadow-lg">
         <div className="flex items-center gap-4 flex-grow">
-          <figure className="w-20 h-20 md:w-24 md:h-24 aspect-square overflow-hidden flex-shrink-0">
+          <figure className="w-20 h-20 md:w-25 md:h-25 aspect-square overflow-hidden flex-shrink-0">
             <img
               className="h-full w-full object-cover"
               src={image}
@@ -23,10 +27,30 @@ const ShoppingCartItem = ({
           </figure>
 
           <div className="flex flex-col">
-            <p className="font-medium text-base md:text-lg line-clamp-2">
+            <p className="font-medium text-base lg:text-lg line-clamp-2">
               {name}
             </p>
-            <span className="text-sm text-black">{price}</span>
+            <span className="text-sm lg:text-lg font-light text-black">
+              {price}
+            </span>
+            <ul className="flex items-center mt-2">
+              {sizes.map((size, index) => (
+                <li key={index}>
+                  <Button
+                    className={`mr-2 hover:bg-black hover:text-white cursor-pointer mb-2 ${
+                      sizes[indexCurrentSize] === size
+                        ? "bg-black text-white"
+                        : ""
+                    }`}
+                    onClick={() => setIndexCurrentSize(index)}
+                    variant="outline"
+                    size="icon"
+                  >
+                    {size}
+                  </Button>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
 

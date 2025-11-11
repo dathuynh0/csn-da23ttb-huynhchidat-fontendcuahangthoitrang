@@ -13,7 +13,7 @@ const SearchBar = () => {
         placeholder="Tìm kiếm sản phẩm..."
         value={search}
         onChange={handleSearchChange}
-        className="w-full pr-7 pl-4 border border-gray-300 rounded-full focus:ring-2 transition-all duration-200 shadow-sm"
+        className="w-full pr-7 pl-4 border border-gray-300 focus:ring-2 transition-all duration-200 shadow-sm"
       />
       {search ? (
         <button

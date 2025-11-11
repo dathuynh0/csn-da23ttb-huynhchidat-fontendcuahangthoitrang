@@ -20,10 +20,9 @@ const ProductCategories = () => {
   );
 };
 
-// Component con cho mỗi card danh mục
 const Card = ({ title, description, imageUrl, link }) => {
   return (
-    <div className="w-full md:w-1/2 flex flex-col">
+    <div className="w-full flex flex-col">
       <Link to={link} className="block overflow-hidden rounded-lg aspect-[5/4]">
         <img
           className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
@@ -35,14 +34,15 @@ const Card = ({ title, description, imageUrl, link }) => {
         <h2 className="text-4xl lg:text-5xl font-light mt-4">{title}</h2>
         <p className="text-base text-gray-600 mt-4 flex-grow">{description}</p>
         <div className="mt-6">
-          <Button
-            size="lg"
-            variant="outline"
-            className="text-lg font-light px-10 py-6 hover:bg-black/80 hover:text-white/90 transition-colors duration-300"
-          >
-            {/* Bạn nên bọc Link bên ngoài Button thay vì bên trong */}
-            <Link to={link}>Mua ngay</Link>
-          </Button>
+          <Link to={link}>
+            <Button
+              size="lg"
+              variant="outline"
+              className="text-lg font-light px-10 py-6 hover:bg-black/80 hover:text-white/90 transition-colors duration-300"
+            >
+              Mua ngay
+            </Button>
+          </Link>
         </div>
       </div>
     </div>

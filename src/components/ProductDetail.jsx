@@ -16,7 +16,11 @@ const ProductDetail = () => {
 
   // tim kiem san pham theo id
   const findProduct = allProducts.find((item) => item.id === id);
-  console.log(findProduct);
+  // console.log(findProduct);
+
+  const checknam = nam.find((item) => item.id === id);
+  const checknu = nu.find((item) => item.id === id);
+  const checkother = phukien.find((item) => item.id === id);
 
   const [isChecked, setIsChecked] = useState(false);
   const [isCheckedWarranty, setIsCheckedWarranty] = useState(false);
@@ -28,6 +32,7 @@ const ProductDetail = () => {
   }, []);
 
   const [currentImage, setCurrentImage] = useState(0);
+  const [indexCurrentSize, setIndexCurrentSize] = useState(0);
 
   const handleNextImage = () => {
     setCurrentImage((prevImage) => (prevImage + 1) % findProduct.images.length);
@@ -42,12 +47,32 @@ const ProductDetail = () => {
 
   const itemsPerPage = 8;
 
-  const getCurrentProducts = () => {
-    const randomStartIndex = Math.ceil(
-      Math.random() * (filteredData.length - itemsPerPage)
-    );
-    const endIndex = randomStartIndex + itemsPerPage;
-    return filteredData.slice(randomStartIndex, endIndex);
+  const getProducts = () => {
+    if (checknam) {
+      const randomStartIndex = Math.ceil(
+        Math.random() * (nam.length - itemsPerPage)
+      );
+      const endIndex = randomStartIndex + itemsPerPage;
+      return nam.slice(randomStartIndex, endIndex);
+    } else if (checknu) {
+      const randomStartIndex = Math.ceil(
+        Math.random() * (nu.length - itemsPerPage)
+      );
+      const endIndex = randomStartIndex + itemsPerPage;
+      return nu.slice(randomStartIndex, endIndex);
+    } else if (checkother) {
+      const randomStartIndex = Math.ceil(
+        Math.random() * (phukien.length - itemsPerPage)
+      );
+      const endIndex = randomStartIndex + itemsPerPage;
+      return phukien.slice(randomStartIndex, endIndex);
+    } else {
+      const randomStartIndex = Math.ceil(
+        Math.random() * (bestseller.length - itemsPerPage)
+      );
+      const endIndex = randomStartIndex + itemsPerPage;
+      return bestseller.slice(randomStartIndex, endIndex);
+    }
   };
 
   const lowerCaseSearch = search.toLowerCase();
@@ -60,7 +85,10 @@ const ProductDetail = () => {
   if (search) {
     return (
       <>
-        <p className="text-center text-2xl mt-4">Kết quả tìm: {search}</p>
+        <div className="flex flex-col w-full lg:w-[80%] mx-auto">
+          <p className="text-center text-2xl mt-4">Kết quả tìm: {search}</p>
+          <p className="text-2xl mt-4">Có {filteredProducts.length} sản phẩm</p>
+        </div>
         <ul className="mt-8 mb-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 md:gap-8 gap-x-3 gap-y-4 p-2 w-full lg:w-[80%] mx-auto">
           {filteredProducts.map((item) => (
             <li key={item.id}>
@@ -79,9 +107,30 @@ const ProductDetail = () => {
   return (
     <>
       <section className="w-full lg:w-[80%] mx-auto mb-8">
-        <div className="text-xs md:text-base mt-6 text-gray-600">
+        <div className="text-xs md:text-base mt-6 m-2 text-gray-600">
           <Link className="hover:underline" to="/">
             Trang chủ
+          </Link>
+          <ChevronRight className="inline-block mx-2 h-4 w-4" />
+          <Link
+            className="hover:underline"
+            to={`${
+              checknam
+                ? "/do-nam"
+                : checknu
+                ? "/do-nu"
+                : checkother
+                ? "/phu-kien"
+                : "/san-pham-ban-chay"
+            }`}
+          >
+            {checknam
+              ? "Sản phẩm nam"
+              : checknu
+              ? "Sản phẩm nữ"
+              : checkother
+              ? "Phụ kiện"
+              : "Sản phẩm bán chạy"}
           </Link>
           <ChevronRight className="inline-block mx-2 h-4 w-4" />
           <Link
@@ -92,8 +141,8 @@ const ProductDetail = () => {
           </Link>
         </div>
 
-        <div className="flex flex-col lg:flex-row items-start justify-between gap-10 py-10">
-          <div className="w-[80%] mx-auto lg:w-[40%] relative">
+        <div className="flex flex-col lg:flex-row items-start justify-between gap-10 py-8">
+          <div className="w-[90%] mx-auto lg:w-[40%] relative">
             <div className="group aspect-square overflow-hidden bg-gray-100 shadow-lg">
               <Button
                 variant="outline"
@@ -119,9 +168,9 @@ const ProductDetail = () => {
             </div>
 
             {/* image nho */}
-            <ul className="flex items-center gap-4 mt-4 w-full overflow-hidden">
+            <ul className="group flex items-center gap-4 mt-4 w-full overflow-x-scroll scroll-smooth">
               {findProduct.images.map((image, index) => (
-                <li key={index}>
+                <li key={index} className="flex-shrink-0">
                   <img
                     className={`w-20 h-20 rounded-lg border-2 object-cover cursor-pointer transition-transform duration-200  ${
                       currentImage === index ? "border" : "border-none"
@@ -136,7 +185,7 @@ const ProductDetail = () => {
           </div>
 
           <div className="w-[90%] lg:w-[40%] mx-auto flex flex-col items-start">
-            <h3 className="text-2xl lg:text-5xl font-semibold leading-snug mb-4">
+            <h3 className="text-2xl lg:text-5xl font-light leading-snug mb-4">
               {findProduct.name}
             </h3>
             <div className="flex items-center gap-4 mb-6">
@@ -150,9 +199,17 @@ const ProductDetail = () => {
 
             {/* size */}
             <div className="mt-4">
+              <span className="block mb-4 text-md lg:text-xl">
+                Size: {findProduct.sizes[indexCurrentSize]}
+              </span>
               {findProduct.sizes.map((size, index) => (
                 <Button
-                  className="mr-2 hover:bg-black hover:text-white cursor-pointer mb-2"
+                  onClick={() => setIndexCurrentSize(index)}
+                  className={`mr-2 hover:bg-black hover:text-white cursor-pointer mb-2 ${
+                    findProduct.sizes[indexCurrentSize] === size
+                      ? "bg-black text-white"
+                      : ""
+                  }`}
                   key={index}
                   variant="outline"
                   size="icon"
@@ -286,9 +343,11 @@ const ProductDetail = () => {
 
         {/* sản phẩm liên quan */}
         <div>
-          <h2 className="text-3xl font-light mt-6 mb-6">Sản phẩm liên quan</h2>
+          <h2 className="m-2 text-3xl font-light mt-6 mb-6">
+            Sản phẩm liên quan
+          </h2>
           <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 lg:gap-8 m-2">
-            {getCurrentProducts().map((item) => {
+            {getProducts().map((item) => {
               return (
                 <li key={item.id}>
                   <ProDuctItem

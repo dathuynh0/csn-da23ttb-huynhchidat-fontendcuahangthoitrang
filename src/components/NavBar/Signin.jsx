@@ -1,9 +1,11 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
+import { X } from "lucide-react";
 
 const Signin = ({
   check,
+  buttonX,
   checkLogin,
   username,
   password,
@@ -16,14 +18,18 @@ const Signin = ({
       <AnimatePresence>
         {check && (
           <motion.div
-            initial={{ opacity: 0, x: 150 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 150 }}
+            initial={{ x: "100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "100%" }}
             transition={{ duration: 0.3 }}
-            className="absolute top-15 right-2  w-25rem h-[25rem] z-20 bg-indigo-100 rounded-2xl p-6"
+            className="fixed w-full lg:w-[40rem] z-20 bg-slate-200 rounded-xl p-4"
           >
-            <div>
-              <h1 className="text-2xl uppercase text-center">
+            <div className="relative">
+              <X
+                onClick={buttonX}
+                className="absolute top-0 right-0 cursor-pointer"
+              />
+              <h1 className="mt-4 text-2xl uppercase text-center">
                 Đăng nhập tài khoản
               </h1>
               <p className="text-center text-lg font-light text-gray-800">

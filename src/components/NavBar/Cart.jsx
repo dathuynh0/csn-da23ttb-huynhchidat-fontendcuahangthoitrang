@@ -21,7 +21,7 @@ const Cart = ({
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ duration: 0.3 }}
-            className="overscroll-contain bg-slate-100 fixed top-0 right-0 w-full max-w-md lg:w-[30rem] h-full z-20 shadow-xl flex flex-col"
+            className="overscroll-contain bg-slate-100 fixed top-0 right-0 w-full lg:w-[50%] h-full z-20 shadow-xl flex flex-col"
           >
             <div className="flex items-center justify-between p-4 flex-shrink-0">
               <h1 className="text-2xl font-bold text-black">Giỏ hàng</h1>
@@ -29,7 +29,7 @@ const Cart = ({
                 variant="outline"
                 size="icon"
                 onClick={onClose}
-                className="text-white bg-black  cursor-pointer hover:opacity-85"
+                className="text-white bg-black cursor-pointer hover:opacity-85"
               >
                 <X className="h-6 w-6" />
               </Button>
@@ -44,6 +44,7 @@ const Cart = ({
                         image={item.images[0]}
                         name={item.name}
                         price={item.price}
+                        sizes={item.sizes}
                         number={item.number}
                         onMinus={() => onMinus(index)}
                         onPlus={() => onPlus(index)}

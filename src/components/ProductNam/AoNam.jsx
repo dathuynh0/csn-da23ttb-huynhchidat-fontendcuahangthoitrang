@@ -1,7 +1,7 @@
 import ProductsPage from "../ProductPage";
 import { aoNam } from "../../lib/data";
 
-const Ao = () => {
+const AoNam = () => {
   return (
     <ProductsPage
       data={aoNam}
@@ -14,4 +14,4 @@ const Ao = () => {
   );
 };
 
-export default Ao;
+export default AoNam;
