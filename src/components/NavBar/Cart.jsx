@@ -43,7 +43,7 @@ const Cart = ({
                       <ShoppingCartItem
                         image={item.images[0]}
                         name={item.name}
-                        price={item.price}
+                        price={item.priceSale || item.price}
                         sizes={item.sizes}
                         number={item.number}
                         onMinus={() => onMinus(index)}

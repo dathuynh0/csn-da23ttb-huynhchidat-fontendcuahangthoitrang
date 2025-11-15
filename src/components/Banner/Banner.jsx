@@ -37,9 +37,8 @@ const Banner = () => {
     <section className="relative group w-full h-[50vh] lg:h-screen mb-8">
       <Button
         onClick={handlePrev}
-        className="absolute left-5 top-[45%] bg-white hover:bg-black hover:text-white shadow-lg rounded-lg opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer"
+        className="absolute left-5 top-[45%] p-6 bg-white hover:bg-black hover:text-white shadow-lg rounded-full opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer"
         variant="outline"
-        size="lg"
       >
         <ArrowLeft className="size-6" />
       </Button>
@@ -53,9 +52,8 @@ const Banner = () => {
       </picture>
       <Button
         onClick={handleNext}
-        className="absolute right-5 top-[45%] bg-white hover:bg-black hover:text-white shadow-lg rounded-lg opacity-0 group-hover:opacity-100 transition-all cursor-pointer"
+        className="absolute right-5 top-[45%] p-6 bg-white hover:bg-black hover:text-white shadow-lg rounded-full opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer"
         variant="outline"
-        size="lg"
       >
         <ArrowRight className="size-6" />
       </Button>

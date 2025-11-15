@@ -104,7 +104,7 @@ const Signup = () => {
             <div className="flex flex-col sm:flex-row justify-center items-center mt-6">
               <Button
                 type="submit"
-                className="bg-black text-white text-base hover:opacity-80 p-6 px-12 rounded-xl mr-0 sm:mr-6 w-full sm:w-auto"
+                className="bg-black text-white text-base hover:opacity-80 p-6 px-12 rounded-xl mr-0 sm:mr-6 w-full sm:w-auto cursor-pointer"
               >
                 Đăng kí
               </Button>

@@ -1,0 +1,60 @@
+import {
+  CreditCard,
+  MessageSquare,
+  PackageOpen,
+  RotateCcw,
+} from "lucide-react";
+
+const Support = () => {
+  return (
+    <section className="grid grid-cols-2 lg:grid-cols-4 gap-8 w-full mx-auto py-18 p-1">
+      <div className="flex flex-col items-center mt-4 lg:mt-0">
+        <span className="inline-block p-2 bg-gray-300 rounded-full">
+          <MessageSquare className="size-6" />
+        </span>
+        <h4 className="font-medium text-2xl mt-4 text-center">Hỗ trợ 24/7</h4>
+        <p className="text-md font-light mt-5 text-center w-full">
+          Hotline hỗ trợ: 0337937146
+        </p>
+      </div>
+
+      <div className="flex flex-col items-center mt-4 lg:mt-0">
+        <span className="inline-block p-2 bg-gray-300 rounded-full">
+          <PackageOpen className="size-6" />
+        </span>
+        <h4 className="font-medium text-2xl mt-4 text-center">
+          Giao hàng toàn quốc
+        </h4>
+        <p className="text-md font-light mt-5 text-center w-full">
+          Thời gian giao hàng nhanh chóng. Từ 3-5 ngày làm việc
+        </p>
+      </div>
+
+      <div className="flex flex-col items-center mt-4 lg:mt-0">
+        <span className="inline-block p-2 bg-gray-300 rounded-full">
+          <CreditCard className="size-6" />
+        </span>
+        <h4 className="font-medium text-2xl mt-4 text-center">
+          Thanh toán đa dạng
+        </h4>
+        <p className="text-md font-light mt-5 text-center w-full">
+          Chấp nhận thanh toán tiền mặt. Chuyển khoản, QR code
+        </p>
+      </div>
+
+      <div className="flex flex-col items-center mt-4 lg:mt-0">
+        <span className="inline-block p-2 bg-gray-300 rounded-full">
+          <RotateCcw className="size-6" />
+        </span>
+        <h4 className="font-medium text-2xl mt-4 text-center">
+          Đổi trả hàng dễ dàng
+        </h4>
+        <p className="text-md font-light mt-5 text-center w-full">
+          Thời gian trả hàng lên đến 30 ngày
+        </p>
+      </div>
+    </section>
+  );
+};
+
+export default Support;

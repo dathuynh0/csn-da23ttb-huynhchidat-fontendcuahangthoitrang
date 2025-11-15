@@ -36,7 +36,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
   return (
     <div className="flex items-center">
       <Button
-        className="mr-1 md:mr-2"
+        className="mr-1 md:mr-2 cursor-pointer"
         onClick={() => onPageChange(currentPage - 1)}
         variant="outline"
         size="icon"
@@ -58,8 +58,8 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
             onClick={() => onPageChange(page)}
             className={
               currentPage === page
-                ? "bg-black text-white m-1 md:px-2 lg:px-4 py-2 border rounded-lg transition"
-                : "m-1 md:px-2 lg:px-4 py-2 border rounded-lg"
+                ? "bg-black text-white m-1 md:px-2 lg:px-4 py-2 border rounded-lg transition cursor-pointer"
+                : "m-1 md:px-2 lg:px-4 py-2 border rounded-lg cursor-pointer"
             }
           >
             {page}
@@ -68,7 +68,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
       })}
 
       <Button
-        className="ml-1 md:ml-2"
+        className="ml-1 md:ml-2 cursor-pointer"
         size="icon"
         onClick={() => onPageChange(currentPage + 1)}
         variant="outline"

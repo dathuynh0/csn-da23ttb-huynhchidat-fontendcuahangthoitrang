@@ -58,11 +58,13 @@ function App() {
   };
 
   const total = cartItems.reduce((sum, item) => {
-    const priceString = String(item.price || 0);
+    const priceString = String(
+      item.priceSale ? item.priceSale : item.price || 0
+    );
 
-    const finalPriceString = priceString.replace(/\./g, "");
+    const finalPrice = priceString.replace(/\./g, "");
 
-    const price = Number(finalPriceString) || 0;
+    const price = Number(finalPrice) || 0;
 
     return Math.floor(sum + price * item.number);
   }, 0); // đặt giá trị ban đầu của sum = 0
@@ -79,9 +81,9 @@ function App() {
   });
 
   return (
-    <div className="bg-slate-200">
+    <div className="bg-slate-100">
       <Toaster richColors />
-      <div className="bg-slate-100 flex justify-center lg:sticky top-0 right-0 left-0 z-50">
+      <div className="bg-slate-100 flex justify-center lg:sticky top-0 z-50">
         <NavBar
           data={cartItems}
           onMinus={handleMinus}
@@ -97,15 +99,15 @@ function App() {
         <div>
           {search ? (
             <div>
-              <div className="flex flex-col w-full lg:w-[80%] mx-auto">
-                <p className="text-center text-2xl mt-4">
+              <div className="flex flex-col w-full mx-auto lg:container">
+                <p className="text-center text-2xl font-bold mt-4">
                   Kết quả tìm: {search}
                 </p>
-                <p className="text-2xl mt-4">
+                <p className="text-2xl mt-4 font-light">
                   Có {filteredProducts.length} sản phẩm
                 </p>
               </div>
-              <ul className="mt-8 mb-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 md:gap-8 gap-x-3 gap-y-4 p-2 w-full lg:w-[80%] mx-auto">
+              <ul className="mt-8 mb-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-5 gap-x-3 gap-y-4 p-2 w-full lg:container mx-auto">
                 {filteredProducts.map((item) => (
                   <li key={item.id}>
                     <ProDuctItem
@@ -122,7 +124,7 @@ function App() {
           )}
         </div>
       </main>
-      <div className="bg-sky-200 text-white flex justify-center">
+      <div className="bg-[#000] text-white">
         <Footer />
       </div>
     </div>

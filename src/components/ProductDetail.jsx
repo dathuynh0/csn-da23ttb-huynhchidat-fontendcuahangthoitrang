@@ -1,14 +1,12 @@
-import { useContext, useEffect, useState } from "react";
+import { useState } from "react";
 import { Button } from "./ui/button";
 import { ChevronDown, ChevronLeft, ChevronRight } from "lucide-react";
 import { Link, useOutletContext, useParams } from "react-router-dom";
 import ProDuctItem from "./ProductItems";
-import { Context } from "../Context";
 import { nam, bestseller, nu, phukien } from "../lib/data";
 
 const ProductDetail = () => {
   const { handleAddToCart } = useOutletContext();
-  const { search } = useContext(Context);
 
   const allProducts = nam.concat(bestseller, nu, phukien);
 
@@ -24,12 +22,6 @@ const ProductDetail = () => {
 
   const [isChecked, setIsChecked] = useState(false);
   const [isCheckedWarranty, setIsCheckedWarranty] = useState(false);
-
-  const [filteredData, setFilteredData] = useState([]);
-
-  useEffect(() => {
-    setFilteredData(allProducts);
-  }, []);
 
   const [currentImage, setCurrentImage] = useState(0);
   const [indexCurrentSize, setIndexCurrentSize] = useState(0);
@@ -75,38 +67,9 @@ const ProductDetail = () => {
     }
   };
 
-  const lowerCaseSearch = search.toLowerCase();
-
-  const filteredProducts = filteredData.filter((item) => {
-    const lowerCaseProductName = item.name.toLowerCase();
-    return lowerCaseProductName.includes(lowerCaseSearch);
-  });
-
-  if (search) {
-    return (
-      <>
-        <div className="flex flex-col w-full lg:w-[80%] mx-auto">
-          <p className="text-center text-2xl mt-4">Kết quả tìm: {search}</p>
-          <p className="text-2xl mt-4">Có {filteredProducts.length} sản phẩm</p>
-        </div>
-        <ul className="mt-8 mb-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 md:gap-8 gap-x-3 gap-y-4 p-2 w-full lg:w-[80%] mx-auto">
-          {filteredProducts.map((item) => (
-            <li key={item.id}>
-              <ProDuctItem
-                {...item}
-                product={item}
-                onAddToCart={() => handleAddToCart(item)}
-              />
-            </li>
-          ))}
-        </ul>
-      </>
-    );
-  }
-
   return (
     <>
-      <section className="w-full lg:w-[80%] mx-auto mb-8">
+      <section className="w-full container mx-auto mb-8">
         <div className="text-xs md:text-base mt-6 m-2 text-gray-600">
           <Link className="hover:underline" to="/">
             Trang chủ
@@ -189,9 +152,21 @@ const ProductDetail = () => {
               {findProduct.name}
             </h3>
             <div className="flex items-center gap-4 mb-6">
-              <span className="text-2xl font-bold text-red-600">
-                {findProduct.price} VND
-              </span>
+              {findProduct.priceSale ? (
+                <div>
+                  <p className="text-lg lg:text-2xl font-light line-through ">
+                    {findProduct.price} VND
+                  </p>
+                  <p className="text-lg lg:text-2xl text-red-600 font-bold">
+                    {" "}
+                    {findProduct.priceSale} VND
+                  </p>
+                </div>
+              ) : (
+                <span className="text-lg lg:text-2xl font-bold text-red-600">
+                  {findProduct.price} VND
+                </span>
+              )}
               <span className="text-sm border border-gray-300 text-gray-600 px-3 py-1 rounded-full">
                 Miễn Phí Ship
               </span>
@@ -346,7 +321,7 @@ const ProductDetail = () => {
           <h2 className="m-2 text-3xl font-light mt-6 mb-6">
             Sản phẩm liên quan
           </h2>
-          <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 lg:gap-8 m-2">
+          <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 lg:gap-5 m-2">
             {getProducts().map((item) => {
               return (
                 <li key={item.id}>

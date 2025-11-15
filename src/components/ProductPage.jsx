@@ -48,19 +48,23 @@ const ProductsPage = ({ data, name, title, link, title2, link2 }) => {
 
     // filter theo giá
     if (priceFilter === "d100") {
-      result = result.filter((item) => clearPrice(item.price) <= 100000);
+      result = result.filter(
+        (item) => clearPrice(item.priceSale || item.price) <= 100000
+      );
     } else if (priceFilter === "t100-d500") {
       result = result.filter((item) => {
-        const price = clearPrice(item.price);
+        const price = clearPrice(item.priceSale || item.price);
         return price > 100000 && price <= 500000;
       });
     } else if (priceFilter === "t500-d1tr") {
       result = result.filter((item) => {
-        const price = clearPrice(item.price);
+        const price = clearPrice(item.priceSale || item.price);
         return price > 500000 && price <= 1000000;
       });
     } else if (priceFilter === "t1tr") {
-      result = result.filter((item) => clearPrice(item.price) > 1000000);
+      result = result.filter(
+        (item) => clearPrice(item.priceSale || item.price) > 1000000
+      );
     }
 
     //set lai state
@@ -91,7 +95,7 @@ const ProductsPage = ({ data, name, title, link, title2, link2 }) => {
   const show = getCurrentProducts();
 
   return (
-    <section className="pt-8 px-2 pb-8 w-full lg:w-[80%] mx-auto">
+    <section className="pt-8 px-2 pb-8 w-full lg:container mx-auto">
       <div className="flex items-center text-xs lg:text-base">
         <Link to="/" className="hover:underline">
           Trang chủ
@@ -139,7 +143,7 @@ const ProductsPage = ({ data, name, title, link, title2, link2 }) => {
 
       <hr />
 
-      <ul className="mt-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 lg:gap-6">
+      <ul className="mt-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 lg:gap-5">
         {show.map((item) => (
           <li key={item.id}>
             <ProDuctItem
@@ -150,7 +154,7 @@ const ProductsPage = ({ data, name, title, link, title2, link2 }) => {
           </li>
         ))}
       </ul>
-      <div className="flex items-center justify-center mt-6 w-full">
+      <div className="flex items-center justify-center my-12 w-full">
         <Pagination
           currentPage={currentPage}
           totalPages={totalPages}

@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 
 const ProductCategories = () => {
   return (
-    <div className="w-full lg:w-[80%] mx-auto mt-6 flex flex-col md:flex-row items-stretch justify-center gap-6 md:gap-8 mb-10 p-4">
+    <div className="w-full lg:container mx-auto mt-6 flex flex-col md:flex-row items-stretch justify-center gap-6 md:gap-8 mb-10 p-4">
       <Card
         title="Nam"
         description="Thời Trang Nam – Lịch Lãm & Cá Tính"

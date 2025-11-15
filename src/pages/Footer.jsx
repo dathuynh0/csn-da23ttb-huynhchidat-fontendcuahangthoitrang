@@ -12,28 +12,30 @@ import { Link } from "react-router";
 
 const Footer = () => {
   return (
-    <footer className="w-[80%] text-gray-800 p-8 md:p-12">
-      <div className="">
+    <footer className="w-full lg:container mx-auto p-10 lg:p-20">
+      <div>
         <div className="flex flex-col md:flex-row md:justify-between items-start gap-10">
-          <div className="flex flex-col gap-y-4 w-full md:w-1/3 lg:w-2/5">
+          <div className="flex flex-col gap-y-4 w-full">
             <Link to="/" className="flex items-center gap-x-3 mb-2">
-              <p className="text-3xl font-extrabold bg-gradient-to-b from-white/20 to-black inline-block text-transparent bg-clip-text">
-                M O D A
-              </p>
+              <p className="text-3xl font-extrabold">M O D A</p>
             </Link>
             <div className="flex items-center gap-x-3">
               <MapPin className="size-5 mt-1 flex-shrink-0" />
-              <p className="text-sm">
+              <p className="font-medium text-white/80 text-md">
                 Ấp Trà Ốp, Xã Tân An, Huyện Càng Long, Tỉnh Trà Vinh
               </p>
             </div>
             <div className="flex items-center gap-x-3">
               <Phone className="size-5 flex-shrink-0" />
-              <p className="text-sm">Hotline: 0123456789</p>
+              <p className="font-medium text-white/80 text-md">
+                Hotline: 0123456789
+              </p>
             </div>
             <div className="flex items-center gap-x-3">
               <Mail className="size-5 flex-shrink-0" />
-              <p className="text-sm">contact@datfashion.com</p>
+              <p className="font-medium text-white/80 text-md">
+                contact@modashop.com
+              </p>
             </div>
 
             <div className="mt-4 flex items-center gap-x-3">
@@ -67,56 +69,97 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="flex flex-col gap-y-2">
-            <h3 className="text-lg font-semibold mb-2">Về MODA</h3>
+          <div className="flex flex-col gap-y-4 w-full">
+            <h3 className="text-lg lg:text-2xl font-semibold mb-2">Về MODA</h3>
             <Link
-              className="hover:text-blue-600 hover:underline"
+              className="font-medium text-white/80 text-md hover:underline"
               to="/gioithieu"
             >
               Giới thiệu
             </Link>
-            <Link className="hover:text-blue-600 hover:underline" to="/">
+            <Link
+              className="font-medium text-white/80 text-md hover:underline"
+              to="/"
+            >
               Trang chủ
             </Link>
-            <Link className="hover:text-blue-600 hover:underline" to="/do-nam">
+            <Link
+              className="font-medium text-white/80 text-md hover:underline"
+              to="/do-nam"
+            >
               Đồ nam
             </Link>
-            <Link className="hover:text-blue-600 hover:underline" to="/do-nu">
+            <Link
+              className="font-medium text-white/80 text-md hover:underline"
+              to="/do-nu"
+            >
               Đồ nữ
             </Link>
             <Link
-              className="hover:text-blue-600 hover:underline"
+              className="font-medium text-white/80 text-md hover:underline"
               to="/phu-kien"
             >
               Phụ kiện
             </Link>
           </div>
 
-          <div className="flex flex-col gap-y-2">
-            <h3 className="text-lg font-semibold mb-2">Chính sách</h3>
+          <div className="flex flex-col gap-y-4 w-full">
+            <h3 className="text-lg lg:text-2xl font-semibold mb-2 text-white">
+              Hỗ trợ khách hàng
+            </h3>
             <Link
-              className="hover:text-blue-600 hover:underline"
+              to="/"
+              className="font-medium text-white/80 text-md hover:underline"
+            >
+              Sản phẩm khuyến mại
+            </Link>
+            <Link
+              to="/"
+              className="font-medium text-white/80 text-md hover:underline"
+            >
+              Sản phẩm nổi bậc
+            </Link>
+          </div>
+
+          <div className="flex flex-col gap-y-4 w-full">
+            <h3 className="text-lg lg:text-2xl font-semibold mb-2">
+              Chính sách
+            </h3>
+            <Link
+              className="font-medium text-white/80 text-md hover:underline"
               to="/chinh-sach-bao-hanh"
             >
               Bảo hành & Đổi trả
             </Link>
             <Link
-              className="hover:text-blue-600 hover:underline"
+              className="font-medium text-white/80 text-md hover:underline"
               to="/chinh-sach-bao-mat"
             >
               Bảo mật thông tin
             </Link>
             <Link
-              className="hover:text-blue-600 hover:underline"
+              className="font-medium text-white/80 text-md hover:underline"
               to="/dieu-khoan-dich-vu"
             >
               Điều khoản dịch vụ
             </Link>
+            <Link
+              className="font-medium text-white/80 text-md hover:underline"
+              to="/chinh-sach-thanh-toan"
+            >
+              Chính sách thanh toán
+            </Link>
+            <Link
+              className="font-medium text-white/80 text-md hover:underline"
+              to="/lien-he"
+            >
+              Liên hệ
+            </Link>
           </div>
         </div>
 
-        <div className="border-t border-gray-300 mt-10 pt-6 text-center text-sm text-gray-500">
-          <p>&copy; 2025 MODA. All Rights Reserved.</p>
+        <div className="border-t border-gray-300 mt-10 pt-6 text-center text-sm">
+          <p>&copy; 2025 MODA</p>
         </div>
       </div>
     </footer>

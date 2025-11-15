@@ -91,7 +91,7 @@ const NavBar = ({
 
   return (
     <>
-      <nav className="flex flex-col p-6 flex-wrap w-full lg:w-[80%] mx-auto">
+      <nav className="flex flex-col p-6 flex-wrap w-full lg:container mx-auto">
         {/* search */}
         <div className="w-full lg:w-[80%] mx-auto md:order-none">
           <SearchBar />

@@ -13,9 +13,9 @@ const ProductList = ({ data, title, link }) => {
 
   return (
     <>
-      <section className="w-full lg:w-[80%] mx-auto">
+      <section className="w-full lg:container mx-auto">
         <h2 className="text-3xl md:text-4xl m-2 mb-8">{title}</h2>
-        <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 lg:gap-6 m-2">
+        <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 lg:gap-5 m-2">
           {filteredProduct().map((item) => {
             return (
               <li key={item.id}>
