@@ -6,7 +6,7 @@ import {
   TextAlignJustify,
 } from "lucide-react";
 
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import ResponsiveMenu from "./ResponsiveMenu.jsx";
 import { Link, NavLink } from "react-router-dom";
 import "../mystyle.css";
@@ -15,6 +15,7 @@ import { toast } from "sonner";
 import SearchBar from "./SearchBar.jsx";
 import Cart from "./Cart.jsx";
 import { Context } from "../../Context.jsx";
+import axios from "axios";
 
 const NavBar = ({
   data,
@@ -24,7 +25,8 @@ const NavBar = ({
   setCartItems,
   formattedTotal,
 }) => {
-  const { isSuccess, setIsSuccess, accounts } = useContext(Context);
+  const { isSuccess, setIsSuccess, accounts, setAccounts } =
+    useContext(Context);
 
   const [checkMobile, setCheckMobile] = useState(false);
   const [checkLogin, setCheckLogin] = useState(false);
@@ -32,8 +34,25 @@ const NavBar = ({
 
   const [infoUser, setInfoUser] = useState(null);
 
-  const [email, setEmail] = useState("");
+  const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
+
+  //set data vào account
+  useEffect(() => {
+    const getAccounts = async () => {
+      try {
+        const res = await axios.get("http://localhost:8080/api/users");
+        setAccounts(res.data);
+      } catch (error) {
+        console.error("Loi khi goi data ", error);
+      }
+    };
+
+    //goi ham
+    getAccounts();
+  }, [accounts, setAccounts]);
+
+  console.log(accounts);
 
   const openMenu = () => {
     setCheckMobile(!checkMobile);
@@ -54,13 +73,13 @@ const NavBar = ({
   };
 
   const handleLogin = () => {
-    if (!email && !password) {
+    if (!userName && !password) {
       alert("Vui lòng nhập tài khoản và mật khẩu");
       toast.error("Đăng nhâp thất bại!");
       return;
     }
 
-    const checkUser = accounts.find((acc) => acc.email === email);
+    const checkUser = accounts.find((acc) => acc.userName === userName);
 
     //check email
     if (!checkUser) {
@@ -79,7 +98,7 @@ const NavBar = ({
     setIsSuccess(true);
     setCheckLogin(false);
     setInfoUser(checkUser);
-    setEmail("");
+    setUserName("");
     setPassword("");
   };
 
@@ -261,9 +280,9 @@ const NavBar = ({
         check={checkLogin}
         buttonX={handleCheckLogin}
         checkLogin={handleLogin}
-        username={email}
+        userName={userName}
         password={password}
-        setUsername={setEmail}
+        setUsername={setUserName}
         setPassword={setPassword}
         handleKeyDown={handleKeyDown}
       />

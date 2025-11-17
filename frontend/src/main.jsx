@@ -20,6 +20,14 @@ import AoNu from "./components/ProductNu/AoNu";
 import QuanNu from "./components/ProductNu/QuanNu";
 import Vay from "./components/ProductNu/Vay";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+const created = () => {
+  AOS.init();
+};
+
+created();
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <ContextProvider>

@@ -48,13 +48,14 @@ const ProductsPage = ({ data, name, title, link, title2, link2 }) => {
 
     // filter theo giá
     if (priceFilter === "d100") {
-      result = result.filter(
-        (item) => clearPrice(item.priceSale || item.price) <= 100000
-      );
+      result = result.filter((item) => {
+        const price = clearPrice(item.priceSale || item.price);
+        return price < 100000;
+      });
     } else if (priceFilter === "t100-d500") {
       result = result.filter((item) => {
         const price = clearPrice(item.priceSale || item.price);
-        return price > 100000 && price <= 500000;
+        return price >= 100000 && price <= 500000;
       });
     } else if (priceFilter === "t500-d1tr") {
       result = result.filter((item) => {

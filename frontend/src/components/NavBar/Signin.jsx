@@ -2,12 +2,13 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
 import { X } from "lucide-react";
+import { Link } from "react-router";
 
 const Signin = ({
   check,
   buttonX,
   checkLogin,
-  username,
+  userName,
   password,
   setUsername,
   setPassword,
@@ -42,7 +43,7 @@ const Signin = ({
                 className="mt-4 w-full p-5 text-xl"
                 type="email"
                 placeholder="Email"
-                value={username}
+                value={userName}
                 onChange={(e) => setUsername(e.target.value)}
                 onKeyDown={handleKeyDown}
               />
@@ -66,9 +67,9 @@ const Signin = ({
 
               <p className="text-right mt-4 text-base">
                 Bạn chưa có tài khoản?
-                <a className="text-blue-600 hover:underline" href="/signup">
+                <Link className="text-blue-600 hover:underline" to="/signup">
                   Đăng kí ngay
-                </a>
+                </Link>
               </p>
             </div>
           </motion.div>

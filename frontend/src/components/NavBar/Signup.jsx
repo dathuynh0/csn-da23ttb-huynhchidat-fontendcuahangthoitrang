@@ -1,15 +1,14 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { toast } from "sonner";
-import { Context } from "../../Context";
 import { useNavigate } from "react-router";
+import axios from "axios";
 
 const Signup = () => {
-  const { setAccounts } = useContext(Context);
   const [formData, setFormData] = useState({
     name: "",
-    email: "",
+    userName: "",
     password: "",
     confirmPassword: "",
   });
@@ -25,12 +24,24 @@ const Signup = () => {
     }));
   };
 
+  const addUser = async (name, userName, password) => {
+    try {
+      await axios.post("http://localhost:8080/api/users", {
+        name: name,
+        userName: userName,
+        password: password,
+      });
+    } catch (error) {
+      console.error("Loi he thong", error);
+    }
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const { name, email, password, confirmPassword } = formData;
+    const { name, userName, password, confirmPassword } = formData;
 
-    if (!name || !email || !password || !confirmPassword) {
+    if (!name || !userName || !password || !confirmPassword) {
       alert("Vui lòng điền đầy đủ thông tin.");
       toast.error("Vui lòng điền đầy đủ thông tin.");
       return;
@@ -42,22 +53,9 @@ const Signup = () => {
       return;
     }
 
-    const newUser = {
-      name: name,
-      email: email,
-      password: password,
-    };
-
-    setAccounts((prevAccount) => [...prevAccount, newUser]);
+    addUser(name, userName, password);
     toast.success("Đăng ký thành công");
     navigate("/");
-
-    setFormData({
-      name: "",
-      email: "",
-      password: "",
-      confirmPassword: "",
-    });
   };
 
   return (
@@ -79,10 +77,10 @@ const Signup = () => {
             />
             <Input
               className="mt-4 w-full text-lg p-5"
-              placeholder="Email"
-              type="email"
-              name="email"
-              value={formData.email}
+              placeholder="Tên tài khoản"
+              type="text"
+              name="userName"
+              value={formData.userName}
               onChange={handleChange}
             />
             <Input

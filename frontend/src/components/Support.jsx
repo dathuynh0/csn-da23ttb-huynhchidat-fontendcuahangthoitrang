@@ -7,7 +7,11 @@ import {
 
 const Support = () => {
   return (
-    <section className="grid grid-cols-2 lg:grid-cols-4 gap-8 w-full mx-auto py-18 p-1">
+    <section
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      className="grid grid-cols-2 lg:grid-cols-4 gap-8 w-full mx-auto my-30 p-1"
+    >
       <div className="flex flex-col items-center mt-4 lg:mt-0">
         <span className="inline-block p-2 bg-gray-300 rounded-full">
           <MessageSquare className="size-6" />
