@@ -7,6 +7,7 @@ import DoNam from "./pages/DoNam";
 import DoNu from "./pages/DoNu";
 import HomePage from "./pages/HomePage";
 import NotFound from "./pages/NotFound";
+import Signin from "./components/NavBar/Signin";
 import Signup from "./components/NavBar/Signup";
 import Admin from "./pages/Admin";
 import Sale from "./pages/Sale";
@@ -35,6 +36,7 @@ createRoot(document.getElementById("root")).render(
         <Routes>
           <Route path="/" element={<App />}>
             <Route index element={<HomePage />} />
+            <Route path="/signin" element={<Signin />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/sale" element={<Sale />} />
             <Route path="/san-pham-ban-chay" element={<BanChay />} />

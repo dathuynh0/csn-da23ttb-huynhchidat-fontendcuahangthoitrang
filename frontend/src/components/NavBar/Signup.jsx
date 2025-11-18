@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { toast } from "sonner";
-import { useNavigate } from "react-router";
+import { Link } from "react-router";
 import axios from "axios";
 
 const Signup = () => {
@@ -12,8 +12,6 @@ const Signup = () => {
     password: "",
     confirmPassword: "",
   });
-
-  const navigate = useNavigate();
 
   //cập nhật state
   const handleChange = (e) => {
@@ -55,7 +53,6 @@ const Signup = () => {
 
     addUser(name, userName, password);
     toast.success("Đăng ký thành công");
-    navigate("/");
   };
 
   return (
@@ -63,9 +60,11 @@ const Signup = () => {
       <div className="h-screen flex items-center justify-center">
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col items-center justify-center bg-amber-50 p-12 rounded-2xl shadow-lg"
+          className="flex flex-col items-center justify-center bg-white p-12 rounded-2xl shadow-lg"
         >
-          <h1 className="text-4xl font-bold mb-6">Đăng ký tài khoản</h1>
+          <h1 className="text-2xl lg:text-4xl text-center font-medium uppercase mb-6">
+            Đăng ký tài khoản
+          </h1>
           <div className="max-w-lg">
             <Input
               className="mt-4 w-full text-lg p-5"
@@ -99,18 +98,23 @@ const Signup = () => {
               value={formData.confirmPassword}
               onChange={handleChange}
             />
-            <div className="flex flex-col sm:flex-row justify-center items-center mt-6">
+            <div className="flex flex-col md:flex-row items-center justify-center mt-4">
               <Button
                 type="submit"
-                className="bg-black text-white text-base hover:opacity-80 p-6 px-12 rounded-xl mr-0 sm:mr-6 w-full sm:w-auto cursor-pointer"
+                variant="ghost"
+                size="lg"
+                className="bg-black text-white hover:opacity-80 p-6 px-12 rounded-xl mr-0 sm:mr-6 w-full sm:w-auto cursor-pointer"
               >
                 Đăng kí
               </Button>
               <p className="text-base mt-4 sm:mt-0">
                 Bạn đã có tài khoản?
-                <span className="text-blue-500 hover:underline cursor-pointer">
+                <Link
+                  to="/signin"
+                  className="text-blue-500 hover:underline cursor-pointer"
+                >
                   Đăng nhập ngay
-                </span>
+                </Link>
               </p>
             </div>
           </div>

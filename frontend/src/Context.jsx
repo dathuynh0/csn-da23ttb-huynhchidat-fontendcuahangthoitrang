@@ -6,6 +6,8 @@ export const ContextProvider = ({ children }) => {
   const [accounts, setAccounts] = useState([]);
   const [isSuccess, setIsSuccess] = useState(false);
 
+  const [infoUser, setInfoUser] = useState(null);
+
   //phần search
   const [search, setSearch] = useState("");
 
@@ -21,6 +23,8 @@ export const ContextProvider = ({ children }) => {
     search,
     setSearch,
     handleSearchChange,
+    infoUser,
+    setInfoUser,
   };
 
   return <Context.Provider value={value}>{children}</Context.Provider>;

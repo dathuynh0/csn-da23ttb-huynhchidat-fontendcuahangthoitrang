@@ -6,16 +6,14 @@ import {
   TextAlignJustify,
 } from "lucide-react";
 
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import ResponsiveMenu from "./ResponsiveMenu.jsx";
 import { Link, NavLink } from "react-router-dom";
 import "../mystyle.css";
-import Signin from "./Signin.jsx";
 import { toast } from "sonner";
 import SearchBar from "./SearchBar.jsx";
 import Cart from "./Cart.jsx";
 import { Context } from "../../Context.jsx";
-import axios from "axios";
 
 const NavBar = ({
   data,
@@ -25,41 +23,13 @@ const NavBar = ({
   setCartItems,
   formattedTotal,
 }) => {
-  const { isSuccess, setIsSuccess, accounts, setAccounts } =
-    useContext(Context);
+  const { isSuccess, setIsSuccess, infoUser } = useContext(Context);
 
   const [checkMobile, setCheckMobile] = useState(false);
-  const [checkLogin, setCheckLogin] = useState(false);
   const [checkCart, setCheckCart] = useState(false);
-
-  const [infoUser, setInfoUser] = useState(null);
-
-  const [userName, setUserName] = useState("");
-  const [password, setPassword] = useState("");
-
-  //set data vào account
-  useEffect(() => {
-    const getAccounts = async () => {
-      try {
-        const res = await axios.get("http://localhost:8080/api/users");
-        setAccounts(res.data);
-      } catch (error) {
-        console.error("Loi khi goi data ", error);
-      }
-    };
-
-    //goi ham
-    getAccounts();
-  }, [accounts, setAccounts]);
-
-  console.log(accounts);
 
   const openMenu = () => {
     setCheckMobile(!checkMobile);
-  };
-
-  const handleCheckLogin = () => {
-    setCheckLogin(!checkLogin);
   };
 
   const handleLogout = () => {
@@ -70,42 +40,6 @@ const NavBar = ({
 
   const handleCheckCart = () => {
     setCheckCart(!checkCart);
-  };
-
-  const handleLogin = () => {
-    if (!userName && !password) {
-      alert("Vui lòng nhập tài khoản và mật khẩu");
-      toast.error("Đăng nhâp thất bại!");
-      return;
-    }
-
-    const checkUser = accounts.find((acc) => acc.userName === userName);
-
-    //check email
-    if (!checkUser) {
-      toast.error("Tài khoản không đúng");
-      return;
-    }
-
-    //check password
-    if (checkUser.password !== password) {
-      toast.error("Mật khẩu không đúng");
-      return;
-    }
-
-    //thành công
-    toast.success(`Đăng nhập thành công.`);
-    setIsSuccess(true);
-    setCheckLogin(false);
-    setInfoUser(checkUser);
-    setUserName("");
-    setPassword("");
-  };
-
-  const handleKeyDown = (event) => {
-    if (event.key === "Enter") {
-      handleLogin();
-    }
   };
 
   return (
@@ -244,10 +178,9 @@ const NavBar = ({
                 />
               </div>
             ) : (
-              <CircleUserRound
-                onClick={handleCheckLogin}
-                className="size-7 lg:size-8 cursor-pointer"
-              />
+              <Link to="/signin">
+                <CircleUserRound className="size-7 lg:size-8 cursor-pointer" />
+              </Link>
             )}
 
             <div className="relative">
@@ -274,18 +207,6 @@ const NavBar = ({
           </div>
         </div>
       </nav>
-
-      {/* login */}
-      <Signin
-        check={checkLogin}
-        buttonX={handleCheckLogin}
-        checkLogin={handleLogin}
-        userName={userName}
-        password={password}
-        setUsername={setUserName}
-        setPassword={setPassword}
-        handleKeyDown={handleKeyDown}
-      />
 
       {/* cart */}
       <Cart

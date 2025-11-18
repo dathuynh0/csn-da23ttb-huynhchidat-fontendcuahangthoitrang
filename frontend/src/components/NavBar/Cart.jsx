@@ -57,13 +57,14 @@ const Cart = ({
             </div>
 
             <div className="p-2">
-              <p className="text-sm md:text-lg">Tổng tiền: </p>
+              <p className="text-sm md:text-lg">Tạm tính: </p>
               <span className="text-sm md:text-lg font-semibold text-red-600">
                 {formattedTotal}
               </span>
               <Button
                 variant="outline"
-                className="w-full mt-2 p-2 bg-orange-400 text-black font-bold hover:opacity-85 cursor-pointer"
+                size="lg"
+                className="w-full mt-2 text-lg bg-black text-white font-bold hover:opacity-85 cursor-pointer"
               >
                 Thanh toán ngay
               </Button>
