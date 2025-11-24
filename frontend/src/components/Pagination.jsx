@@ -6,7 +6,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
   const generatePage = () => {
     const page = [];
 
-    if (totalPages < 4) {
+    if (totalPages <= 4) {
       for (let i = 1; i <= totalPages; i++) {
         page.push(i);
       }

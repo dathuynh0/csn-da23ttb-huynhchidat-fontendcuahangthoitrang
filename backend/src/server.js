@@ -12,13 +12,12 @@ const port = 8080;
 
 //middleware chuyen req body ve json
 app.use(express.json());
-
 app.use(cors());
-
-connectionDB();
 
 app.use("/api/users", routerUser);
 
-app.listen(port, () => {
-  console.log(`Server dang chay tren cong ${port}`);
+connectionDB().then(() => {
+  app.listen(port, () => {
+    console.log(`Server dang chay tren cong ${port}`);
+  });
 });

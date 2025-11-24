@@ -6,7 +6,3 @@
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
-
-body {
-  font-family: "Open sans", sans-serif;
-}

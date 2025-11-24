@@ -1,19 +1,20 @@
-import Banner from "../components/Banner/Banner";
+import SlideShow from "../components/SlideShow/SlideShow";
 import ProductCategories from "../components/ProductCategories";
-import { bestseller, nam, nu, phukien } from "../lib/data";
+import { bestseller, nam, nu, phukien, sale } from "../lib/data";
 import ProductList from "../components/ProductList";
 import Support from "../components/Support";
 
 const HomePage = () => {
   return (
     <>
-      <Banner />
+      <SlideShow />
       <ProductCategories />
       <ProductList
         data={bestseller}
         title="Sản phẩm bán chạy"
         link="/san-pham-ban-chay"
       />
+      <ProductList data={sale} title={"Sản phẩm khuyến mại"} link="/sale" />
       <ProductList data={nam} title="Sản phẩm nam" link="/do-nam" />
       <ProductList data={nu} title="Sản phẩm nữ" link="/do-nu" />
       <ProductList data={phukien} title="Phụ kiện" link="/phu-kien" />

@@ -17,8 +17,13 @@ const ProDuctItem = ({
   const handleLinkClick = () => {
     setTimeout(() => {
       setSearch("");
-    }, 10);
+    }, 1);
   };
+
+  const priceSaleString = Number(priceSale?.replace(/\./g, ""));
+  const priceString = Number(price?.replace(/\./g, ""));
+  const percent = (priceSaleString / priceString) * 100;
+  const finalPercent = Math.ceil(100 - percent);
 
   return (
     <div
@@ -47,6 +52,14 @@ const ProDuctItem = ({
           <span className="hidden lg:inline">Thêm vào giỏ hàng</span>
           <ShoppingCart className="size-5" />
         </Button>
+
+        {priceSale && (
+          <div className="absolute top-1 left-1 h-10 w-10 bg-red-500 rounded-full flex items-center justify-center">
+            <span className="text-xs lg:text-base text-white">
+              -{finalPercent}%
+            </span>
+          </div>
+        )}
       </div>
 
       <h3 className="m-2 md:m-3 text-sm md:text-lg font-light leading-snug line-clamp-2 min-h-[2.5rem] md:min-h-[3rem]">
@@ -56,7 +69,7 @@ const ProDuctItem = ({
       <div className="flex items-center justify-between w-full p-1 lg:p-2">
         {priceSale ? (
           <div className="w-[80%] flex items-center">
-            <span className="text-xs md:text-lg text-red-600 font-medium overflow-hidden  whitespace-nowrap max-w-[50%] inline-block mr-1.5">
+            <span className="text-xs md:text-lg font-medium overflow-hidden  whitespace-nowrap max-w-[50%] inline-block mr-1.5">
               {priceSale} VND
             </span>
 
@@ -65,7 +78,7 @@ const ProDuctItem = ({
             </span>
           </div>
         ) : (
-          <span className="text-xs md:text-lg text-red-600 font-medium line-clamp-1 whitespace-nowrap inline-block mr-2">
+          <span className="text-xs md:text-lg font-medium line-clamp-1 whitespace-nowrap inline-block mr-2">
             {price} VND
           </span>
         )}

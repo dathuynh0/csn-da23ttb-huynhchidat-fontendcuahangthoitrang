@@ -74,7 +74,7 @@ const Signin = () => {
         <div className="w-full lg:w-xl bg-white rounded-xl p-12">
           <div>
             <h1 className="mt-4 text-2xl lg:text-4xl text-center uppercase">
-              Đăng nhập tài khoản
+              Đăng nhập
             </h1>
 
             <Input

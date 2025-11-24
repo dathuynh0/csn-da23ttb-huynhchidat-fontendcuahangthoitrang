@@ -108,13 +108,13 @@ const Footer = () => {
               Hỗ trợ khách hàng
             </h3>
             <Link
-              to="/"
+              to="/sale"
               className="font-medium text-white/80 text-md hover:underline"
             >
               Sản phẩm khuyến mại
             </Link>
             <Link
-              to="/"
+              to="/san-pham-ban-chay"
               className="font-medium text-white/80 text-md hover:underline"
             >
               Sản phẩm nổi bậc

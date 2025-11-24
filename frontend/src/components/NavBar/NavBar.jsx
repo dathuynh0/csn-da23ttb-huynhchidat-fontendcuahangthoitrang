@@ -44,134 +44,142 @@ const NavBar = ({
 
   return (
     <>
-      <nav className="flex flex-col p-6 flex-wrap w-full lg:container mx-auto">
-        {/* search */}
-        <div className="w-full lg:w-[80%] mx-auto md:order-none">
-          <SearchBar />
-        </div>
-        <div className="mt-4 flex items-center justify-between">
-          {/* logo */}
-          <Link to="/">
-            <p className="text-3xl font-extrabold bg-gradient-to-b from-white/20 to-black inline-block text-transparent bg-clip-text">
-              M O D A
-            </p>
-          </Link>
+      <nav className="flex flex-col py-6 flex-wrap w-full lg:container mx-auto">
+        <div className="mt-4 flex items-center justify-between flex-wrap">
+          <div className="flex items-center gap-x-8">
+            {/* logo */}
+            <Link to="/">
+              <p className="text-3xl font-extrabold bg-gradient-to-b from-white/20 to-black inline-block text-transparent bg-clip-text">
+                M O D A
+              </p>
+            </Link>
 
-          {/* item */}
-          <div className="hidden lg:block">
-            <ul className="flex items-center justify-center gap-x-8 text-lg text-black uppercase">
-              <li>
-                <NavLink className="hover:opacity-85 hover:underline" to="/">
-                  Trang chủ
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  className="hover:opacity-85 hover:underline"
-                  to="/sale"
-                >
-                  Sale
-                </NavLink>
-              </li>
-
-              <li className="relative group">
-                <div className="flex items-center gap-x-1">
+            {/* item */}
+            <div className="hidden lg:block">
+              <ul className="flex items-center justify-center gap-x-6 text-md text-black uppercase">
+                <li>
+                  <NavLink className="hover:opacity-85 hover:underline" to="/">
+                    Trang chủ
+                  </NavLink>
+                </li>
+                <li>
                   <NavLink
                     className="hover:opacity-85 hover:underline"
-                    to="/do-nam"
+                    to="/sale"
                   >
-                    Đồ nam
+                    Sale
                   </NavLink>
-                  <ChevronDown />
-                </div>
+                </li>
 
-                <div
-                  className="absolute top-full left-0 bg-white rounded-md shadow-md overflow-hidden
+                <li className="relative group">
+                  <div className="flex items-center gap-x-1">
+                    <NavLink
+                      className="hover:opacity-85 hover:underline"
+                      to="/do-nam"
+                    >
+                      Đồ nam
+                    </NavLink>
+                    <ChevronDown />
+                  </div>
+
+                  <div
+                    className="absolute top-full left-0 bg-white rounded-md shadow-md overflow-hidden
                   opacity-0 invisible pointer-events-none
                   group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto
                   transition-all duration-300 z-50"
-                >
-                  <ul className="py-4 min-w-[200px] px-4">
-                    <li className="hover:underline">
-                      <NavLink
-                        className="hover:opacity-85 hover:underline"
-                        to="/do-nam/ao-nam"
-                      >
-                        Áo
-                      </NavLink>
-                    </li>
-                    <li className="mt-2 hover:underline">
-                      <NavLink
-                        className="hover:opacity-85 hover:underline"
-                        to="/do-nam/quan-nam"
-                      >
-                        Quần
-                      </NavLink>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li className="relative group">
-                <div className="flex items-center gap-x-1">
-                  <NavLink
-                    className="hover:opacity-85 hover:underline"
-                    to="/do-nu"
                   >
-                    Đồ nữ
-                  </NavLink>
-                  <ChevronDown />
-                </div>
+                    <ul className="py-4 min-w-[200px] px-4">
+                      <li className="hover:underline">
+                        <NavLink
+                          className="hover:opacity-85 hover:underline"
+                          to="/do-nam/ao-nam"
+                        >
+                          Áo
+                        </NavLink>
+                      </li>
+                      <li className="mt-2 hover:underline">
+                        <NavLink
+                          className="hover:opacity-85 hover:underline"
+                          to="/do-nam/quan-nam"
+                        >
+                          Quần
+                        </NavLink>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li className="relative group">
+                  <div className="flex items-center gap-x-1">
+                    <NavLink
+                      className="hover:opacity-85 hover:underline"
+                      to="/do-nu"
+                    >
+                      Đồ nữ
+                    </NavLink>
+                    <ChevronDown />
+                  </div>
 
-                <div
-                  className="absolute top-full left-0 bg-white rounded-md shadow-md overflow-hidden 
+                  <div
+                    className="absolute top-full left-0 bg-white rounded-md shadow-md overflow-hidden 
                 opacity-0 invisible pointer-events-none 
                 group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto
                 transition-all duration-300 z-50"
-                >
-                  <ul className="py-4 min-w-[200px] px-4">
-                    <li className="hover:underline">
-                      <NavLink
-                        className="hover:opacity-85 hover:underline"
-                        to="/do-nu/ao-nu"
-                      >
-                        Áo
-                      </NavLink>
-                    </li>
-                    <li className="mt-2 hover:underline">
-                      <NavLink
-                        className="hover:opacity-85 hover:underline"
-                        to="/do-nu/quan-nu"
-                      >
-                        Quần
-                      </NavLink>
-                    </li>
-                    <li className="mt-2 hover:underline">
-                      <NavLink
-                        className="hover:opacity-85 hover:underline"
-                        to="/do-nu/vay"
-                      >
-                        Váy
-                      </NavLink>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li>
-                <NavLink
-                  className="hover:opacity-85 hover:underline"
-                  to="/phu-kien"
-                >
-                  Phụ kiện
-                </NavLink>
-              </li>
-            </ul>
+                  >
+                    <ul className="py-4 min-w-[200px] px-4">
+                      <li className="hover:underline">
+                        <NavLink
+                          className="hover:opacity-85 hover:underline"
+                          to="/do-nu/ao-nu"
+                        >
+                          Áo
+                        </NavLink>
+                      </li>
+                      <li className="mt-2 hover:underline">
+                        <NavLink
+                          className="hover:opacity-85 hover:underline"
+                          to="/do-nu/quan-nu"
+                        >
+                          Quần
+                        </NavLink>
+                      </li>
+                      <li className="mt-2 hover:underline">
+                        <NavLink
+                          className="hover:opacity-85 hover:underline"
+                          to="/do-nu/vay"
+                        >
+                          Váy
+                        </NavLink>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <NavLink
+                    className="hover:opacity-85 hover:underline"
+                    to="/phu-kien"
+                  >
+                    Phụ kiện
+                  </NavLink>
+                </li>
+              </ul>
+            </div>
+          </div>
+          {/* search mobile */}
+          <div className="w-full block lg:hidden order-last mx-auto mt-4 ">
+            <SearchBar />
           </div>
 
           {/* icon */}
-          <div className="flex items-center gap-x-3">
+          <div className="flex items-center justify-end gap-x-3">
+            {/* search */}
+            <div className="w-full hidden lg:block mx-auto">
+              <SearchBar />
+            </div>
             {isSuccess ? (
               <div className="flex items-center">
-                <p className="text-black mr-2">{infoUser.name}</p>
+                <p className="text-black mr-2 whitespace-nowrap">
+                  {infoUser.name}
+                </p>
                 <LogOut
                   onClick={handleLogout}
                   className="size-7 lg:size-8 cursor-pointer"

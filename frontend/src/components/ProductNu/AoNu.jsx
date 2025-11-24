@@ -9,6 +9,7 @@ const AoNu = () => {
       link2="/do-nu/ao-nu"
       title="Sản phẩm nữ"
       title2="Áo nữ"
+      name="Áo nữ"
     />
   );
 };

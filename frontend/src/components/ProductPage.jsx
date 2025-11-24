@@ -77,10 +77,18 @@ const ProductsPage = ({ data, name, title, link, title2, link2 }) => {
 
     if (sort % 2 === 0) {
       // sắp xếp tăng dần
-      sortProducts.sort((a, b) => clearPrice(a.price) - clearPrice(b.price));
+      sortProducts.sort(
+        (a, b) =>
+          clearPrice(a.priceSale || a.price) -
+          clearPrice(b.priceSale || b.price)
+      );
     } else {
       // sắp xếp giảm dần
-      sortProducts.sort((a, b) => clearPrice(b.price) - clearPrice(a.price));
+      sortProducts.sort(
+        (a, b) =>
+          clearPrice(b.priceSale || b.price) -
+          clearPrice(a.priceSale || a.price)
+      );
     }
 
     setSort((prevSort) => prevSort + 1);

@@ -399,6 +399,8 @@ export const nam = [
     priceSale: "250.000",
     sizes: ["S", "M", "L", "XL"],
     number: 1,
+    warehouse: 100,
+    status: "Đang bán",
   },
   {
     id: "thuong-hieu-den-tu-viet-nam-co-mat-lau-nam-tren-thi-truong",
@@ -412,6 +414,8 @@ export const nam = [
     priceSale: "190.000",
     sizes: ["S", "M", "L", "XL"],
     number: 1,
+    warehouse: 100,
+    status: "Đang bán",
   },
   {
     id: "ao-thun-cotton-premium-100-co-gian-4-chieu-form-rong-tay-lo-unisex-dinh-luong-vai-250gsm",
@@ -425,6 +429,8 @@ export const nam = [
     priceSale: "350.000",
     sizes: ["S", "M", "L", "XL"],
     number: 1,
+    warehouse: 100,
+    status: "Đang bán",
   },
   {
     id: "ao-so-mi-lua-satin-cao-cap-dang-suong-co-duc-cai-nut-phong-cach-cong-so-thanh-lich-mau-moi-2025",
@@ -438,6 +444,8 @@ export const nam = [
     priceSale: "450.000",
     sizes: ["S", "M", "L", "XL"],
     number: 1,
+    warehouse: 100,
+    status: "Đang bán",
   },
   {
     id: "ao-khoac-hoodie-ni-bong-day-dan-co-mu-hai-lop-form-rong-dang-ulzzang-hoa-tiet-in-noi-ben-dep",
@@ -451,6 +459,8 @@ export const nam = [
     priceSale: "400.000",
     sizes: ["S", "M", "L", "XL"],
     number: 1,
+    warehouse: 100,
+    status: "Đang bán",
   },
   {
     id: "ao-khoac-bomber-kaki-du-hai-lop-chan-bong-khoa-keo-dong-chac-chan-bo-chun-gau-ao-chong-gio",
@@ -463,6 +473,8 @@ export const nam = [
     price: "799.000",
     sizes: ["S", "M", "L", "XL"],
     number: 1,
+    warehouse: 100,
+    status: "Đang bán",
   },
   {
     id: "ao-polo-nam-the-thao-vai-ca-sau-cvc-co-be-phoi-vien-tinh-te-tham-hut-mo-hoi-tot",
@@ -475,6 +487,8 @@ export const nam = [
     price: "340.000",
     sizes: ["S", "M", "L", "XL"],
     number: 1,
+    warehouse: 100,
+    status: "Đang bán",
   },
   {
     id: "ao-len-cardigan-dang-ngan-co-v-hoa-tiet-theu-hoa-noi-chat-len-long-tho-mem-mai-phong-cach-han-quoc",
@@ -487,6 +501,8 @@ export const nam = [
     price: "680.000",
     sizes: ["S", "M", "L", "XL"],
     number: 1,
+    warehouse: 100,
+    status: "Đang bán",
   },
   {
     id: "ao-thoi-trang-mat-me-phu-hop-mac-vao-mua-dong-1",
@@ -499,6 +515,8 @@ export const nam = [
     price: "315.000",
     sizes: ["S", "M", "L", "XL"],
     number: 1,
+    warehouse: 100,
+    status: "Đang bán",
   },
   {
     id: "thuong-hieu-den-tu-viet-nam-co-mat-lau-nam-tren-thi-truong-1",
@@ -511,6 +529,8 @@ export const nam = [
     price: "249.000",
     sizes: ["S", "M", "L", "XL"],
     number: 1,
+    warehouse: 100,
+    status: "Đang bán",
   },
   {
     id: "ao-thun-cotton-premium-100-co-gian-4-chieu-form-rong-tay-lo-unisex-dinh-luong-vai-250gsm-1",
@@ -523,6 +543,8 @@ export const nam = [
     price: "390.000",
     sizes: ["S", "M", "L", "XL"],
     number: 1,
+    warehouse: 100,
+    status: "Đang bán",
   },
   {
     id: "ao-so-mi-lua-satin-cao-cap-dang-suong-co-duc-cai-nut-phong-cach-cong-so-thanh-lich-mau-moi-2025-1",
@@ -535,6 +557,8 @@ export const nam = [
     price: "550.000",
     sizes: ["S", "M", "L", "XL"],
     number: 1,
+    warehouse: 100,
+    status: "Đang bán",
   },
   {
     id: "ao-khoac-hoodie-ni-bong-day-dan-co-mu-hai-lop-form-rong-dang-ulzzang-hoa-tiet-in-noi-ben-dep-1",
@@ -547,6 +571,8 @@ export const nam = [
     price: "420.000",
     sizes: ["S", "M", "L", "XL"],
     number: 1,
+    warehouse: 100,
+    status: "Đang bán",
   },
   {
     id: "ao-khoac-bomber-kaki-du-hai-lop-chan-bong-khoa-keo-dong-chac-chan-bo-chun-gau-ao-chong-gio-1",
@@ -560,6 +586,8 @@ export const nam = [
     price: "799.000",
     sizes: ["S", "M", "L", "XL"],
     number: 1,
+    warehouse: 100,
+    status: "Đang bán",
   },
   {
     id: "ao-polo-nam-the-thao-vai-ca-sau-cvc-co-be-phoi-vien-tinh-te-tham-hut-mo-hoi-tot-1",
@@ -572,6 +600,8 @@ export const nam = [
     price: "340.000",
     sizes: ["S", "M", "L", "XL"],
     number: 1,
+    warehouse: 100,
+    status: "Đang bán",
   },
   {
     id: "ao-len-cardigan-dang-ngan-co-v-hoa-tiet-theu-hoa-noi-chat-len-long-tho-mem-mai-phong-cach-han-quoc-1",
@@ -584,6 +614,8 @@ export const nam = [
     price: "680.000",
     sizes: ["S", "M", "L", "XL"],
     number: 1,
+    warehouse: 100,
+    status: "Đang bán",
   },
 ];
 
@@ -1111,6 +1143,94 @@ export const phukien = [
     name: "Balo laptop chống sốc, trượt nước",
     price: "195.000",
     priceSale: "150.000",
+    sizes: ["S", "M", "L", "XL"],
+    number: 1,
+  },
+];
+
+export const sale = [
+  {
+    id: "thuong-hieu-den-tu-viet-nam-co-mat-lau-nam-tren-thi-truong",
+    images: [
+      "https://yame.vn/cdn/shop/files/ao-polo-the-minimalist-001-xanh-den-1174885416.jpg?v=1760774688&width=165",
+      "https://yame.vn/cdn/shop/files/ao-khoac-jean-the-original-m039-xanh-d-ng-1184461421.jpg?v=1760792443&width=360",
+    ],
+    name: "Thương hiệu đến từ Việt Nam có mặt lâu năm trên thị trường",
+    price: "249.000",
+    priceSale: "220.000",
+    sizes: ["S", "M", "L", "XL"],
+    number: 1,
+  },
+  {
+    id: "chan-vay-tennis-xep-ly-ngan-dang-xoe-co-quan-bao-ho-ben-trong-tien-loi-vai-kaki-mem-min",
+    images: [
+      "https://content.pancake.vn/1/s727x970/0f/7a/46/86/50ab1e990c4e8ff2ef2e4daf49e7b527c4267e8ba2baabb627177caf-w:4125-h:5500-l:11656951-t:image/jpeg.jpeg",
+      "https://content.pancake.vn/1/s727x970/10/f4/6b/24/139818059b7bbce6d3b8d80f25ef37e860fd0801e819b58ab0bce02a-w:4125-h:5500-l:15099721-t:image/jpeg.jpeg",
+    ],
+    name: "Chân Váy Tennis Xếp Ly Ngắn Dáng Xòe, Có Quần Bảo Hộ Bên Trong Tiện Lợi, Vải Kaki Mềm Mịn",
+    price: "250.000",
+    priceSale: "220.000",
+    sizes: ["S", "M", "L", "XL"],
+    number: 1,
+  },
+  {
+    id: "chan-vay-but-chi-dai-xe-ta-sau-cap-cao-ton-dang-chat-umi-co-gian-phu-hop-di-lam-di-tiec-1",
+    images: [
+      "https://content.pancake.vn/1/s727x970/0f/7a/46/86/50ab1e990c4e8ff2ef2e4daf49e7b527c4267e8ba2baabb627177caf-w:4125-h:5500-l:11656951-t:image/jpeg.jpeg",
+      "https://content.pancake.vn/1/s727x970/10/f4/6b/24/139818059b7bbce6d3b8d80f25ef37e860fd0801e819b58ab0bce02a-w:4125-h:5500-l:15099721-t:image/jpeg.jpeg",
+    ],
+    name: "Chân Váy Bút Chì Dài Xẻ Tà Sau, Cạp Cao Tôn Dáng, Chất Umi Co Giãn, Phù Hợp Đi Làm, Đi Tiệc",
+    price: "320.000",
+    priceSale: "290.000",
+    sizes: ["S", "M", "L", "XL"],
+    number: 1,
+  },
+  {
+    id: "ao-khoac-blazer-nu-2-lop-dang-rong-vai-dem-hang-thiet-ke-cao-cap-kieu-dang-cong-so-han-quoc-1",
+    images: [
+      "https://content.pancake.vn/1/s727x970/0f/7a/46/86/50ab1e990c4e8ff2ef2e4daf49e7b527c4267e8ba2baabb627177caf-w:4125-h:5500-l:11656951-t:image/jpeg.jpeg",
+      "https://content.pancake.vn/1/s727x970/10/f4/6b/24/139818059b7bbce6d3b8d80f25ef37e860fd0801e819b58ab0bce02a-w:4125-h:5500-l:15099721-t:image/jpeg.jpeg",
+    ],
+    name: "Áo Khoác Blazer Nữ 2 Lớp Dáng Rộng Vai Đệm, Hàng Thiết Kế Cao Cấp, Kiểu Dáng Công Sở Hàn Quốc",
+    price: "820.000",
+    priceSale: "750.000",
+    sizes: ["S", "M", "L", "XL"],
+    number: 1,
+  },
+  {
+    id: "non-mu-luoi-trai-one-piece-wano",
+    images: [
+      "https://yame.vn/cdn/shop/files/non-one-piece-wano-35-be-1174879806.jpg?v=1760788984&width=360",
+      "https://yame.vn/cdn/shop/files/tui-deo-one-piece-wano-32-be-1174880843.jpg?v=1760787968&width=360",
+    ],
+    name: "Nón (Mũ) lưỡi trai One Piece Wano",
+    price: "199.000",
+    priceSale: "150.000",
+    sizes: ["S", "M", "L", "XL"],
+    number: 1,
+  },
+  {
+    id: "vong-tay-lac-tay-bac",
+    images: [
+      "https://yame.vn/cdn/shop/files/non-one-piece-wano-35-be-1174879806.jpg?v=1760788984&width=360",
+      "https://yame.vn/cdn/shop/files/tui-deo-one-piece-wano-32-be-1174880843.jpg?v=1760787968&width=360",
+    ],
+    name: "Vòng tay/Lắc tay bạc",
+    price: "180.000",
+    priceSale: "150.000",
+    sizes: ["S", "M", "L", "XL"],
+    number: 1,
+  },
+  {
+    id: "ao-so-mi-lua-satin-cao-cap-dang-suong-co-duc-cai-nut-phong-cach-cong-so-thanh-lich-mau-moi-2025",
+    images: [
+      "https://yame.vn/cdn/shop/files/ao-polo-the-minimalist-001-xanh-den-1174885416.jpg?v=1760774688&width=165",
+      "https://yame.vn/cdn/shop/files/ao-khoac-jean-the-original-m039-xanh-d-ng-1184461421.jpg?v=1760792443&width=360",
+      "https://yame.vn/cdn/shop/files/ao-thun-seventy-seven-13-den-1174883530.jpg?v=1760777397&width=324",
+    ],
+    name: "Áo Sơ Mi Lụa Satin Cao Cấp Dáng Suông, Cổ Đức Cài Nút, Phong Cách Công Sở Thanh Lịch Mẫu Mới 2025",
+    price: "550.000",
+    priceSale: "450.000",
     sizes: ["S", "M", "L", "XL"],
     number: 1,
   },

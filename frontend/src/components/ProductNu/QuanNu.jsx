@@ -9,6 +9,7 @@ const QuanNu = () => {
       link2="/do-nu/quan-nu"
       title="Sản phẩm nữ"
       title2="Quần nữ"
+      name="Quần nữ"
     />
   );
 };

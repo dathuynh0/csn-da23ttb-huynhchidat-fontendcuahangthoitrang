@@ -13,7 +13,7 @@ function App() {
 
   const { search } = useContext(Context);
   const lowerCaseSearch = search ? search.toLowerCase() : "";
-  const allProduct = bestseller.concat(nam, nu, phukien);
+  const allProduct = [...bestseller, ...nam, ...nu, ...phukien];
   const [products, setProducts] = useState([]);
 
   useEffect(() => {

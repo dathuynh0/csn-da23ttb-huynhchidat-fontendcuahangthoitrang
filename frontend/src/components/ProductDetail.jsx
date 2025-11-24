@@ -215,11 +215,8 @@ const ProductDetail = () => {
                 />
               </div>
               {isChecked && (
-                <div className="mt-4 text-base">
-                  <p>
-                    Áo Thun Pique Thoáng Mát Seventy Seven 013 Đen mặc thoáng
-                    mát.
-                  </p>
+                <div className="mt-4 text-base font-light">
+                  <p>{findProduct.name}</p>
                   <p>1. Kiểu sản phẩm: Áo Thun</p>
                   <p>2. Ưu điểm:</p>
                   <p>
@@ -258,58 +255,67 @@ const ProductDetail = () => {
                 />
               </div>
               {isCheckedWarranty && (
-                <div className="mt-4 text-base">
+                <div className="mt-4 text-base font-light">
                   <h3 className="text-xl">1. Thời gian bảo hành:</h3>
-                  <p>
-                    - Tất cả sản phẩm được bảo hành trong vòng 12 tháng kể từ
-                    ngày mua hàng.
-                  </p>
-                  <p>
-                    - Thời gian bảo hành có thể khác nhau tùy theo loại sản phẩm
-                    và nhà sản xuất.
-                  </p>
+                  <div className="ml-3">
+                    <p>
+                      - Tất cả sản phẩm được bảo hành trong vòng 12 tháng kể từ
+                      ngày mua hàng.
+                    </p>
+                    <p>
+                      - Thời gian bảo hành có thể khác nhau tùy theo loại sản
+                      phẩm và nhà sản xuất.
+                    </p>
+                  </div>
                   <h3 className="text-xl">2. Điều kiện bảo hành:</h3>
-                  <p>
-                    Sản phẩm sẽ được bảo hành miễn phí nếu đáp ứng các điều kiện
-                    sau:
-                  </p>
-                  <p>- Sản phẩm bị lỗi kỹ thuật do nhà sản xuất.</p>
-                  <p>- Còn trong thời hạn bảo hành.</p>
-                  <p>- Có đầy đủ hóa đơn mua hàng hoặc phiếu bảo hành.</p>
-                  <p>
-                    - Sản phẩm chưa bị can thiệp, sửa chữa bởi bên thứ ba không
-                    được ủy quyền.
-                  </p>
+                  <div className="ml-3">
+                    <p>
+                      Sản phẩm sẽ được bảo hành miễn phí nếu đáp ứng các điều
+                      kiện sau:
+                    </p>
+
+                    <p>- Sản phẩm bị lỗi kỹ thuật do nhà sản xuất.</p>
+                    <p>- Còn trong thời hạn bảo hành.</p>
+                    <p>- Có đầy đủ hóa đơn mua hàng hoặc phiếu bảo hành.</p>
+                    <p>
+                      - Sản phẩm chưa bị can thiệp, sửa chữa bởi bên thứ ba
+                      không được ủy quyền.
+                    </p>
+                  </div>
                   <h3 className="text-xl">
                     3. Những trường hợp không được bảo hành:
                   </h3>
-                  <p>
-                    - Sản phẩm bị hư hỏng do sử dụng sai cách, rơi vỡ, va đập,
-                    cháy nổ, vào nước…
-                  </p>
-                  <p>
-                    - Sản phẩm bị thay đổi cấu trúc, sửa chữa không đúng quy
-                    trình.
-                  </p>
-                  <p>- Hết thời hạn bảo hành.</p>
-                  <p>- Không có hóa đơn hoặc phiếu bảo hành hợp lệ.</p>
-                  <h3 className="text-xl">4. Hình thức bảo hành:</h3>
-                  <p>- Sửa chữa hoặc thay thế linh kiện miễn phí.</p>
-                  <p>
-                    - Đổi sản phẩm mới nếu không thể sửa chữa (tùy theo chính
-                    sách từng sản phẩm).
-                  </p>
-                  <p>
-                    - Thời gian xử lý bảo hành: từ 3–7 ngày làm việc tùy mức độ
-                    hư hỏng.
-                  </p>
+                  <div className="ml-3">
+                    <p>
+                      - Sản phẩm bị hư hỏng do sử dụng sai cách, rơi vỡ, va đập,
+                      cháy nổ, vào nước…
+                    </p>
+                    <p>
+                      - Sản phẩm bị thay đổi cấu trúc, sửa chữa không đúng quy
+                      trình.
+                    </p>
+                    <p>- Hết thời hạn bảo hành.</p>
+                    <p>- Không có hóa đơn hoặc phiếu bảo hành hợp lệ.</p>
+                    <h3 className="text-xl">4. Hình thức bảo hành:</h3>
+                    <p>- Sửa chữa hoặc thay thế linh kiện miễn phí.</p>
+                    <p>
+                      - Đổi sản phẩm mới nếu không thể sửa chữa (tùy theo chính
+                      sách từng sản phẩm).
+                    </p>
+                    <p>
+                      - Thời gian xử lý bảo hành: từ 3–7 ngày làm việc tùy mức
+                      độ hư hỏng.
+                    </p>
+                  </div>
                   <h3 className="text-xl">5. Hướng dẫn liên hệ bảo hành:</h3>
-                  <p>- Gọi hotline: 1900 1900</p>
-                  <p>- Email: baohanh@moda.com</p>
-                  <p>
-                    - Địa chỉ trung tâm bảo hành: Ấp Trà Ốp, xã Tân An, huyện
-                    Càng Long, tỉnh Trà Vinh
-                  </p>
+                  <div className="ml-3">
+                    <p>- Gọi hotline: 1900 1900</p>
+                    <p>- Email: baohanh@moda.com</p>
+                    <p>
+                      - Địa chỉ trung tâm bảo hành: Ấp Trà Ốp, xã Tân An, huyện
+                      Càng Long, tỉnh Trà Vinh
+                    </p>
+                  </div>
                 </div>
               )}
             </div>

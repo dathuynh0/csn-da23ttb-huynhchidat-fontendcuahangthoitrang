@@ -10,13 +10,15 @@ const Support = () => {
     <section
       data-aos="fade-up"
       data-aos-duration="1000"
-      className="grid grid-cols-2 lg:grid-cols-4 gap-8 w-full mx-auto my-30 p-1"
+      className="grid grid-cols-2 lg:grid-cols-4 gap-8 w-full mx-auto my-30 p-2"
     >
       <div className="flex flex-col items-center mt-4 lg:mt-0">
         <span className="inline-block p-2 bg-gray-300 rounded-full">
-          <MessageSquare className="size-6" />
+          <MessageSquare className="size-5 lg:size-6" />
         </span>
-        <h4 className="font-medium text-2xl mt-4 text-center">Hỗ trợ 24/7</h4>
+        <h4 className="font-medium text-xl lg:text-2xl mt-4 text-center">
+          Hỗ trợ 24/7
+        </h4>
         <p className="text-md font-light mt-5 text-center w-full">
           Hotline hỗ trợ: 0337937146
         </p>
@@ -24,9 +26,9 @@ const Support = () => {
 
       <div className="flex flex-col items-center mt-4 lg:mt-0">
         <span className="inline-block p-2 bg-gray-300 rounded-full">
-          <PackageOpen className="size-6" />
+          <PackageOpen className="size-5 lg:size-6" />
         </span>
-        <h4 className="font-medium text-2xl mt-4 text-center">
+        <h4 className="font-medium text-xl lg:text-2xl mt-4 text-center">
           Giao hàng toàn quốc
         </h4>
         <p className="text-md font-light mt-5 text-center w-full">
@@ -36,9 +38,9 @@ const Support = () => {
 
       <div className="flex flex-col items-center mt-4 lg:mt-0">
         <span className="inline-block p-2 bg-gray-300 rounded-full">
-          <CreditCard className="size-6" />
+          <CreditCard className="size-5 lg:size-6" />
         </span>
-        <h4 className="font-medium text-2xl mt-4 text-center">
+        <h4 className="font-medium text-xl lg:text-2xl mt-4 text-center">
           Thanh toán đa dạng
         </h4>
         <p className="text-md font-light mt-5 text-center w-full">
@@ -48,9 +50,9 @@ const Support = () => {
 
       <div className="flex flex-col items-center mt-4 lg:mt-0">
         <span className="inline-block p-2 bg-gray-300 rounded-full">
-          <RotateCcw className="size-6" />
+          <RotateCcw className="size-5 lg:size-6" />
         </span>
-        <h4 className="font-medium text-2xl mt-4 text-center">
+        <h4 className="font-medium text-xl lg:text-2xl mt-4 text-center">
           Đổi trả hàng dễ dàng
         </h4>
         <p className="text-md font-light mt-5 text-center w-full">

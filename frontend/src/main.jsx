@@ -23,6 +23,10 @@ import Vay from "./components/ProductNu/Vay";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import BaoHanh from "./components/Footer/BaoHanh";
+import DieuKhoanDichVu from "./components/Footer/DieuKhoanDichVu";
+import ChinhSachThanhToan from "./components/Footer/ChinhSachThanhToan";
+import LienHe from "./components/Footer/LienHe";
 
 const created = () => {
   AOS.init();
@@ -35,6 +39,7 @@ createRoot(document.getElementById("root")).render(
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<App />}>
+            <Route path="/admin" element={<Admin />} />
             <Route index element={<HomePage />} />
             <Route path="/signin" element={<Signin />} />
             <Route path="/signup" element={<Signup />} />
@@ -51,9 +56,16 @@ createRoot(document.getElementById("root")).render(
             <Route path="/do-nu/vay" element={<Vay />} />
 
             <Route path="/products/chi-tiet/:id" element={<ProductDetail />} />
+
+            <Route path="/chinh-sach-bao-hanh" element={<BaoHanh />} />
+            <Route path="/dieu-khoan-dich-vu" element={<DieuKhoanDichVu />} />
+            <Route
+              path="/chinh-sach-thanh-toan"
+              element={<ChinhSachThanhToan />}
+            />
+            <Route path="/lien-he" element={<LienHe />} />
           </Route>
 
-          <Route path="/admin" element={<Admin />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
