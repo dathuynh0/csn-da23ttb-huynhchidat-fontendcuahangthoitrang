@@ -4,6 +4,7 @@ import ThongKe from "./ThongKe";
 import QuanLySanPham from "./QuanLySanPham";
 import QuanLyDanhMuc from "./QuanLyDanhMuc";
 import QuanLyTaiKhoan from "./QuanLyTaiKhoan";
+import { Link } from "react-router";
 
 const AdminNav = () => {
   const data = [
@@ -28,9 +29,12 @@ const AdminNav = () => {
   const [indexCurrent, setIndexCurrent] = useState(0);
 
   return (
-    <div className="grid grid-cols-10 h-screen">
+    <div className="mt-8 grid grid-cols-10 h-screen">
       {/* nav */}
       <ul className="col-span-2 p-2 space-y-2">
+        <Link className="mt-2 p-2" to="/">
+          Trang chủ
+        </Link>
         {data.map((item, index) => {
           console.log(indexCurrent);
 

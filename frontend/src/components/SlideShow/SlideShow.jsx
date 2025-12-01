@@ -27,7 +27,7 @@ const SlideShow = () => {
     }, 8000);
 
     return () => clearInterval(interval);
-  }, [images.length]);
+  }, [images.length, index]);
 
   const handlePrev = () => {
     setIndex(index === 0 ? images.length - 1 : index - 1);
@@ -43,7 +43,7 @@ const SlideShow = () => {
         <figure
           ref={refFigure}
           id="slideshow"
-          className="w-full flex transition-transform duration-500 ease-in-out"
+          className="w-full flex transition-transform duration-300 ease-in-out"
           style={{ transform: `translateX(${-index * 100}%)` }}
         >
           {images.map((image, i) => (

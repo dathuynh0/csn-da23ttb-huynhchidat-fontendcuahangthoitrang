@@ -1,10 +1,10 @@
 import ProductsPage from "../ProductPage";
-import { nu } from "../../lib/data.js";
+import { aoNu } from "../../lib/data.js";
 
 const AoNu = () => {
   return (
     <ProductsPage
-      data={nu}
+      data={aoNu}
       link="/do-nu"
       link2="/do-nu/ao-nu"
       title="Sản phẩm nữ"

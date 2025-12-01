@@ -11,7 +11,7 @@ import Signin from "./components/NavBar/Signin";
 import Signup from "./components/NavBar/Signup";
 import Admin from "./pages/Admin";
 import Sale from "./pages/Sale";
-import { ContextProvider } from "./Context";
+import { Context, ContextProvider } from "./Context";
 import ProductDetail from "./components/ProductDetail";
 import Other from "./pages/Other";
 import BanChay from "./pages/BanChay";
@@ -19,7 +19,7 @@ import AoNam from "./components/ProductNam/AoNam";
 import QuanNam from "./components/ProductNam/QuanNam";
 import AoNu from "./components/ProductNu/AoNu";
 import QuanNu from "./components/ProductNu/QuanNu";
-import Vay from "./components/ProductNu/Vay";
+import Dam from "./components/ProductNu/Dam";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -27,6 +27,7 @@ import BaoHanh from "./components/Footer/BaoHanh";
 import DieuKhoanDichVu from "./components/Footer/DieuKhoanDichVu";
 import ChinhSachThanhToan from "./components/Footer/ChinhSachThanhToan";
 import LienHe from "./components/Footer/LienHe";
+import Info from "./components/NavBar/Info";
 
 const created = () => {
   AOS.init();
@@ -39,7 +40,6 @@ createRoot(document.getElementById("root")).render(
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<App />}>
-            <Route path="/admin" element={<Admin />} />
             <Route index element={<HomePage />} />
             <Route path="/signin" element={<Signin />} />
             <Route path="/signup" element={<Signup />} />
@@ -53,7 +53,7 @@ createRoot(document.getElementById("root")).render(
             <Route path="/do-nam/quan-nam" element={<QuanNam />} />
             <Route path="/do-nu/ao-nu" element={<AoNu />} />
             <Route path="/do-nu/quan-nu" element={<QuanNu />} />
-            <Route path="/do-nu/vay" element={<Vay />} />
+            <Route path="/do-nu/dam" element={<Dam />} />
 
             <Route path="/products/chi-tiet/:id" element={<ProductDetail />} />
 
@@ -64,7 +64,11 @@ createRoot(document.getElementById("root")).render(
               element={<ChinhSachThanhToan />}
             />
             <Route path="/lien-he" element={<LienHe />} />
+
+            <Route path="/thong-tin" element={<Info />} />
           </Route>
+
+          <Route path="/admin" element={<Admin />} />
 
           <Route path="*" element={<NotFound />} />
         </Routes>

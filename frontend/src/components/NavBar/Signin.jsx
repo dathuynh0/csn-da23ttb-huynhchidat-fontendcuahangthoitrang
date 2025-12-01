@@ -7,8 +7,7 @@ import { Context } from "../../Context";
 import { toast } from "sonner";
 
 const Signin = () => {
-  const { accounts, setAccounts, setInfoUser, setIsSuccess } =
-    useContext(Context);
+  const { accounts, setAccounts, setIsSuccess, setName } = useContext(Context);
 
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
@@ -28,11 +27,9 @@ const Signin = () => {
     getAccounts();
   }, [accounts, setAccounts]);
 
-  console.log(accounts);
-
   const navigate = useNavigate();
 
-  const handleLogin = () => {
+  const handleLogin = async () => {
     if (!userName && !password) {
       alert("Vui lòng nhập tài khoản và mật khẩu");
       toast.error("Đăng nhâp thất bại!");
@@ -56,7 +53,7 @@ const Signin = () => {
     //thành công
     toast.success(`Đăng nhập thành công.`);
     setIsSuccess(true);
-    setInfoUser(checkUser);
+    setName(userName);
     setUserName("");
     setPassword("");
     navigate("/");

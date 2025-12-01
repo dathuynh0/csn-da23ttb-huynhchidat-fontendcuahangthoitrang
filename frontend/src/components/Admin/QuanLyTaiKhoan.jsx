@@ -1,7 +1,7 @@
 import { Pen, Plus, Trash } from "lucide-react";
 import { Button } from "../ui/button";
 import axios from "axios";
-import { useContext, useEffect, useState } from "react";
+import { use, useContext, useEffect, useState } from "react";
 import { Context } from "../../Context";
 import { toast } from "sonner";
 import { Input } from "../ui/input";
@@ -14,6 +14,7 @@ const QuanLyTaiKhoan = () => {
   const [userName, setUserName] = useState("");
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
+  const [auth, setAuth] = useState("");
 
   const [addAccount, setAddAccount] = useState(false);
 
@@ -52,6 +53,7 @@ const QuanLyTaiKhoan = () => {
         name: name,
         userName: userName,
         password: password,
+        auth: auth,
       });
       fetchUser();
       toast.success("Doi thanh cong!");
@@ -208,6 +210,7 @@ const QuanLyTaiKhoan = () => {
                 <th className="border">Tên hiển thị</th>
                 <th className="border">Tên tài khoản</th>
                 <th className="border">Mật khẩu</th>
+                <th className="border">Chức vụ</th>
                 <th className="border">Hành động</th>
               </tr>
             </thead>
@@ -251,6 +254,18 @@ const QuanLyTaiKhoan = () => {
                       account.password
                     )}
                   </td>
+                  <td className="border">
+                    {isEdit && editId === account._id ? (
+                      <Input
+                        onKeyPress={handleKeyPress}
+                        value={auth}
+                        onChange={(e) => setAuth(e.target.value)}
+                        placeholder="Nhập chức vụ"
+                      />
+                    ) : (
+                      account.auth
+                    )}
+                  </td>
                   <td>
                     <Button
                       onClick={() => {
@@ -259,6 +274,7 @@ const QuanLyTaiKhoan = () => {
                         setUserName(account.userName);
                         setPassword(account.password);
                         setName(account.name);
+                        setAuth(account.auth);
                       }}
                       variant="outline"
                       size="icon"

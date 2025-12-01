@@ -3,13 +3,34 @@ import { Button } from "./ui/button";
 import { ChevronDown, ChevronLeft, ChevronRight } from "lucide-react";
 import { Link, useOutletContext, useParams } from "react-router-dom";
 import ProDuctItem from "./ProductItems";
-import { nam, bestseller, nu, phukien } from "../lib/data";
+import {
+  aoNam,
+  quanNam,
+  bestseller,
+  aoNu,
+  quanNu,
+  dam,
+  phukien,
+} from "../lib/data";
 
 const ProductDetail = () => {
   const { handleAddToCart } = useOutletContext();
 
-  const allProducts = nam.concat(bestseller, nu, phukien);
+  const allProducts = [
+    ...aoNam,
+    ...quanNam,
+    ...aoNu,
+    ...quanNu,
+    ...dam,
+    ...bestseller,
+    ...phukien,
+  ];
 
+  const nam = [...aoNam, ...quanNam];
+
+  const nu = [...aoNu, ...quanNu, ...dam];
+
+  //lay id product
   const { id } = useParams();
 
   // tim kiem san pham theo id
@@ -24,7 +45,7 @@ const ProductDetail = () => {
   const [isCheckedWarranty, setIsCheckedWarranty] = useState(false);
 
   const [currentImage, setCurrentImage] = useState(0);
-  const [indexCurrentSize, setIndexCurrentSize] = useState(0);
+  const [currentSize, setCurrentSize] = useState("");
 
   const handleNextImage = () => {
     setCurrentImage((prevImage) => (prevImage + 1) % findProduct.images.length);
@@ -173,30 +194,34 @@ const ProductDetail = () => {
             </div>
 
             {/* size */}
-            <div className="mt-4">
-              <span className="block mb-4 text-md lg:text-xl">
-                Size: {findProduct.sizes[indexCurrentSize]}
-              </span>
-              {findProduct.sizes.map((size, index) => (
-                <Button
-                  onClick={() => setIndexCurrentSize(index)}
-                  className={`mr-2 hover:bg-black hover:text-white cursor-pointer mb-2 ${
-                    findProduct.sizes[indexCurrentSize] === size
-                      ? "bg-black text-white"
-                      : ""
-                  }`}
-                  key={index}
-                  variant="outline"
-                  size="icon"
-                >
-                  {size}
-                </Button>
-              ))}
-            </div>
+            {findProduct.sizes && (
+              <div className="relative mt-4 flex items-center">
+                {findProduct.sizes.map((size, index) => (
+                  <div key={index} className="">
+                    <Button
+                      onClick={() => setCurrentSize(size.size)}
+                      className={`mr-2 hover:bg-black hover:text-white cursor-pointer mb-2 ${
+                        currentSize === size.size ? "bg-black text-white" : ""
+                      }`}
+                      variant="outline"
+                      size="icon"
+                      disabled={size.inventory < 1}
+                    >
+                      {size.size}
+                    </Button>
+                    {currentSize === size.size && (
+                      <span className="absolute left-0 -bottom-6 w-xs font-light text-md lg:text-xl text-gray-600">
+                        Số lượng còn: {size.inventory}
+                      </span>
+                    )}
+                  </div>
+                ))}
+              </div>
+            )}
 
             <Button
               onClick={() => handleAddToCart(findProduct)}
-              className="w-full py-6 mt-6 bg-black text-white cursor-pointer hover:opacity-90 text-sm md:text-lg"
+              className="w-full py-6 mt-10 bg-black text-white cursor-pointer hover:opacity-90 text-sm md:text-lg"
             >
               Thêm vào giỏ hàng
             </Button>

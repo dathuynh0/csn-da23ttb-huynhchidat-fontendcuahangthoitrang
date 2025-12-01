@@ -1,6 +1,6 @@
-import { ArrowDown, ChevronDown, Pen, Plus, Trash } from "lucide-react";
+import { ChevronDown, Pen, Plus, Trash } from "lucide-react";
 import { Button } from "../ui/button";
-import { nam } from "../../lib/data";
+import { aoNam, quanNam } from "../../lib/data";
 import { useState } from "react";
 import { Badge } from "../ui/badge";
 import Pagination from "../Pagination";
@@ -8,6 +8,8 @@ import { Input } from "../ui/input";
 
 const QuanLySanPham = () => {
   const [currentPage, setCurrentPage] = useState(1);
+
+  const nam = [...aoNam, ...quanNam];
 
   const itemPerPage = 4;
   const totalPage = Math.ceil(nam.length / itemPerPage);

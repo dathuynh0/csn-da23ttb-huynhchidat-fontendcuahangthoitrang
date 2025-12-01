@@ -4,7 +4,15 @@ import Footer from "./pages/Footer";
 import { toast, Toaster } from "sonner";
 import { useContext, useEffect, useState } from "react";
 import { Context } from "./Context";
-import { bestseller, nam, nu, phukien } from "./lib/data.js";
+import {
+  bestseller,
+  aoNam,
+  quanNam,
+  aoNu,
+  quanNu,
+  dam,
+  phukien,
+} from "./lib/data.js";
 import ProDuctItem from "./components/ProductItems";
 
 function App() {
@@ -13,7 +21,15 @@ function App() {
 
   const { search } = useContext(Context);
   const lowerCaseSearch = search ? search.toLowerCase() : "";
-  const allProduct = [...bestseller, ...nam, ...nu, ...phukien];
+  const allProduct = [
+    ...bestseller,
+    ...aoNam,
+    ...quanNam,
+    ...aoNu,
+    ...quanNu,
+    ...dam,
+    ...phukien,
+  ];
   const [products, setProducts] = useState([]);
 
   useEffect(() => {

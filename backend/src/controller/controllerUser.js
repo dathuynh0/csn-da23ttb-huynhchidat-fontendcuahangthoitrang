@@ -1,4 +1,5 @@
 import User from "../models/User.js";
+import bcrypt from "bcrypt";
 
 export const getUser = async (req, res) => {
   try {
@@ -11,14 +12,34 @@ export const getUser = async (req, res) => {
   }
 };
 
+export const getUserById = async (req, res) => {
+  try {
+    const user = await User.findById(req.params.id);
+
+    if (!user) {
+      return res.status(404).json({ message: "User khong ton tai" });
+    }
+
+    res.status(200).json(user);
+  } catch (error) {
+    console.log("Loi khi goi getUser");
+    res.status(500).json({ message: "Loi he thong" });
+  }
+};
+
 export const generateUser = async (req, res) => {
   try {
-    const { name, userName, password } = req.body;
+    const { name, userName, password, auth } = req.body;
 
-    const user = new User({ name, userName, password });
-    const newUser = await user.save();
+    //tao user
+    await User.create({
+      name,
+      userName,
+      password,
+      auth,
+    });
 
-    res.status(201).json(newUser);
+    res.sendStatus(201);
   } catch (error) {
     console.log("Loi khi goi generateUser");
     res.status(500).json({ message: "Loi he thong" });

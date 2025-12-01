@@ -12,7 +12,7 @@ const ShoppingCartItem = ({
   onMinus,
   onDelete,
 }) => {
-  const [indexCurrentSize, setIndexCurrentSize] = useState(0);
+  const [currentSize, setCurrentSize] = useState("");
 
   return (
     <>
@@ -33,24 +33,24 @@ const ShoppingCartItem = ({
             <span className="text-sm lg:text-lg font-light text-black">
               {price}
             </span>
-            <ul className="flex items-center mt-2">
-              {sizes.map((size, index) => (
-                <li key={index}>
-                  <Button
-                    className={`mr-2 hover:bg-black hover:text-white cursor-pointer mb-2 ${
-                      sizes[indexCurrentSize] === size
-                        ? "bg-black text-white"
-                        : ""
-                    }`}
-                    onClick={() => setIndexCurrentSize(index)}
-                    variant="outline"
-                    size="icon"
-                  >
-                    {size}
-                  </Button>
-                </li>
-              ))}
-            </ul>
+            {sizes && (
+              <ul className="flex items-center mt-2">
+                {sizes.map((size, index) => (
+                  <li key={index}>
+                    <Button
+                      className={`mr-2 hover:bg-black hover:text-white cursor-pointer mb-2 ${
+                        currentSize === size.size ? "bg-black text-white" : ""
+                      }`}
+                      onClick={() => setCurrentSize(sizes.size)}
+                      variant="outline"
+                      size="icon"
+                    >
+                      {size.size}
+                    </Button>
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
         </div>
 

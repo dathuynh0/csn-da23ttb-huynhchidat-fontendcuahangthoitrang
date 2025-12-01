@@ -14,6 +14,8 @@ import { toast } from "sonner";
 import SearchBar from "./SearchBar.jsx";
 import Cart from "./Cart.jsx";
 import { Context } from "../../Context.jsx";
+import { Button } from "../ui/button.jsx";
+import Info from "./Info.jsx";
 
 const NavBar = ({
   data,
@@ -23,10 +25,11 @@ const NavBar = ({
   setCartItems,
   formattedTotal,
 }) => {
-  const { isSuccess, setIsSuccess, infoUser } = useContext(Context);
+  const { isSuccess, setIsSuccess, accounts, name } = useContext(Context);
 
   const [checkMobile, setCheckMobile] = useState(false);
   const [checkCart, setCheckCart] = useState(false);
+  const [showInfo, setShowInfo] = useState(false);
 
   const openMenu = () => {
     setCheckMobile(!checkMobile);
@@ -38,9 +41,15 @@ const NavBar = ({
     toast.success("Đăng xuất thành công");
   };
 
+  const handleShowInfo = () => {
+    setShowInfo(!showInfo);
+  };
+
   const handleCheckCart = () => {
     setCheckCart(!checkCart);
   };
+
+  const findUser = accounts.find((account) => account.userName === name);
 
   return (
     <>
@@ -145,9 +154,9 @@ const NavBar = ({
                       <li className="mt-2 hover:underline">
                         <NavLink
                           className="hover:opacity-85 hover:underline"
-                          to="/do-nu/vay"
+                          to="/do-nu/dam"
                         >
-                          Váy
+                          Đầm
                         </NavLink>
                       </li>
                     </ul>
@@ -175,20 +184,49 @@ const NavBar = ({
             <div className="w-full hidden lg:block mx-auto">
               <SearchBar />
             </div>
+
             {isSuccess ? (
-              <div className="flex items-center">
-                <p className="text-black mr-2 whitespace-nowrap">
-                  {infoUser.name}
-                </p>
-                <LogOut
-                  onClick={handleLogout}
-                  className="size-7 lg:size-8 cursor-pointer"
-                />
-              </div>
-            ) : (
-              <Link to="/signin">
+              <Button
+                onClick={handleShowInfo}
+                variant="ghost"
+                className="relative p-2 hover:border transition-all duration-300 hover:shadow-2xl"
+              >
                 <CircleUserRound className="size-7 lg:size-8 cursor-pointer" />
-              </Link>
+                <ChevronDown className={`size-5 ${showInfo && "rotate-180"}`} />
+                {showInfo && (
+                  <div className="absolute flex flex-col items-start w-50 top-10 left-0  p-6 rounded-lg bg-white">
+                    {/* neu la tk admin */}
+                    {findUser.auth === "admin" ? (
+                      <Button className="hover:underline">
+                        <Link to="/admin">Admin</Link>
+                      </Button>
+                    ) : (
+                      ""
+                    )}
+
+                    <Button className="hover:underline" variant="ghost">
+                      <Link to="/thong-tin">Thông tin</Link>
+                    </Button>
+                    <Button
+                      className="hover:underline"
+                      variant="ghost"
+                      onClick={handleLogout}
+                    >
+                      <p className="text-sm">Đăng xuất</p>
+                      <LogOut />
+                    </Button>
+                  </div>
+                )}
+              </Button>
+            ) : (
+              <Button
+                variant="ghost"
+                className="p-2 hover:border transition-all duration-300 hover:shadow-2xl"
+              >
+                <Link to="/signin">
+                  <CircleUserRound className="size-7 lg:size-8 cursor-pointer" />
+                </Link>
+              </Button>
             )}
 
             <div className="relative">

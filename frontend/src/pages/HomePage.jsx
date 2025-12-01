@@ -1,10 +1,22 @@
 import SlideShow from "../components/SlideShow/SlideShow";
 import ProductCategories from "../components/ProductCategories";
-import { bestseller, nam, nu, phukien, sale } from "../lib/data";
+import {
+  bestseller,
+  aoNam,
+  quanNam,
+  aoNu,
+  quanNu,
+  dam,
+  phukien,
+  sale,
+} from "../lib/data";
 import ProductList from "../components/ProductList";
 import Support from "../components/Support";
 
 const HomePage = () => {
+  const nam = [...aoNam, ...quanNam];
+
+  const nu = [...aoNu, ...quanNu, ...dam];
   return (
     <>
       <SlideShow />

@@ -11,13 +11,13 @@ const ProductCategories = () => {
       <Card
         title="Nam"
         description="Thời Trang Nam – Lịch Lãm & Cá Tính"
-        imageUrl="https://cdn.shopify.com/s/files/1/0932/5569/6681/files/1O4A3024_500x.jpg?v=1757903878"
+        imageUrl="https://cdn.shopify.com/s/files/1/0932/5569/6681/files/33_148f8f8f-5d57-4afe-88cf-e35a8dea7f1c_500x.png?v=1757584482"
         link="/do-nam"
       />
       <Card
         title="Nữ"
         description="Thời Trang Nữ Mới Nhất – Dịu Dàng & Cá Tính"
-        imageUrl="https://cdn.shopify.com/s/files/1/0932/5569/6681/files/1O4A9203_500x.jpg?v=1757905339"
+        imageUrl="https://cevoidcontent.com/images/nEeQkFwcGAQ3d8evBcpNO/original.jpeg?class=360"
         link="/do-nu"
       />
     </div>

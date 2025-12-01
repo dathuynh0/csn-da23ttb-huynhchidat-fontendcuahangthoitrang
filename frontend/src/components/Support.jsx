@@ -10,10 +10,10 @@ const Support = () => {
     <section
       data-aos="fade-up"
       data-aos-duration="1000"
-      className="grid grid-cols-2 lg:grid-cols-4 gap-8 w-full mx-auto my-30 p-2"
+      className="bg-gray-500 text-white grid grid-cols-2 lg:grid-cols-4 gap-8 w-full mx-auto my-15 py-12 p-2"
     >
       <div className="flex flex-col items-center mt-4 lg:mt-0">
-        <span className="inline-block p-2 bg-gray-300 rounded-full">
+        <span className="inline-block p-2 text-black bg-white rounded-full">
           <MessageSquare className="size-5 lg:size-6" />
         </span>
         <h4 className="font-medium text-xl lg:text-2xl mt-4 text-center">
@@ -25,7 +25,7 @@ const Support = () => {
       </div>
 
       <div className="flex flex-col items-center mt-4 lg:mt-0">
-        <span className="inline-block p-2 bg-gray-300 rounded-full">
+        <span className="inline-block p-2 text-black bg-white rounded-full">
           <PackageOpen className="size-5 lg:size-6" />
         </span>
         <h4 className="font-medium text-xl lg:text-2xl mt-4 text-center">
@@ -37,7 +37,7 @@ const Support = () => {
       </div>
 
       <div className="flex flex-col items-center mt-4 lg:mt-0">
-        <span className="inline-block p-2 bg-gray-300 rounded-full">
+        <span className="inline-block p-2 text-black bg-white rounded-full">
           <CreditCard className="size-5 lg:size-6" />
         </span>
         <h4 className="font-medium text-xl lg:text-2xl mt-4 text-center">
@@ -49,7 +49,7 @@ const Support = () => {
       </div>
 
       <div className="flex flex-col items-center mt-4 lg:mt-0">
-        <span className="inline-block p-2 bg-gray-300 rounded-full">
+        <span className="inline-block p-2 text-black bg-white rounded-full">
           <RotateCcw className="size-5 lg:size-6" />
         </span>
         <h4 className="font-medium text-xl lg:text-2xl mt-4 text-center">

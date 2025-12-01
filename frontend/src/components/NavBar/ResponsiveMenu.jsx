@@ -81,7 +81,7 @@ const ResponsiveMenu = ({ open, openMenu }) => {
                           <NavLink to="/do-nu/quan-nu">Quần</NavLink>
                         </li>
                         <li className="border-b">
-                          <NavLink to="/do-nu/vay">Váy</NavLink>
+                          <NavLink to="/do-nu/dam">Đầm</NavLink>
                         </li>
                       </div>
                     )}

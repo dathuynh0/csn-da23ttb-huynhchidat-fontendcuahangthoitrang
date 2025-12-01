@@ -1,7 +1,9 @@
-import { nu } from "../lib/data";
+import { aoNu, quanNu, dam } from "../lib/data";
 import ProductsPage from "../components/ProductPage";
 
 const DoNu = () => {
+  const nu = [...aoNu, ...quanNu, ...dam];
+
   return (
     <ProductsPage
       data={nu}
