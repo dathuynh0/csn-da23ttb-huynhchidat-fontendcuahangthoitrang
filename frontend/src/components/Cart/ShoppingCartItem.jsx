@@ -12,7 +12,7 @@ const ShoppingCartItem = ({
   onMinus,
   onDelete,
 }) => {
-  const [currentSize, setCurrentSize] = useState("");
+  const [currentSize, setCurrentSize] = useState(sizes[0]);
 
   return (
     <>
@@ -41,7 +41,7 @@ const ShoppingCartItem = ({
                       className={`mr-2 hover:bg-black hover:text-white cursor-pointer mb-2 ${
                         currentSize === size.size ? "bg-black text-white" : ""
                       }`}
-                      onClick={() => setCurrentSize(sizes.size)}
+                      onClick={() => setCurrentSize(() => size.size)}
                       variant="outline"
                       size="icon"
                     >

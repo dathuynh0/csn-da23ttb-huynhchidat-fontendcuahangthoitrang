@@ -11,8 +11,8 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
         page.push(i);
       }
     } else {
-      if (currentPage < 3) {
-        page.push(1, 2, 3, "...", totalPages);
+      if (currentPage < 4) {
+        page.push(1, 2, 3, 4, "...", totalPages);
       } else if (currentPage >= totalPages - 1) {
         page.push(1, "...", totalPages - 2, totalPages - 1, totalPages);
       } else {

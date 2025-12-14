@@ -10,7 +10,7 @@ const Support = () => {
     <section
       data-aos="fade-up"
       data-aos-duration="1000"
-      className="bg-gray-500 text-white grid grid-cols-2 lg:grid-cols-4 gap-8 w-full mx-auto my-15 py-12 p-2"
+      className="bg-gray-500 text-white grid grid-cols-2 lg:grid-cols-4 gap-8 w-full mx-auto mt-15 py-12 p-2"
     >
       <div className="flex flex-col items-center mt-4 lg:mt-0">
         <span className="inline-block p-2 text-black bg-white rounded-full">

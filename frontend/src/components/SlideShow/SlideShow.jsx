@@ -1,25 +1,13 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "../ui/button";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
+import slide1 from "../../assets/slide1.png";
+import slide2 from "../../assets/slide2.png";
 
 const SlideShow = () => {
   const [index, setIndex] = useState(0);
-  const refFigure = useRef(null);
-
-  const images = [
-    {
-      url: "https://yame.vn/cdn/shop/files/banner_homepage_0410_desktopp.png?v=1759576507&width=2000",
-      title: "slide 1",
-    },
-    {
-      url: "https://content.pancake.vn/1/s2640x1486/ab/a4/6f/2d/7126e89818a28bddde6453b00aa3188bf273df54dedc5515b0f3ea96-w:6206-h:3492-l:8441411-t:image/jpeg.jpeg",
-      title: "slide 2",
-    },
-    {
-      url: "https://yame.vn/cdn/shop/files/banner_homepage_0211_pc.jpg?v=1762093829&width=2000",
-      title: "slide 3",
-    },
-  ];
+  const images = [slide1, slide2];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -38,28 +26,25 @@ const SlideShow = () => {
   };
 
   return (
-    <section className="relative group w-full lg:h-screen lg:container mx-auto mb-8">
+    <section className="relative group w-full lg:container mx-auto mb-8">
       <div className="w-full h-full overflow-hidden">
-        <figure
-          ref={refFigure}
-          id="slideshow"
-          className="w-full flex transition-transform duration-300 ease-in-out"
-          style={{ transform: `translateX(${-index * 100}%)` }}
-        >
-          {images.map((image, i) => (
-            <img
-              key={i}
-              src={image.url}
-              alt={image.title}
-              className="w-full object-cover shrink-0"
-            />
-          ))}
-        </figure>
+        <AnimatePresence mode="wait">
+          <motion.img
+            key={index}
+            src={images[index]}
+            alt=""
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3, ease: "linear" }}
+            className="w-full h-full object-cover"
+          />
+        </AnimatePresence>
       </div>
 
       <Button
         onClick={handlePrev}
-        className="absolute left-5 top-[45%] p-6 bg-white hover:bg-black hover:text-white shadow-lg rounded-full opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer"
+        className="absolute left-5 top-1/2 -translate-y-1/2 p-6 bg-white hover:bg-black hover:text-white shadow-lg rounded-full opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer"
         variant="outline"
       >
         <ArrowLeft className="size-6" />
@@ -67,7 +52,7 @@ const SlideShow = () => {
 
       <Button
         onClick={handleNext}
-        className="absolute right-5 top-[45%] p-6 bg-white hover:bg-black hover:text-white shadow-lg rounded-full opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer"
+        className="absolute right-5 top-1/2 -translate-y-1/2 p-6 bg-white hover:bg-black hover:text-white shadow-lg rounded-full opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer"
         variant="outline"
       >
         <ArrowRight className="size-6" />

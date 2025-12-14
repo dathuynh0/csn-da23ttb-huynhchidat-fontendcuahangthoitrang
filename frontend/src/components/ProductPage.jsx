@@ -4,6 +4,15 @@ import ProDuctItem from "./ProductItems";
 import { Button } from "./ui/button";
 import { ArrowDownUp, ChevronRight } from "lucide-react";
 import Pagination from "./Pagination";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "./ui/select";
 
 const ProductsPage = ({ data, name, title, link, title2, link2 }) => {
   const { handleAddToCart } = useOutletContext();
@@ -41,7 +50,7 @@ const ProductsPage = ({ data, name, title, link, title2, link2 }) => {
     setFilteredProducts(data);
   }, [data]);
 
-  const clearPrice = (price) => Number(String(price).replace(/\./g, "")) || 0;
+  const clearPrice = (price) => price.replace(/\./g, "") || 0;
 
   useEffect(() => {
     let result = [...products];
@@ -130,12 +139,12 @@ const ProductsPage = ({ data, name, title, link, title2, link2 }) => {
             onChange={handleFilter}
             name="filteredProduct"
             id="filteredProduct"
-            className="block px-2 py-2 text-sm md:text-base  text-black bg-white border border-gray-300 rounded-lg shadow-sm appearance-none cursor-pointer"
+            className="block px-2 py-1 text-sm md:text-base  text-black bg-white border border-gray-300 rounded-lg shadow-sm appearance-none cursor-pointer"
           >
-            <option value="all">Tất cả sản phẩm</option>
+            <option value="all">Theo giá</option>
             <option value="d100">Dưới 100.000 VND</option>
-            <option value="t100-d500">Từ 100.000 VND - 500.000 VND</option>
-            <option value="t500-d1tr">Từ 500.000 VND - 1.000.000 VND</option>
+            <option value="t100-d500">Từ 100.000 - 500.000 VND</option>
+            <option value="t500-d1tr">Từ 500.000 - 1.000.000 VND</option>
             <option value="t1tr">Trên 1.000.000 VND</option>
           </select>
         </div>

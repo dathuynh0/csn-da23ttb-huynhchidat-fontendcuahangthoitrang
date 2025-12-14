@@ -4,10 +4,13 @@ import { Input } from "../ui/input";
 
 const QuanLyDanhMuc = () => {
   return (
-    <div className="p-6">
+    <div className="p-4">
       <div className="flex items-center justify-between">
         <h2 className="text-2xl font-bold">Quản lý danh mục sản phẩm</h2>
-        <Button variant="ghost" className="bg-blue-600 text-white">
+        <Button
+          variant="ghost"
+          className="bg-blue-600 text-white cursor-pointer hover:opacity-85"
+        >
           <Plus />
           Thêm danh mục mới
         </Button>
@@ -19,10 +22,10 @@ const QuanLyDanhMuc = () => {
       <div className="my-4">
         <table className="w-full">
           <thead>
-            <tr>
-              <th className="text-start text-gray-400">Tên danh mục</th>
-              <th className="text-start text-gray-400">Mô tả</th>
-              <th className="text-center text-gray-400">Hành động</th>
+            <tr className="uppercase">
+              <th className="text-start">Tên danh mục</th>
+              <th className="text-start">Mô tả</th>
+              <th className="text-center">Tùy chỉnh</th>
             </tr>
           </thead>
 
@@ -56,7 +59,7 @@ const QuanLyDanhMuc = () => {
 
             <tr className="border-b">
               <td>
-                <p className="text-center">Quần nam</p>
+                <p className="text-start">Quần nam</p>
               </td>
               <td>
                 <p>Nhiều loại quần phù hợp với nhiều cuộc vui</p>
@@ -110,7 +113,7 @@ const QuanLyDanhMuc = () => {
 
             <tr className="border-b">
               <td>
-                <p className="text-center">Váy</p>
+                <p className="text-start">Váy</p>
               </td>
               <td>
                 <p>Váy sang trọng</p>

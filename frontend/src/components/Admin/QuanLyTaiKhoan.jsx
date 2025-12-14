@@ -1,7 +1,7 @@
 import { Pen, Plus, Trash } from "lucide-react";
 import { Button } from "../ui/button";
 import axios from "axios";
-import { use, useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Context } from "../../Context";
 import { toast } from "sonner";
 import { Input } from "../ui/input";
@@ -130,7 +130,7 @@ const QuanLyTaiKhoan = () => {
   };
 
   return (
-    <div className="p-4">
+    <div className="p-4 w-full h-full">
       {/* thanh dieu huong */}
       <div className="flex items-center justify-between mb-8">
         <h2 className="text-2xl font-bold">Quản lý tài khoản</h2>
@@ -138,14 +138,14 @@ const QuanLyTaiKhoan = () => {
           <Button
             onClick={() => setAddAccount(false)}
             variant={"ghost"}
-            className="border bg-blue-600 text-white cursor-pointer"
+            className="border bg-blue-600 text-white cursor-pointer hover:opacity-85"
           >
             Tất cả tài khoản
           </Button>
           <Button
             onClick={() => setAddAccount(true)}
             variant={"ghost"}
-            className="border bg-blue-600 text-white cursor-pointer"
+            className="border bg-blue-600 text-white cursor-pointer hover:opacity-85"
           >
             <Plus />
             Thêm tài khoản mới
@@ -203,22 +203,22 @@ const QuanLyTaiKhoan = () => {
       ) : (
         <div className="mt-4">
           <h3 className="text-center text-2xl font-bold">Tất cả tài khoản</h3>
-          <table border="1" className="w-full mt-6">
+          <table className="w-full mt-6">
             <thead>
-              <tr className="border">
-                <th className="border">STT</th>
-                <th className="border">Tên hiển thị</th>
-                <th className="border">Tên tài khoản</th>
-                <th className="border">Mật khẩu</th>
-                <th className="border">Chức vụ</th>
-                <th className="border">Hành động</th>
+              <tr className="border uppercase">
+                <th className="px-4 py-2 text-center">STT</th>
+                <th className="px-4 py-2 text-center">Tên hiển thị</th>
+                <th className="px-4 py-2 text-center">Tên tài khoản</th>
+                <th className="px-4 py-2 text-center">Mật khẩu</th>
+                <th className="px-4 py-2 text-center">Chức vụ</th>
+                <th className="px-4 py-2 text-center">Tùy chỉnh</th>
               </tr>
             </thead>
             <tbody>
               {accounts.map((account, index) => (
                 <tr key={account._id} className="text-center border">
-                  <td className="border">{index + 1}</td>
-                  <td className="border">
+                  <td>{index + 1}</td>
+                  <td>
                     {isEdit && editId === account._id ? (
                       <Input
                         onKeyPress={handleKeyPress}
@@ -230,7 +230,7 @@ const QuanLyTaiKhoan = () => {
                       account.name
                     )}
                   </td>
-                  <td className="border">
+                  <td>
                     {isEdit && editId === account._id ? (
                       <Input
                         onKeyPress={handleKeyPress}
@@ -242,7 +242,7 @@ const QuanLyTaiKhoan = () => {
                       account.userName
                     )}
                   </td>
-                  <td className="border">
+                  <td>
                     {isEdit && editId === account._id ? (
                       <Input
                         onKeyPress={handleKeyPress}
@@ -254,7 +254,7 @@ const QuanLyTaiKhoan = () => {
                       account.password
                     )}
                   </td>
-                  <td className="border">
+                  <td>
                     {isEdit && editId === account._id ? (
                       <Input
                         onKeyPress={handleKeyPress}

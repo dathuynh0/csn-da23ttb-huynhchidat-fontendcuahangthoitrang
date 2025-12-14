@@ -1,470 +1,3 @@
-export const bestseller = [
-  {
-    id: "ao-polo-pique-mem-min-thoang-khi-the-weekend",
-    images: [
-      "https://yame.vn/cdn/shop/files/TheWeekend003NauXanhLa24768thumb1.jpg?v=1764058991&width=823",
-      "https://yame.vn/cdn/shop/files/TheWeekend003NauXanhLa24768thumb2.jpg?v=1764058991&width=823",
-      "https://yame.vn/cdn/shop/files/TheWeekend003NauXanhLa24768thumb3.jpg?v=1764058991&width=823",
-    ],
-    name: "Áo Polo Pique Mềm Mịn Thoáng Khí The Weekend",
-    price: "650.000",
-    priceSale: "500.000",
-    sizes: [
-      {
-        size: "S",
-        inventory: 22,
-      },
-      {
-        size: "M",
-        inventory: 10,
-      },
-      {
-        size: "L",
-        inventory: 0,
-      },
-      {
-        size: "XL",
-        inventory: 0,
-      },
-    ],
-    number: 1,
-  },
-  {
-    id: "ao-polo-basic-co-gian-thoang-mat-non-branded",
-    images: [
-      "https://yame.vn/cdn/shop/files/NonBranded056XanhD_ng24655thumb1.jpg?v=1764057536&width=823",
-      "https://yame.vn/cdn/shop/files/NonBranded056XanhD_ng24655thumb2.jpg?v=1764057536&width=823",
-    ],
-    name: "Áo polo Basic Co Giãn Thoáng Mát Non Branded",
-    price: "699.000",
-    priceSale: "599.000",
-    sizes: [
-      {
-        size: "S",
-        inventory: 0,
-      },
-      {
-        size: "M",
-        inventory: 10,
-      },
-      {
-        size: "L",
-        inventory: 10,
-      },
-      {
-        size: "XL",
-        inventory: 10,
-      },
-    ],
-    number: 1,
-  },
-  {
-    id: "ao-khoac-jean-ben-dung-phom-the-original",
-    images: [
-      "https://yame.vn/cdn/shop/files/TheOriginal001XanhD_ngD_m00248511.jpg?v=1762846596&width=823",
-      "https://yame.vn/cdn/shop/files/TheOriginal001XanhD_ngD_m00248512.jpg?v=1762846596&width=823",
-    ],
-    name: "Áo khoác Jean Bền Đứng Phom The Original",
-    price: "920.000",
-    sizes: [
-      {
-        size: "S",
-        inventory: 0,
-      },
-      {
-        size: "M",
-        inventory: 10,
-      },
-      {
-        size: "L",
-        inventory: 10,
-      },
-      {
-        size: "XL",
-        inventory: 10,
-      },
-    ],
-    number: 1,
-  },
-  {
-    id: "ao-polo-raglan-mat-mem-mai-the-no-style",
-    images: [
-      "https://yame.vn/cdn/shop/files/TheNoStyle240XanhD_ngXam0024831Thumb1.jpg?v=1762316999&width=823",
-      "https://yame.vn/cdn/shop/files/TheNoStyle240XanhD_ngXam0024831Thumb2.jpg?v=1762316999&width=823",
-      "https://yame.vn/cdn/shop/files/TheNoStyle240XanhD_ngXam0024831Thumb5.jpg?v=1762316999&width=823",
-    ],
-    name: "Áo Polo Raglan Mát Mềm Mại The No Style",
-    price: "550.000",
-    priceSale: "4000.000",
-    sizes: [
-      {
-        size: "S",
-        inventory: 0,
-      },
-      {
-        size: "M",
-        inventory: 10,
-      },
-      {
-        size: "L",
-        inventory: 10,
-      },
-      {
-        size: "XL",
-        inventory: 10,
-      },
-    ],
-    number: 1,
-  },
-  {
-    id: "ao-polo-tay-ngan-sporty-sieu-mem-min-no-style",
-    images: [
-      "https://yame.vn/cdn/shop/files/ao-polo-no-style-m28-kem-1174885537.jpg?v=1760774051&width=823",
-      "https://yame.vn/cdn/shop/files/ao-polo-no-style-m28-kem-1174885534.jpg?v=1760774052&width=823",
-      "https://yame.vn/cdn/shop/files/ao-polo-no-style-m28-kem-1174885533.jpg?v=1760774054&width=823",
-    ],
-    name: "Áo Polo Tay Ngắn Sporty Siêu Mềm Mịn The No Style",
-    price: "699.000",
-    priceSale: "600.000",
-    sizes: [
-      {
-        size: "S",
-        inventory: 2,
-      },
-      {
-        size: "M",
-        inventory: 10,
-      },
-      {
-        size: "L",
-        inventory: 0,
-      },
-      {
-        size: "XL",
-        inventory: 10,
-      },
-    ],
-    number: 1,
-  },
-  {
-    id: "ao-polo-co-khoa-keo-no-style",
-    images: [
-      "https://yame.vn/cdn/shop/files/ao-polo-no-style-m128-nau-1174885623.jpg?v=1760773814&width=823",
-      "https://yame.vn/cdn/shop/files/ao-polo-no-style-m128-nau-1174885622.jpg?v=1760773815&width=823",
-    ],
-    name: "Áo Polo Cổ Khóa Kéo The No Style",
-    price: "450.000",
-    priceSale: "350.000",
-    sizes: [
-      {
-        size: "S",
-        inventory: 0,
-      },
-      {
-        size: "M",
-        inventory: 10,
-      },
-      {
-        size: "L",
-        inventory: 10,
-      },
-      {
-        size: "XL",
-        inventory: 10,
-      },
-    ],
-    number: 1,
-  },
-  {
-    id: "ao-so-mi-cuban-corduroy-it-nhan-seventy-seven",
-    images: [
-      "https://yame.vn/cdn/shop/files/ao-s-mi-seventy-seven-23-be-1174882940.jpg?v=1760776699&width=823",
-      "https://yame.vn/cdn/shop/files/ao-s-mi-seventy-seven-23-be-1174882939.jpg?v=1760776701&width=823",
-    ],
-    name: "Áo Sơ Mi Cuban Corduroy Ít Nhăn Seventy Seven",
-    price: "420.000",
-    priceSale: "399.000",
-    sizes: [
-      {
-        size: "S",
-        inventory: 0,
-      },
-      {
-        size: "M",
-        inventory: 10,
-      },
-      {
-        size: "L",
-        inventory: 10,
-      },
-      {
-        size: "XL",
-        inventory: 10,
-      },
-    ],
-    number: 1,
-  },
-  {
-    id: "ao-so-mi-cuban-hoa-tiet-noi-co-gian-no-style",
-    images: [
-      "https://yame.vn/cdn/shop/files/ao-s-mi-no-style-m82-den-1174883037.jpg?v=1760776534&width=823",
-      "https://yame.vn/cdn/shop/files/ao-s-mi-no-style-m82-den-1174883036.jpg?v=1760776535&width=823",
-    ],
-    name: "Áo Sơ Mi Cuban Họa Tiết Nổi Co Giãn The No Style",
-    price: "685.000",
-    sizes: [
-      {
-        size: "S",
-        inventory: 0,
-      },
-      {
-        size: "M",
-        inventory: 10,
-      },
-      {
-        size: "L",
-        inventory: 10,
-      },
-      {
-        size: "XL",
-        inventory: 10,
-      },
-    ],
-    number: 1,
-  },
-  {
-    id: "ao-thun-3-lo-cotton-thoang-khi-seventy-seven",
-    images: [
-      "https://yame.vn/cdn/shop/files/23224_thumb_1.jpg?v=1760776205&width=823",
-      "https://yame.vn/cdn/shop/files/ao-thun-seventy-seven-14-xanh-reu-1174884475.jpg?v=1760776206&width=823",
-    ],
-    name: "Áo Thun 3 Lỗ Cotton Thoáng Khí Seventy Seven",
-    price: "350.000",
-    sizes: [
-      {
-        size: "S",
-        inventory: 0,
-      },
-      {
-        size: "M",
-        inventory: 10,
-      },
-      {
-        size: "L",
-        inventory: 10,
-      },
-      {
-        size: "XL",
-        inventory: 10,
-      },
-    ],
-    number: 1,
-  },
-  {
-    id: "ao-khoac-bomber-corduroy-giu-am-no-style",
-    images: [
-      "https://yame.vn/cdn/shop/files/ao-khoac-no-style-m44-xanh-reu-1174885212.jpg?v=1760778955&width=823",
-      "https://yame.vn/cdn/shop/files/ao-khoac-no-style-m44-xanh-reu-1174885207.jpg?v=1760778957&width=823",
-      "https://yame.vn/cdn/shop/files/ao-khoac-no-style-m44-xanh-reu-1174885208.jpg?v=1760778958&width=823",
-    ],
-    name: "Áo Khoác Bomber Corduroy Giữ Ấm The No Style",
-    price: "799.000",
-    priceSale: "650.000",
-    sizes: [
-      {
-        size: "S",
-        inventory: 0,
-      },
-      {
-        size: "M",
-        inventory: 10,
-      },
-      {
-        size: "L",
-        inventory: 10,
-      },
-      {
-        size: "XL",
-        inventory: 10,
-      },
-    ],
-    number: 1,
-  },
-  {
-    id: "ao-thun-cotton-line-art-co-gian-seventy-seven",
-    images: [
-      "https://yame.vn/cdn/shop/files/ao-thun-seventy-seven-04-xam-xanh-1174883175.jpg?v=1760778548&width=823",
-      "https://yame.vn/cdn/shop/files/ao-thun-seventy-seven-04-xam-xanh-1174883178.jpg?v=1760778549&width=823",
-    ],
-    name: "Áo Thun Cotton Line Art Co Giãn Seventy Seven",
-    price: "157.000",
-    priceSale: "141.000",
-    sizes: [
-      {
-        size: "S",
-        inventory: 0,
-      },
-      {
-        size: "M",
-        inventory: 10,
-      },
-      {
-        size: "L",
-        inventory: 10,
-      },
-      {
-        size: "XL",
-        inventory: 10,
-      },
-    ],
-    number: 1,
-  },
-  {
-    id: "quan-lot-nam-boxer-seamless-mem-sieu-co-gian-combo-3",
-    images: [
-      "https://yame.vn/cdn/shop/files/qu-n-lot-boxer-ng-n-y2010-m2-combo-3-1174879441.jpg?v=1760789406&width=823",
-      "https://yame.vn/cdn/shop/files/qu-n-lot-boxer-ng-n-y2010-m2-combo-3-1174879438.jpg?v=1760789410&width=823",
-    ],
-    name: "Quần Lót Nam Boxer Seamless Mềm Siêu Co Giãn Combo 3 Cái",
-    price: "270.000",
-    priceSale: "229.000",
-    sizes: [
-      {
-        size: "S",
-        inventory: 0,
-      },
-      {
-        size: "M",
-        inventory: 10,
-      },
-      {
-        size: "L",
-        inventory: 10,
-      },
-      {
-        size: "XL",
-        inventory: 10,
-      },
-    ],
-    number: 1,
-  },
-  {
-    id: "quan-jeans-slimfit-co-gian-the-original",
-    images: [
-      "https://yame.vn/cdn/shop/files/qu-n-jean-the-original-28-xam-1174882665.jpg?v=1760782677&width=823",
-      "https://yame.vn/cdn/shop/files/qu-n-jean-the-original-28-xam-1174882666.jpg?v=1760782679&width=823",
-    ],
-    name: "Quần Jeans Slimfit Co Giãn The Original",
-    price: "699.000",
-    priceSale: "590.000",
-    sizes: [
-      {
-        size: "S",
-        inventory: 0,
-      },
-      {
-        size: "M",
-        inventory: 10,
-      },
-      {
-        size: "L",
-        inventory: 10,
-      },
-      {
-        size: "XL",
-        inventory: 10,
-      },
-    ],
-    number: 1,
-  },
-  {
-    id: "quan-short-jeans-9-inch-ben-seventy-seven-29-xanh-nhat",
-    images: [
-      "https://yame.vn/cdn/shop/files/qu-n-short-seventy-seven-29-xanh-nh-t-1174882189.jpg?v=1760783891&width=823",
-      "https://yame.vn/cdn/shop/files/qu-n-short-seventy-seven-29-xanh-nh-t-1174882188.jpg?v=1760783893&width=823",
-    ],
-    name: "Quần Short Jeans 9 Inch Bền The Original 008 Xanh Dương Nhạt",
-    price: "450.000",
-    priceSale: "400.000",
-    sizes: [
-      {
-        size: "S",
-        inventory: 0,
-      },
-      {
-        size: "M",
-        inventory: 10,
-      },
-      {
-        size: "L",
-        inventory: 10,
-      },
-      {
-        size: "XL",
-        inventory: 10,
-      },
-    ],
-    number: 1,
-  },
-  {
-    id: "ao-polo-pique-thoang-mat-non-branded",
-    images: [
-      "https://yame.vn/cdn/shop/files/ao-polo-non-branded-03-xanh-xam-1174885406.jpg?v=1760774380&width=823",
-      "https://yame.vn/cdn/shop/files/ao-polo-non-branded-03-xanh-xam-1174885405.jpg?v=1760774381&width=823",
-    ],
-    name: "Áo Polo Pique Thoáng Mát Non Branded",
-    price: "520.000",
-    sizes: [
-      {
-        size: "S",
-        inventory: 0,
-      },
-      {
-        size: "M",
-        inventory: 10,
-      },
-      {
-        size: "L",
-        inventory: 10,
-      },
-      {
-        size: "XL",
-        inventory: 10,
-      },
-    ],
-    number: 1,
-  },
-  {
-    id: "ao-khoac-jeans-classic-ben-seventy-seven-36-xanh-nhat",
-    images: [
-      "https://yame.vn/cdn/shop/files/ao-khoac-the-original-36-xanh-nh-t-1174881209.jpg?v=1760784108&width=823",
-      "https://yame.vn/cdn/shop/files/ao-khoac-the-original-36-xanh-nh-t-1174881205.jpg?v=1760784110&width=823",
-    ],
-    name: "Áo Khoác Jeans Classic Bền The Original 036 Xanh Dương Nhạt",
-    price: "357.000",
-    priceSale: "339.000",
-    sizes: [
-      {
-        size: "S",
-        inventory: 0,
-      },
-      {
-        size: "M",
-        inventory: 10,
-      },
-      {
-        size: "L",
-        inventory: 10,
-      },
-      {
-        size: "XL",
-        inventory: 10,
-      },
-    ],
-    number: 1,
-  },
-];
-
 export const aoNam = [
   {
     id: "ao-thoi-trang-mat-me-phu-hop-mac-vao-mua-dong",
@@ -492,6 +25,9 @@ export const aoNam = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
+    sold: 250,
     number: 1,
   },
   {
@@ -521,6 +57,8 @@ export const aoNam = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -550,6 +88,8 @@ export const aoNam = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -579,6 +119,8 @@ export const aoNam = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -610,6 +152,8 @@ export const aoNam = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -639,6 +183,8 @@ export const aoNam = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -667,6 +213,8 @@ export const aoNam = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -696,6 +244,8 @@ export const aoNam = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
 ];
@@ -727,6 +277,8 @@ export const quanNam = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -755,6 +307,8 @@ export const quanNam = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -785,6 +339,8 @@ export const quanNam = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -813,6 +369,8 @@ export const quanNam = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -842,6 +400,8 @@ export const quanNam = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -872,6 +432,8 @@ export const quanNam = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -901,6 +463,8 @@ export const quanNam = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -933,6 +497,8 @@ export const quanNam = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
 ];
@@ -964,6 +530,8 @@ export const aoNu = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -993,6 +561,8 @@ export const aoNu = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -1022,6 +592,8 @@ export const aoNu = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -1051,6 +623,8 @@ export const aoNu = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -1081,6 +655,8 @@ export const aoNu = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -1110,6 +686,8 @@ export const aoNu = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -1138,6 +716,8 @@ export const aoNu = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -1167,6 +747,8 @@ export const aoNu = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
 
@@ -1196,6 +778,8 @@ export const aoNu = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -1225,6 +809,8 @@ export const aoNu = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -1254,6 +840,8 @@ export const aoNu = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -1285,6 +873,8 @@ export const aoNu = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -1314,6 +904,8 @@ export const aoNu = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -1343,6 +935,8 @@ export const aoNu = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -1372,6 +966,8 @@ export const aoNu = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
 ];
@@ -1403,6 +999,8 @@ export const quanNu = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -1431,6 +1029,8 @@ export const quanNu = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -1459,6 +1059,8 @@ export const quanNu = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -1488,6 +1090,8 @@ export const quanNu = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -1517,6 +1121,8 @@ export const quanNu = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -1547,6 +1153,8 @@ export const quanNu = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -1576,6 +1184,8 @@ export const quanNu = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -1605,6 +1215,8 @@ export const quanNu = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
 
@@ -1634,6 +1246,8 @@ export const quanNu = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -1663,12 +1277,14 @@ export const quanNu = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
     id: "quan-ong-suong-xep-l",
     images: [
-      "https:/https://minio.theciu.vn/theciu-beta/1000/images/Jpu0XMBmiTX3ZZrhosWLEkreOyVyIrqNkGQ8IElO.webp",
+      "https://minio.theciu.vn/theciu-beta/1000/images/Jpu0XMBmiTX3ZZrhosWLEkreOyVyIrqNkGQ8IElO.webp",
       "https://minio.theciu.vn/theciu-beta/1000/images/pfsDtRvJMPTljIpMizanlQcrRep1Fnqsv6kxhHNG.webp",
     ],
     name: "Quần ống suông xếp li",
@@ -1691,6 +1307,8 @@ export const quanNu = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -1719,6 +1337,8 @@ export const quanNu = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -1748,6 +1368,8 @@ export const quanNu = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -1776,6 +1398,8 @@ export const quanNu = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -1805,6 +1429,8 @@ export const quanNu = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
 ];
@@ -1836,6 +1462,8 @@ export const dam = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -1865,6 +1493,8 @@ export const dam = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -1895,6 +1525,8 @@ export const dam = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -1925,6 +1557,8 @@ export const dam = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -1953,6 +1587,8 @@ export const dam = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -1981,6 +1617,8 @@ export const dam = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -2010,6 +1648,8 @@ export const dam = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -2039,6 +1679,8 @@ export const dam = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
 
@@ -2069,6 +1711,8 @@ export const dam = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -2097,6 +1741,8 @@ export const dam = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -2125,6 +1771,8 @@ export const dam = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -2153,6 +1801,8 @@ export const dam = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -2182,6 +1832,8 @@ export const dam = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -2211,6 +1863,8 @@ export const dam = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -2240,6 +1894,8 @@ export const dam = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
 ];
@@ -2254,6 +1910,8 @@ export const phukien = [
     name: "Nón (Mũ) lưỡi trai One Piece Wano",
     price: "199.000",
     priceSale: "150.000",
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -2265,6 +1923,8 @@ export const phukien = [
     ],
     name: "Nón Dad Hat Dù Mỏng Nhẹ Mesh Thoáng Khí 069 Xanh Dương Đậm",
     price: "220.000",
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -2278,6 +1938,8 @@ export const phukien = [
     name: "Dép Siêu Nhẹ Slide Slipper 028",
     price: "95.000",
     priceSale: "55.000",
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -2290,6 +1952,8 @@ export const phukien = [
     ],
     name: "Túi Bao Tử Hip Sack Nhỏ Gọn NB 027 Xanh Dương",
     price: "150.000",
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -2301,6 +1965,8 @@ export const phukien = [
     ],
     name: "Ví Đứng Da Bò 137 Xanh Dương Đậm",
     price: "310.000",
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -2314,6 +1980,8 @@ export const phukien = [
     name: "Balo Essential Trượt Nước Đai Gắn Vali 005 Xanh Dương Nhạt",
     price: "180.000",
     priceSale: "150.000",
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -2324,6 +1992,8 @@ export const phukien = [
     ],
     name: "Khăn choàng cổ lụa/len",
     price: "275.000",
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -2334,6 +2004,8 @@ export const phukien = [
     ],
     name: "Nón Dad Hat Kaki Bền Bỉ MICHIGAN NS 142 Xanh Dương Đậm",
     price: "195.000",
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -2345,6 +2017,8 @@ export const phukien = [
     name: "Nón Bucket Corduroy Bền Bỉ NB 018 Xanh Dương Đậm",
     price: "199.000",
     priceSale: "150.000",
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -2356,6 +2030,8 @@ export const phukien = [
     ],
     name: "Găng Tay Ngắn Chống Nắng Chống Trượt 053 Đen",
     price: "220.000",
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -2367,6 +2043,8 @@ export const phukien = [
     ],
     name: "Dây Nịt Da Bò Khóa Gài Kim 025 Đen",
     price: "95.000",
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -2379,6 +2057,8 @@ export const phukien = [
     name: "Ví Cầm Tay Canvas Bền Nhẹ 096 Đen",
     price: "150.000",
     priceSale: "99.000",
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -2390,6 +2070,8 @@ export const phukien = [
     ],
     name: "Dây Nịt Da Bò Khóa Tự Động 024 Đen",
     price: "310.000",
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -2401,6 +2083,8 @@ export const phukien = [
     ],
     name: "Túi Messenger Bền Nhẹ 090 Đen",
     price: "180.000",
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -2411,6 +2095,8 @@ export const phukien = [
     ],
     name: "Băng Bảo Vệ Cổ Chân Thể Thao Đa Năng BG 089 Đen",
     price: "69.000",
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -2424,40 +2110,13 @@ export const phukien = [
     name: "Túi Messenger Siêu Nhẹ Trượt Nước 085 Đen",
     price: "195.000",
     priceSale: "150.000",
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
 ];
 
 export const sale = [
-  {
-    id: "thuong-hieu-den-tu-viet-nam-co-mat-lau-nam-tren-thi-truong",
-    images: [
-      "https://yame.vn/cdn/shop/files/ao-polo-the-minimalist-001-xanh-den-1174885416.jpg?v=1760774688&width=165",
-      "https://yame.vn/cdn/shop/files/ao-khoac-jean-the-original-m039-xanh-d-ng-1184461421.jpg?v=1760792443&width=360",
-    ],
-    name: "Thương hiệu đến từ Việt Nam có mặt lâu năm trên thị trường",
-    price: "249.000",
-    priceSale: "220.000",
-    sizes: [
-      {
-        size: "S",
-        inventory: 100,
-      },
-      {
-        size: "M",
-        inventory: 20,
-      },
-      {
-        size: "L",
-        inventory: 0,
-      },
-      {
-        size: "XL",
-        inventory: 2,
-      },
-    ],
-    number: 1,
-  },
   {
     id: "quan-short-jeans-9-inch-ben-seventy-seven-29-xanh-nhat",
     images: [
@@ -2485,6 +2144,8 @@ export const sale = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -2516,6 +2177,8 @@ export const sale = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -2545,6 +2208,8 @@ export const sale = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -2575,6 +2240,8 @@ export const sale = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -2605,6 +2272,8 @@ export const sale = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
     number: 1,
   },
   {
@@ -2636,6 +2305,523 @@ export const sale = [
         inventory: 10,
       },
     ],
+    warehouse: 200,
+    status: "Còn hàng",
+    number: 1,
+  },
+];
+
+export const bestseller = [
+  {
+    id: "ao-polo-pique-mem-min-thoang-khi-the-weekend",
+    images: [
+      "https://yame.vn/cdn/shop/files/TheWeekend003NauXanhLa24768thumb1.jpg?v=1764058991&width=823",
+      "https://yame.vn/cdn/shop/files/TheWeekend003NauXanhLa24768thumb2.jpg?v=1764058991&width=823",
+      "https://yame.vn/cdn/shop/files/TheWeekend003NauXanhLa24768thumb3.jpg?v=1764058991&width=823",
+    ],
+    name: "Áo Polo Pique Mềm Mịn Thoáng Khí The Weekend",
+    price: "650.000",
+    priceSale: "500.000",
+    sizes: [
+      {
+        size: "S",
+        inventory: 22,
+      },
+      {
+        size: "M",
+        inventory: 10,
+      },
+      {
+        size: "L",
+        inventory: 0,
+      },
+      {
+        size: "XL",
+        inventory: 0,
+      },
+    ],
+    warehouse: 200,
+    status: "Còn hàng",
+    sold: 250,
+    number: 1,
+  },
+  {
+    id: "ao-polo-basic-co-gian-thoang-mat-non-branded",
+    images: [
+      "https://yame.vn/cdn/shop/files/NonBranded056XanhD_ng24655thumb1.jpg?v=1764057536&width=823",
+      "https://yame.vn/cdn/shop/files/NonBranded056XanhD_ng24655thumb2.jpg?v=1764057536&width=823",
+    ],
+    name: "Áo polo Basic Co Giãn Thoáng Mát Non Branded",
+    price: "699.000",
+    priceSale: "599.000",
+    sizes: [
+      {
+        size: "S",
+        inventory: 0,
+      },
+      {
+        size: "M",
+        inventory: 10,
+      },
+      {
+        size: "L",
+        inventory: 10,
+      },
+      {
+        size: "XL",
+        inventory: 10,
+      },
+    ],
+    warehouse: 200,
+    status: "Còn hàng",
+    sold: 250,
+    number: 1,
+  },
+  {
+    id: "ao-khoac-jean-ben-dung-phom-the-original",
+    images: [
+      "https://yame.vn/cdn/shop/files/TheOriginal001XanhD_ngD_m00248511.jpg?v=1762846596&width=823",
+      "https://yame.vn/cdn/shop/files/TheOriginal001XanhD_ngD_m00248512.jpg?v=1762846596&width=823",
+    ],
+    name: "Áo khoác Jean Bền Đứng Phom The Original",
+    price: "920.000",
+    sizes: [
+      {
+        size: "S",
+        inventory: 0,
+      },
+      {
+        size: "M",
+        inventory: 10,
+      },
+      {
+        size: "L",
+        inventory: 10,
+      },
+      {
+        size: "XL",
+        inventory: 10,
+      },
+    ],
+    warehouse: 200,
+    status: "Còn hàng",
+    sold: 250,
+    number: 1,
+  },
+  {
+    id: "ao-polo-raglan-mat-mem-mai-the-no-style",
+    images: [
+      "https://yame.vn/cdn/shop/files/TheNoStyle240XanhD_ngXam0024831Thumb1.jpg?v=1762316999&width=823",
+      "https://yame.vn/cdn/shop/files/TheNoStyle240XanhD_ngXam0024831Thumb2.jpg?v=1762316999&width=823",
+      "https://yame.vn/cdn/shop/files/TheNoStyle240XanhD_ngXam0024831Thumb5.jpg?v=1762316999&width=823",
+    ],
+    name: "Áo Polo Raglan Mát Mềm Mại The No Style",
+    price: "550.000",
+    priceSale: "400.000",
+    sizes: [
+      {
+        size: "S",
+        inventory: 0,
+      },
+      {
+        size: "M",
+        inventory: 10,
+      },
+      {
+        size: "L",
+        inventory: 10,
+      },
+      {
+        size: "XL",
+        inventory: 10,
+      },
+    ],
+    warehouse: 200,
+    status: "Còn hàng",
+    sold: 250,
+    number: 1,
+  },
+  {
+    id: "ao-polo-tay-ngan-sporty-sieu-mem-min-no-style",
+    images: [
+      "https://yame.vn/cdn/shop/files/ao-polo-no-style-m28-kem-1174885537.jpg?v=1760774051&width=823",
+      "https://yame.vn/cdn/shop/files/ao-polo-no-style-m28-kem-1174885534.jpg?v=1760774052&width=823",
+      "https://yame.vn/cdn/shop/files/ao-polo-no-style-m28-kem-1174885533.jpg?v=1760774054&width=823",
+    ],
+    name: "Áo Polo Tay Ngắn Sporty Siêu Mềm Mịn The No Style",
+    price: "699.000",
+    priceSale: "600.000",
+    sizes: [
+      {
+        size: "S",
+        inventory: 2,
+      },
+      {
+        size: "M",
+        inventory: 10,
+      },
+      {
+        size: "L",
+        inventory: 0,
+      },
+      {
+        size: "XL",
+        inventory: 10,
+      },
+    ],
+    warehouse: 200,
+    status: "Còn hàng",
+    sold: 250,
+    number: 1,
+  },
+  {
+    id: "ao-polo-co-khoa-keo-no-style",
+    images: [
+      "https://yame.vn/cdn/shop/files/ao-polo-no-style-m128-nau-1174885623.jpg?v=1760773814&width=823",
+      "https://yame.vn/cdn/shop/files/ao-polo-no-style-m128-nau-1174885622.jpg?v=1760773815&width=823",
+    ],
+    name: "Áo Polo Cổ Khóa Kéo The No Style",
+    price: "450.000",
+    priceSale: "350.000",
+    sizes: [
+      {
+        size: "S",
+        inventory: 0,
+      },
+      {
+        size: "M",
+        inventory: 10,
+      },
+      {
+        size: "L",
+        inventory: 10,
+      },
+      {
+        size: "XL",
+        inventory: 10,
+      },
+    ],
+    warehouse: 200,
+    status: "Còn hàng",
+    sold: 250,
+    number: 1,
+  },
+  {
+    id: "ao-so-mi-cuban-corduroy-it-nhan-seventy-seven",
+    images: [
+      "https://yame.vn/cdn/shop/files/ao-s-mi-seventy-seven-23-be-1174882940.jpg?v=1760776699&width=823",
+      "https://yame.vn/cdn/shop/files/ao-s-mi-seventy-seven-23-be-1174882939.jpg?v=1760776701&width=823",
+    ],
+    name: "Áo Sơ Mi Cuban Corduroy Ít Nhăn Seventy Seven",
+    price: "420.000",
+    priceSale: "399.000",
+    sizes: [
+      {
+        size: "S",
+        inventory: 0,
+      },
+      {
+        size: "M",
+        inventory: 10,
+      },
+      {
+        size: "L",
+        inventory: 10,
+      },
+      {
+        size: "XL",
+        inventory: 10,
+      },
+    ],
+    warehouse: 200,
+    status: "Còn hàng",
+    sold: 250,
+    number: 1,
+  },
+  {
+    id: "ao-so-mi-cuban-hoa-tiet-noi-co-gian-no-style",
+    images: [
+      "https://yame.vn/cdn/shop/files/ao-s-mi-no-style-m82-den-1174883037.jpg?v=1760776534&width=823",
+      "https://yame.vn/cdn/shop/files/ao-s-mi-no-style-m82-den-1174883036.jpg?v=1760776535&width=823",
+    ],
+    name: "Áo Sơ Mi Cuban Họa Tiết Nổi Co Giãn The No Style",
+    price: "685.000",
+    sizes: [
+      {
+        size: "S",
+        inventory: 0,
+      },
+      {
+        size: "M",
+        inventory: 10,
+      },
+      {
+        size: "L",
+        inventory: 10,
+      },
+      {
+        size: "XL",
+        inventory: 10,
+      },
+    ],
+    warehouse: 200,
+    status: "Còn hàng",
+    sold: 250,
+    number: 1,
+  },
+  {
+    id: "ao-thun-3-lo-cotton-thoang-khi-seventy-seven",
+    images: [
+      "https://yame.vn/cdn/shop/files/23224_thumb_1.jpg?v=1760776205&width=823",
+      "https://yame.vn/cdn/shop/files/ao-thun-seventy-seven-14-xanh-reu-1174884475.jpg?v=1760776206&width=823",
+    ],
+    name: "Áo Thun 3 Lỗ Cotton Thoáng Khí Seventy Seven",
+    price: "350.000",
+    sizes: [
+      {
+        size: "S",
+        inventory: 0,
+      },
+      {
+        size: "M",
+        inventory: 10,
+      },
+      {
+        size: "L",
+        inventory: 10,
+      },
+      {
+        size: "XL",
+        inventory: 10,
+      },
+    ],
+    warehouse: 200,
+    status: "Còn hàng",
+    sold: 250,
+    number: 1,
+  },
+  {
+    id: "ao-khoac-bomber-corduroy-giu-am-no-style",
+    images: [
+      "https://yame.vn/cdn/shop/files/ao-khoac-no-style-m44-xanh-reu-1174885212.jpg?v=1760778955&width=823",
+      "https://yame.vn/cdn/shop/files/ao-khoac-no-style-m44-xanh-reu-1174885207.jpg?v=1760778957&width=823",
+      "https://yame.vn/cdn/shop/files/ao-khoac-no-style-m44-xanh-reu-1174885208.jpg?v=1760778958&width=823",
+    ],
+    name: "Áo Khoác Bomber Corduroy Giữ Ấm The No Style",
+    price: "799.000",
+    priceSale: "650.000",
+    sizes: [
+      {
+        size: "S",
+        inventory: 0,
+      },
+      {
+        size: "M",
+        inventory: 10,
+      },
+      {
+        size: "L",
+        inventory: 10,
+      },
+      {
+        size: "XL",
+        inventory: 10,
+      },
+    ],
+    warehouse: 200,
+    status: "Còn hàng",
+    sold: 250,
+    number: 1,
+  },
+  {
+    id: "ao-thun-cotton-line-art-co-gian-seventy-seven",
+    images: [
+      "https://yame.vn/cdn/shop/files/ao-thun-seventy-seven-04-xam-xanh-1174883175.jpg?v=1760778548&width=823",
+      "https://yame.vn/cdn/shop/files/ao-thun-seventy-seven-04-xam-xanh-1174883178.jpg?v=1760778549&width=823",
+    ],
+    name: "Áo Thun Cotton Line Art Co Giãn Seventy Seven",
+    price: "157.000",
+    priceSale: "141.000",
+    sizes: [
+      {
+        size: "S",
+        inventory: 0,
+      },
+      {
+        size: "M",
+        inventory: 10,
+      },
+      {
+        size: "L",
+        inventory: 10,
+      },
+      {
+        size: "XL",
+        inventory: 10,
+      },
+    ],
+    warehouse: 200,
+    status: "Còn hàng",
+    sold: 250,
+    number: 1,
+  },
+  {
+    id: "quan-lot-nam-boxer-seamless-mem-sieu-co-gian-combo-3",
+    images: [
+      "https://yame.vn/cdn/shop/files/qu-n-lot-boxer-ng-n-y2010-m2-combo-3-1174879441.jpg?v=1760789406&width=823",
+      "https://yame.vn/cdn/shop/files/qu-n-lot-boxer-ng-n-y2010-m2-combo-3-1174879438.jpg?v=1760789410&width=823",
+    ],
+    name: "Quần Lót Nam Boxer Seamless Mềm Siêu Co Giãn Combo 3 Cái",
+    price: "270.000",
+    priceSale: "229.000",
+    sizes: [
+      {
+        size: "S",
+        inventory: 0,
+      },
+      {
+        size: "M",
+        inventory: 10,
+      },
+      {
+        size: "L",
+        inventory: 10,
+      },
+      {
+        size: "XL",
+        inventory: 10,
+      },
+    ],
+    warehouse: 200,
+    status: "Còn hàng",
+    sold: 250,
+    number: 1,
+  },
+  {
+    id: "quan-jeans-slimfit-co-gian-the-original",
+    images: [
+      "https://yame.vn/cdn/shop/files/qu-n-jean-the-original-28-xam-1174882665.jpg?v=1760782677&width=823",
+      "https://yame.vn/cdn/shop/files/qu-n-jean-the-original-28-xam-1174882666.jpg?v=1760782679&width=823",
+    ],
+    name: "Quần Jeans Slimfit Co Giãn The Original",
+    price: "699.000",
+    priceSale: "590.000",
+    sizes: [
+      {
+        size: "S",
+        inventory: 0,
+      },
+      {
+        size: "M",
+        inventory: 10,
+      },
+      {
+        size: "L",
+        inventory: 10,
+      },
+      {
+        size: "XL",
+        inventory: 10,
+      },
+    ],
+    warehouse: 200,
+    status: "Còn hàng",
+    sold: 250,
+    number: 1,
+  },
+  {
+    id: "quan-short-jeans-9-inch-ben-seventy-seven-29-xanh-nhat",
+    images: [
+      "https://yame.vn/cdn/shop/files/qu-n-short-seventy-seven-29-xanh-nh-t-1174882189.jpg?v=1760783891&width=823",
+      "https://yame.vn/cdn/shop/files/qu-n-short-seventy-seven-29-xanh-nh-t-1174882188.jpg?v=1760783893&width=823",
+    ],
+    name: "Quần Short Jeans 9 Inch Bền The Original 008 Xanh Dương Nhạt",
+    price: "450.000",
+    priceSale: "400.000",
+    sizes: [
+      {
+        size: "S",
+        inventory: 0,
+      },
+      {
+        size: "M",
+        inventory: 10,
+      },
+      {
+        size: "L",
+        inventory: 10,
+      },
+      {
+        size: "XL",
+        inventory: 10,
+      },
+    ],
+    warehouse: 200,
+    status: "Còn hàng",
+    sold: 250,
+    number: 1,
+  },
+  {
+    id: "ao-polo-pique-thoang-mat-non-branded",
+    images: [
+      "https://yame.vn/cdn/shop/files/ao-polo-non-branded-03-xanh-xam-1174885406.jpg?v=1760774380&width=823",
+      "https://yame.vn/cdn/shop/files/ao-polo-non-branded-03-xanh-xam-1174885405.jpg?v=1760774381&width=823",
+    ],
+    name: "Áo Polo Pique Thoáng Mát Non Branded",
+    price: "520.000",
+    sizes: [
+      {
+        size: "S",
+        inventory: 0,
+      },
+      {
+        size: "M",
+        inventory: 10,
+      },
+      {
+        size: "L",
+        inventory: 10,
+      },
+      {
+        size: "XL",
+        inventory: 10,
+      },
+    ],
+    warehouse: 200,
+    status: "Còn hàng",
+    sold: 250,
+    number: 1,
+  },
+  {
+    id: "ao-khoac-jeans-classic-ben-seventy-seven-36-xanh-nhat",
+    images: [
+      "https://yame.vn/cdn/shop/files/ao-khoac-the-original-36-xanh-nh-t-1174881209.jpg?v=1760784108&width=823",
+      "https://yame.vn/cdn/shop/files/ao-khoac-the-original-36-xanh-nh-t-1174881205.jpg?v=1760784110&width=823",
+    ],
+    name: "Áo Khoác Jeans Classic Bền The Original 036 Xanh Dương Nhạt",
+    price: "357.000",
+    priceSale: "339.000",
+    sizes: [
+      {
+        size: "S",
+        inventory: 0,
+      },
+      {
+        size: "M",
+        inventory: 10,
+      },
+      {
+        size: "L",
+        inventory: 10,
+      },
+      {
+        size: "XL",
+        inventory: 10,
+      },
+    ],
+    warehouse: 200,
+    status: "Còn hàng",
+    sold: 250,
     number: 1,
   },
 ];

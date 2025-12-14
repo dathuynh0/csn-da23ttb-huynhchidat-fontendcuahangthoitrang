@@ -47,7 +47,7 @@ const ProDuctItem = ({
 
         <Button
           onClick={() => onAddToCart(product)}
-          className="absolute bottom-1 w-full bg-black text-white hover:opacity-85 text-xs lg:text-base md:px-6 md:py-3 h-auto flex items-center gap-2 cursor-pointer opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          className="absolute bottom-0 w-full bg-black text-white hover:opacity-85 text-xs lg:text-base md:px-6 md:py-3 h-auto flex items-center gap-2 cursor-pointer opacity-0 group-hover:opacity-100 transition-opacity duration-300"
         >
           <span className="hidden lg:inline">Thêm vào giỏ hàng</span>
           <ShoppingCart className="size-5" />
