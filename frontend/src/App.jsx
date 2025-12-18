@@ -19,7 +19,15 @@ function App() {
   const { isSuccess, search, cartItems, setCartItems, formattedTotal } =
     useContext(Context);
 
-  const lowerCaseSearch = search ? search.toLowerCase() : "";
+  //xóa dấu
+  const lowerCaseSearch = search
+    ? search
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/đ/g, "d")
+        .replace(/Đ/g, "D")
+        .toLowerCase()
+    : "";
 
   const allProduct = [
     ...bestseller,
@@ -74,7 +82,12 @@ function App() {
   };
 
   const filteredProducts = products.filter((product) => {
-    const lowerCaseProductName = product.name.toLowerCase();
+    const lowerCaseProductName = product.name
+      .normalize("NFD") //bỏ dấu tiếng việt
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/đ/g, "d")
+      .replace(/Đ/g, "D")
+      .toLowerCase();
     return lowerCaseProductName.includes(lowerCaseSearch);
   });
 
@@ -122,7 +135,7 @@ function App() {
           )}
         </div>
       </main>
-      <div className="bg-[#000] text-white">
+      <div>
         <Footer />
       </div>
     </div>

@@ -26,7 +26,7 @@ const Cart = ({
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ duration: 0.3 }}
-            className="bg-slate-100 fixed top-0 right-0 w-full lg:w-[50%] h-full z-20 shadow-xl flex flex-col"
+            className="bg-slate-100 fixed top-0 right-0 w-full lg:w-[50%] h-full z-50 shadow-xl flex flex-col"
           >
             <div className="flex items-center justify-between p-4 flex-shrink-0">
               <h1 className="text-2xl font-bold text-black">Giỏ hàng</h1>

@@ -105,10 +105,7 @@ const ProductDetail = () => {
 
   return (
     <section className="w-full container mx-auto mb-8">
-      <nav
-        className="text-xs md:text-base mt-6 m-2 text-gray-600"
-        aria-label="Breadcrumb"
-      >
+      <nav className="text-xs md:text-base m-2 text-gray-600">
         <Link className="hover:underline" to="/">
           Trang chủ
         </Link>
@@ -142,14 +139,14 @@ const ProductDetail = () => {
       </nav>
 
       <div className="flex flex-col lg:flex-row items-start justify-between gap-10 py-8">
-        {/* image */}
+        {/* image lớn */}
         <div className="w-[90%] mx-auto lg:w-[40%] relative">
           <div className="group aspect-square overflow-hidden bg-gray-100 shadow-lg rounded-lg">
             <Button
               variant="outline"
               size="icon"
               onClick={handlePrevImage}
-              className="absolute top-[45%] left-2 z-10 hover:bg-black hover:text-white transition-colors duration-300 opacity-0 group-hover:opacity-100"
+              className="absolute top-[40%] left-2 z-10 hover:bg-black hover:text-white transition-all duration-300 opacity-0 group-hover:opacity-100 cursor-pointer"
             >
               <ChevronLeft />
             </Button>
@@ -163,7 +160,7 @@ const ProductDetail = () => {
               variant="outline"
               size="icon"
               onClick={handleNextImage}
-              className="absolute top-[45%] right-2 z-10 hover:bg-black hover:text-white transition-colors duration-300 opacity-0 group-hover:opacity-100"
+              className="absolute top-[40%] right-2 z-10 hover:bg-black hover:text-white transition-colors duration-300 opacity-0 group-hover:opacity-100 cursor-pointer"
               aria-label="Ảnh tiếp theo"
             >
               <ChevronRight />
@@ -224,7 +221,7 @@ const ProductDetail = () => {
                   <div key={index}>
                     <Button
                       onClick={() => setCurrentSize(size.size)}
-                      className={`hover:bg-black hover:text-white transition-all ${
+                      className={`hover:bg-black hover:text-white transition-all cursor-pointer ${
                         currentSize === size.size ? "bg-black text-white" : ""
                       }`}
                       variant="outline"
@@ -264,7 +261,7 @@ const ProductDetail = () => {
           >
             <div className="space-y-2 text-base font-light">
               <p className="font-medium">{findProduct.name}</p>
-              <p>1. Kiểu sản phẩm: Áo Thun</p>
+              <p>1. Kiểu sản phẩm: {findProduct.category}</p>
               <p>2. Ưu điểm:</p>
               <ul className="ml-4 space-y-1">
                 <li>

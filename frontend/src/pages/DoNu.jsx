@@ -3,6 +3,24 @@ import ProductsPage from "../components/ProductPage";
 
 const DoNu = () => {
   const nu = [...aoNu, ...quanNu, ...dam];
+  const category = [
+    "Theo kiểu",
+    "Áo thun",
+    "Áo sơ mi",
+    "Áo khoác",
+    "Áo gile",
+    "Áo len",
+    "Quần jean",
+    "Quần short",
+    "Quần ống rộng",
+    "Quần ống suông",
+    "Váy",
+    "Đầm dáng xòe",
+    "Đầm maxi",
+    "Đầm ngắn",
+    "Đầm trễ vai",
+    "Đầm sơ mi",
+  ];
 
   return (
     <ProductsPage
@@ -10,6 +28,7 @@ const DoNu = () => {
       name="Sản phẩm nữ"
       link="/do-nu"
       title={"Sản phẩm nữ"}
+      category={category}
     />
   );
 };

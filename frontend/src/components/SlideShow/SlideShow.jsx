@@ -4,10 +4,25 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import slide1 from "../../assets/slide1.png";
 import slide2 from "../../assets/slide2.png";
+import slide3 from "../../assets/slide3.png";
+import { Link } from "react-router";
 
 const SlideShow = () => {
   const [index, setIndex] = useState(0);
-  const images = [slide1, slide2];
+  const images = [
+    {
+      image: slide1,
+      link: "/sale",
+    },
+    {
+      image: slide2,
+      link: "/do-nu",
+    },
+    {
+      image: slide3,
+      link: "/do-nam",
+    },
+  ];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -27,18 +42,20 @@ const SlideShow = () => {
 
   return (
     <section className="relative group w-full lg:container mx-auto mb-8">
-      <div className="w-full h-full overflow-hidden">
-        <AnimatePresence mode="wait">
-          <motion.img
-            key={index}
-            src={images[index]}
-            alt=""
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3, ease: "linear" }}
-            className="w-full h-full object-cover"
-          />
+      <div className="w-full lg:h-[75vh] rounded-lg overflow-hidden">
+        <AnimatePresence>
+          <Link to={images[index].link}>
+            <motion.img
+              key={index}
+              src={images[index].image}
+              alt=""
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.5, ease: "linear" }}
+              className="w-full h-full object-cover object-center"
+            />
+          </Link>
         </AnimatePresence>
       </div>
 

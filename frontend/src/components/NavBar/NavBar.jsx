@@ -53,7 +53,7 @@ const NavBar = ({
 
   return (
     <>
-      <nav className="flex flex-col py-6 flex-wrap w-full lg:container mx-auto">
+      <nav className="px-2 flex flex-col py-6 flex-wrap w-full lg:container mx-auto">
         <div className="flex items-center justify-between flex-wrap w-full">
           {/* logo */}
           <Link to="/">

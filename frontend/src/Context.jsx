@@ -20,11 +20,11 @@ export const ContextProvider = ({ children }) => {
     return Math.floor(sum + price * item.number);
   }, 0); // đặt giá trị ban đầu của sum = 0
 
-  const formattedTotal = new Intl.NumberFormat("vi-VN", {
+  const formattedTotal = total.toLocaleString("vi-VN", {
     style: "currency",
     currency: "VND",
     currencyDisplay: "code",
-  }).format(total);
+  });
 
   //phần search
   const [search, setSearch] = useState("");

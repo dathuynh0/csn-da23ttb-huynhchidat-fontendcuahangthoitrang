@@ -2,6 +2,15 @@ import ProductsPage from "../ProductPage";
 import { dam } from "../../lib/data.js";
 
 const Dam = () => {
+  const category = [
+    "Theo kiểu",
+    "Đầm dáng xòe",
+    "Đầm maxi",
+    "Đầm ngắn",
+    "Đầm trễ vai",
+    "Đầm sơ mi",
+  ];
+
   return (
     <ProductsPage
       data={dam}
@@ -10,6 +19,7 @@ const Dam = () => {
       title="Sản phẩm nữ"
       title2="Đầm"
       name="Đầm"
+      category={category}
     />
   );
 };

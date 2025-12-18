@@ -1,11 +1,11 @@
 export const aoNam = [
   {
-    id: "ao-thoi-trang-mat-me-phu-hop-mac-vao-mua-dong",
+    id: "ao-polo-thoi-trang-mat-me-phu-hop-mac-vao-mua-dong",
     images: [
       "https://yame.vn/cdn/shop/files/ao-polo-the-minimalist-001-xanh-den-1174885416.jpg?v=1760774688&width=165",
       "https://yame.vn/cdn/shop/files/ao-khoac-jean-the-original-m039-xanh-d-ng-1184461421.jpg?v=1760792443&width=360",
     ],
-    name: "Áo thời trang mát mẻ phù hợp mặc vào mùa đông",
+    name: "Áo polo thời trang mát mẻ phù hợp mặc vào mùa đông",
     price: "615.000",
     sizes: [
       {
@@ -28,6 +28,7 @@ export const aoNam = [
     warehouse: 200,
     status: "Còn hàng",
     sold: 250,
+    category: "Áo polo",
     number: 1,
   },
   {
@@ -59,6 +60,7 @@ export const aoNam = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Áo polo",
     number: 1,
   },
   {
@@ -90,6 +92,7 @@ export const aoNam = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Áo sơ mi",
     number: 1,
   },
   {
@@ -121,6 +124,7 @@ export const aoNam = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Áo sơ mi",
     number: 1,
   },
   {
@@ -154,6 +158,7 @@ export const aoNam = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Áo thun",
     number: 1,
   },
   {
@@ -185,6 +190,7 @@ export const aoNam = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Áo sơ mi",
     number: 1,
   },
   {
@@ -215,6 +221,7 @@ export const aoNam = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Áo sơ mi",
     number: 1,
   },
   {
@@ -246,6 +253,7 @@ export const aoNam = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Áo thun",
     number: 1,
   },
 ];
@@ -279,6 +287,7 @@ export const quanNam = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Quần jean",
     number: 1,
   },
   {
@@ -309,6 +318,7 @@ export const quanNam = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Quần short",
     number: 1,
   },
   {
@@ -341,6 +351,7 @@ export const quanNam = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Quần jean",
     number: 1,
   },
   {
@@ -371,6 +382,7 @@ export const quanNam = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Quần short",
     number: 1,
   },
   {
@@ -402,6 +414,7 @@ export const quanNam = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Quần jean",
     number: 1,
   },
   {
@@ -434,6 +447,7 @@ export const quanNam = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Quần short",
     number: 1,
   },
   {
@@ -465,6 +479,7 @@ export const quanNam = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Quần tây",
     number: 1,
   },
   {
@@ -499,6 +514,7 @@ export const quanNam = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Quần short",
     number: 1,
   },
 ];
@@ -532,6 +548,7 @@ export const aoNu = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Áo thun",
     number: 1,
   },
   {
@@ -563,6 +580,7 @@ export const aoNu = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Áo thun",
     number: 1,
   },
   {
@@ -594,6 +612,7 @@ export const aoNu = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Áo thun",
     number: 1,
   },
   {
@@ -625,6 +644,7 @@ export const aoNu = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Áo kiểu",
     number: 1,
   },
   {
@@ -657,6 +677,7 @@ export const aoNu = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Áo gile",
     number: 1,
   },
   {
@@ -688,6 +709,7 @@ export const aoNu = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Áo khoác",
     number: 1,
   },
   {
@@ -718,6 +740,7 @@ export const aoNu = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Áo khoác",
     number: 1,
   },
   {
@@ -749,6 +772,7 @@ export const aoNu = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Áo khoác",
     number: 1,
   },
 
@@ -780,6 +804,7 @@ export const aoNu = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Áo sơ mi",
     number: 1,
   },
   {
@@ -811,6 +836,7 @@ export const aoNu = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Áo khoác",
     number: 1,
   },
   {
@@ -842,6 +868,7 @@ export const aoNu = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Áo blazer",
     number: 1,
   },
   {
@@ -875,6 +902,7 @@ export const aoNu = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Áo gile",
     number: 1,
   },
   {
@@ -906,6 +934,7 @@ export const aoNu = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Áo len",
     number: 1,
   },
   {
@@ -937,6 +966,7 @@ export const aoNu = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Áo len",
     number: 1,
   },
   {
@@ -968,6 +998,7 @@ export const aoNu = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Áo thun",
     number: 1,
   },
 ];
@@ -1001,6 +1032,7 @@ export const quanNu = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Quần jean",
     number: 1,
   },
   {
@@ -1031,6 +1063,7 @@ export const quanNu = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Quần jean",
     number: 1,
   },
   {
@@ -1061,6 +1094,7 @@ export const quanNu = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Quần jean",
     number: 1,
   },
   {
@@ -1092,6 +1126,7 @@ export const quanNu = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Váy",
     number: 1,
   },
   {
@@ -1123,6 +1158,7 @@ export const quanNu = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Quần short",
     number: 1,
   },
   {
@@ -1155,6 +1191,7 @@ export const quanNu = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Quần short",
     number: 1,
   },
   {
@@ -1186,6 +1223,7 @@ export const quanNu = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Quần jean",
     number: 1,
   },
   {
@@ -1217,6 +1255,7 @@ export const quanNu = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Quần jean",
     number: 1,
   },
 
@@ -1248,6 +1287,7 @@ export const quanNu = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Quần jean",
     number: 1,
   },
   {
@@ -1279,6 +1319,7 @@ export const quanNu = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Quần jean",
     number: 1,
   },
   {
@@ -1309,6 +1350,7 @@ export const quanNu = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Quần ống suông",
     number: 1,
   },
   {
@@ -1339,6 +1381,7 @@ export const quanNu = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Quần ống rộng",
     number: 1,
   },
   {
@@ -1370,6 +1413,7 @@ export const quanNu = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Quần short",
     number: 1,
   },
   {
@@ -1400,6 +1444,7 @@ export const quanNu = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Quần ống rộng",
     number: 1,
   },
   {
@@ -1431,6 +1476,7 @@ export const quanNu = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Quần short",
     number: 1,
   },
 ];
@@ -1464,6 +1510,7 @@ export const dam = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Đầm dáng xòe",
     number: 1,
   },
   {
@@ -1495,6 +1542,7 @@ export const dam = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Đầm dáng xòe",
     number: 1,
   },
   {
@@ -1527,6 +1575,7 @@ export const dam = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Đầm ngắn",
     number: 1,
   },
   {
@@ -1559,6 +1608,7 @@ export const dam = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Đầm dáng xòe",
     number: 1,
   },
   {
@@ -1589,6 +1639,7 @@ export const dam = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Đầm ngắn",
     number: 1,
   },
   {
@@ -1619,6 +1670,7 @@ export const dam = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Đầm ngắn",
     number: 1,
   },
   {
@@ -1650,6 +1702,7 @@ export const dam = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Đầm sơ mi",
     number: 1,
   },
   {
@@ -1681,6 +1734,7 @@ export const dam = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Đầm ngắn",
     number: 1,
   },
 
@@ -1713,6 +1767,7 @@ export const dam = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Đầm trễ vai",
     number: 1,
   },
   {
@@ -1743,6 +1798,7 @@ export const dam = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Đầm ngắn",
     number: 1,
   },
   {
@@ -1773,6 +1829,7 @@ export const dam = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Đầm ngắn",
     number: 1,
   },
   {
@@ -1803,6 +1860,7 @@ export const dam = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Đầm ngắn",
     number: 1,
   },
   {
@@ -1834,6 +1892,7 @@ export const dam = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Đầm maxi",
     number: 1,
   },
   {
@@ -1865,6 +1924,7 @@ export const dam = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Đầm dáng xòe",
     number: 1,
   },
   {
@@ -1896,6 +1956,7 @@ export const dam = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Đầm ngắn",
     number: 1,
   },
 ];
@@ -1912,6 +1973,7 @@ export const phukien = [
     priceSale: "150.000",
     warehouse: 200,
     status: "Còn hàng",
+    category: "Nón (mũ)",
     number: 1,
   },
   {
@@ -1925,6 +1987,7 @@ export const phukien = [
     price: "220.000",
     warehouse: 200,
     status: "Còn hàng",
+    category: "Nón (mũ)",
     number: 1,
   },
   {
@@ -1940,6 +2003,7 @@ export const phukien = [
     priceSale: "55.000",
     warehouse: 200,
     status: "Còn hàng",
+    category: "Dép",
     number: 1,
   },
   {
@@ -1954,6 +2018,7 @@ export const phukien = [
     price: "150.000",
     warehouse: 200,
     status: "Còn hàng",
+    category: "Túi",
     number: 1,
   },
   {
@@ -1967,6 +2032,7 @@ export const phukien = [
     price: "310.000",
     warehouse: 200,
     status: "Còn hàng",
+    category: "Ví",
     number: 1,
   },
   {
@@ -1982,18 +2048,20 @@ export const phukien = [
     priceSale: "150.000",
     warehouse: 200,
     status: "Còn hàng",
+    category: "Balo",
     number: 1,
   },
   {
     id: "khan-choang-co-lua-len",
     images: [
-      "https://yame.vn/cdn/shop/files/non-one-piece-wano-35-be-1174879806.jpg?v=1760788984&width=360",
-      "https://yame.vn/cdn/shop/files/tui-deo-one-piece-wano-32-be-1174880843.jpg?v=1760787968&width=360",
+      "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/478312/item/goods_01_478312_3x4.jpg?width=294",
+      "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/478312/item/goods_01_478312_3x4.jpg?width=294",
     ],
     name: "Khăn choàng cổ lụa/len",
     price: "275.000",
     warehouse: 200,
     status: "Còn hàng",
+    category: "Khăn",
     number: 1,
   },
   {
@@ -2006,6 +2074,7 @@ export const phukien = [
     price: "195.000",
     warehouse: 200,
     status: "Còn hàng",
+    category: "Nón (mũ)",
     number: 1,
   },
   {
@@ -2019,6 +2088,7 @@ export const phukien = [
     priceSale: "150.000",
     warehouse: 200,
     status: "Còn hàng",
+    category: "Nón (mũ)",
     number: 1,
   },
   {
@@ -2032,6 +2102,7 @@ export const phukien = [
     price: "220.000",
     warehouse: 200,
     status: "Còn hàng",
+    category: "Găng tay",
     number: 1,
   },
   {
@@ -2045,6 +2116,7 @@ export const phukien = [
     price: "95.000",
     warehouse: 200,
     status: "Còn hàng",
+    category: "Dây nịt",
     number: 1,
   },
   {
@@ -2059,6 +2131,7 @@ export const phukien = [
     priceSale: "99.000",
     warehouse: 200,
     status: "Còn hàng",
+    category: "Ví",
     number: 1,
   },
   {
@@ -2072,6 +2145,7 @@ export const phukien = [
     price: "310.000",
     warehouse: 200,
     status: "Còn hàng",
+    category: "Dây nịt",
     number: 1,
   },
   {
@@ -2085,6 +2159,7 @@ export const phukien = [
     price: "180.000",
     warehouse: 200,
     status: "Còn hàng",
+    category: "Túi",
     number: 1,
   },
   {
@@ -2097,6 +2172,7 @@ export const phukien = [
     price: "69.000",
     warehouse: 200,
     status: "Còn hàng",
+    category: "Băng bảo vệ",
     number: 1,
   },
   {
@@ -2112,6 +2188,7 @@ export const phukien = [
     priceSale: "150.000",
     warehouse: 200,
     status: "Còn hàng",
+    category: "Túi",
     number: 1,
   },
 ];
@@ -2146,6 +2223,7 @@ export const sale = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Quần short",
     number: 1,
   },
   {
@@ -2179,6 +2257,7 @@ export const sale = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Áo thun",
     number: 1,
   },
   {
@@ -2210,6 +2289,7 @@ export const sale = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Áo polo",
     number: 1,
   },
   {
@@ -2242,6 +2322,7 @@ export const sale = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Áo polo",
     number: 1,
   },
   {
@@ -2274,10 +2355,11 @@ export const sale = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Áo sơ mi",
     number: 1,
   },
   {
-    id: "ao-gile-len-nu-soc-ngang-the-c-i-u-ao-kieu-sat-nach-cai-nut-phoi-vien-den-form-om-basic",
+    id: "ao-gile-len-nu-soc-ngang-ao-kieu-sat-nach-cai-nut-phoi-vien-den-form-om-basic",
     images: [
       "https://minio.theciu.vn/theciu-beta/1000/images/SiSL9tDUGdw5Y8CSXTWHTCGiR3DSIjzWqIUwY8HL.jpg",
       "https://minio.theciu.vn/theciu-beta/1000/images/kVTqTI1JbPfPJrwLjWPnPOZJnz2X0ZiMr6h0BvIe.jpg",
@@ -2307,6 +2389,7 @@ export const sale = [
     ],
     warehouse: 200,
     status: "Còn hàng",
+    category: "Áo gile",
     number: 1,
   },
 ];
@@ -2343,6 +2426,7 @@ export const bestseller = [
     warehouse: 200,
     status: "Còn hàng",
     sold: 250,
+    category: "Áo polo",
     number: 1,
   },
   {
@@ -2375,6 +2459,7 @@ export const bestseller = [
     warehouse: 200,
     status: "Còn hàng",
     sold: 250,
+    category: "Áo polo",
     number: 1,
   },
   {
@@ -2406,6 +2491,7 @@ export const bestseller = [
     warehouse: 200,
     status: "Còn hàng",
     sold: 250,
+    category: "Áo khoác",
     number: 1,
   },
   {
@@ -2439,6 +2525,7 @@ export const bestseller = [
     warehouse: 200,
     status: "Còn hàng",
     sold: 250,
+    category: "Áo polo",
     number: 1,
   },
   {
@@ -2472,6 +2559,7 @@ export const bestseller = [
     warehouse: 200,
     status: "Còn hàng",
     sold: 250,
+    category: "Áo polo",
     number: 1,
   },
   {
@@ -2504,6 +2592,7 @@ export const bestseller = [
     warehouse: 200,
     status: "Còn hàng",
     sold: 250,
+    category: "Áo polo",
     number: 1,
   },
   {
@@ -2536,6 +2625,7 @@ export const bestseller = [
     warehouse: 200,
     status: "Còn hàng",
     sold: 250,
+    category: "Áo sơ mi",
     number: 1,
   },
   {
@@ -2567,6 +2657,7 @@ export const bestseller = [
     warehouse: 200,
     status: "Còn hàng",
     sold: 250,
+    category: "Áo polo",
     number: 1,
   },
   {
@@ -2598,6 +2689,7 @@ export const bestseller = [
     warehouse: 200,
     status: "Còn hàng",
     sold: 250,
+    category: "Áo thun",
     number: 1,
   },
   {
@@ -2631,6 +2723,7 @@ export const bestseller = [
     warehouse: 200,
     status: "Còn hàng",
     sold: 250,
+    category: "Áo khoác",
     number: 1,
   },
   {
@@ -2663,6 +2756,7 @@ export const bestseller = [
     warehouse: 200,
     status: "Còn hàng",
     sold: 250,
+    category: "Áo thun",
     number: 1,
   },
   {
@@ -2695,6 +2789,7 @@ export const bestseller = [
     warehouse: 200,
     status: "Còn hàng",
     sold: 250,
+    category: "Quần lót",
     number: 1,
   },
   {
@@ -2727,6 +2822,7 @@ export const bestseller = [
     warehouse: 200,
     status: "Còn hàng",
     sold: 250,
+    category: "Quần jean",
     number: 1,
   },
   {
@@ -2759,6 +2855,7 @@ export const bestseller = [
     warehouse: 200,
     status: "Còn hàng",
     sold: 250,
+    category: "Quần short",
     number: 1,
   },
   {
@@ -2790,6 +2887,7 @@ export const bestseller = [
     warehouse: 200,
     status: "Còn hàng",
     sold: 250,
+    category: "Áo polo",
     number: 1,
   },
   {
@@ -2822,6 +2920,7 @@ export const bestseller = [
     warehouse: 200,
     status: "Còn hàng",
     sold: 250,
+    category: "Áo khoác",
     number: 1,
   },
 ];

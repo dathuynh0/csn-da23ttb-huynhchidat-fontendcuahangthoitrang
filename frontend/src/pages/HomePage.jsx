@@ -21,7 +21,7 @@ const HomePage = () => {
   return (
     <>
       <SlideShow />
-
+      <Support />
       <ProductCategories />
       <Banner
         link={"/san-pham-ban-chay"}
@@ -39,7 +39,6 @@ const HomePage = () => {
       <ProductList data={nu} title="Sản phẩm nữ" link="/do-nu" />
 
       <ProductList data={phukien} title="Phụ kiện" link="/phu-kien" />
-      <Support />
     </>
   );
 };

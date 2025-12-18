@@ -1,30 +1,33 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useOutletContext } from "react-router";
 import ProDuctItem from "./ProductItems";
 import { Button } from "./ui/button";
-import { ArrowDownUp, ChevronRight } from "lucide-react";
+import { ArrowDownUp, ChevronRight, Filter, X } from "lucide-react";
 import Pagination from "./Pagination";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectLabel,
-  SelectTrigger,
-  SelectValue,
-} from "./ui/select";
+import { AnimatePresence, motion } from "framer-motion";
 
-const ProductsPage = ({ data, name, title, link, title2, link2 }) => {
+const ProductsPage = ({ data, category, name, title, link, title2, link2 }) => {
   const { handleAddToCart } = useOutletContext();
+
+  const [filterMobile, setFilterMobile] = useState(false);
 
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
 
+  //loc theo kieu
+  const [selectedCategory, setSelectedCategory] = useState(category[0]);
+
+  const arrPrice = [
+    "Theo giá",
+    "Dưới 100.000 VND",
+    "Từ 100.000 - 500.000 VND",
+    "Từ 500.000 - 1.000.000 VND",
+    "Tren 1.000.000 VND",
+  ];
+  //loc theo giá
+  const [priceFilter, setPriceFilter] = useState(arrPrice[0]);
+
   const [sort, setSort] = useState(0);
-
-  const [priceFilter, setPriceFilter] = useState("");
-
-  const refSelected = useRef();
 
   const [currentPage, setCurrentPage] = useState(1);
   const itemPerPage = 12;
@@ -36,8 +39,6 @@ const ProductsPage = ({ data, name, title, link, title2, link2 }) => {
     const endIndex = startIndex + itemPerPage;
     return filteredProducts.slice(startIndex, endIndex);
   };
-
-  console.log(getCurrentProducts());
 
   const handlePageChange = (page) => {
     setCurrentPage(page);
@@ -54,24 +55,30 @@ const ProductsPage = ({ data, name, title, link, title2, link2 }) => {
 
   useEffect(() => {
     let result = [...products];
+    //loc theo kieu
+    result =
+      selectedCategory === "Theo kiểu"
+        ? result
+        : result.filter((product) => product.category === selectedCategory);
 
     // filter theo giá
-    if (priceFilter === "d100") {
+
+    if (priceFilter === "Dưới 100.000 VND") {
       result = result.filter((item) => {
         const price = clearPrice(item.priceSale || item.price);
         return price < 100000;
       });
-    } else if (priceFilter === "t100-d500") {
+    } else if (priceFilter === "Từ 100.000 - 500.000 VND") {
       result = result.filter((item) => {
         const price = clearPrice(item.priceSale || item.price);
         return price >= 100000 && price <= 500000;
       });
-    } else if (priceFilter === "t500-d1tr") {
+    } else if (priceFilter === "Từ 500.000 - 1.000.000 VND") {
       result = result.filter((item) => {
         const price = clearPrice(item.priceSale || item.price);
         return price > 500000 && price <= 1000000;
       });
-    } else if (priceFilter === "t1tr") {
+    } else if (priceFilter === "Tren 1.000.000 VND") {
       result = result.filter(
         (item) => clearPrice(item.priceSale || item.price) > 1000000
       );
@@ -79,7 +86,7 @@ const ProductsPage = ({ data, name, title, link, title2, link2 }) => {
 
     //set lai state
     setFilteredProducts(result);
-  }, [products, priceFilter]);
+  }, [products, priceFilter, selectedCategory]);
 
   const handleSort = () => {
     const sortProducts = [...filteredProducts];
@@ -104,16 +111,10 @@ const ProductsPage = ({ data, name, title, link, title2, link2 }) => {
     setFilteredProducts(sortProducts);
   };
 
-  // lay value của option trong select
-  const handleFilter = () => {
-    const value = refSelected.current.value;
-    setPriceFilter(value);
-  };
-
   const show = getCurrentProducts();
 
   return (
-    <section className="pt-8 px-2 pb-8 w-full lg:container mx-auto">
+    <section className="px-2 pb-8 w-full lg:container mx-auto">
       <div className="flex items-center text-xs lg:text-base">
         <Link to="/" className="hover:underline">
           Trang chủ
@@ -128,24 +129,106 @@ const ProductsPage = ({ data, name, title, link, title2, link2 }) => {
         </Link>
       </div>
 
-      <hr className="mt-2" />
-      <h2 className="text-4xl font-bold mt-8">{name}</h2>
+      <h2 className="text-4xl font-bold mt-12">{name}</h2>
 
-      <div className="mt-4 mb-4 flex items-center justify-between">
-        <div className="flex items-center justify-center">
-          <p className="mr-2 text-sm md:text-base ">Bộ lọc: </p>
-          <select
-            ref={refSelected}
-            onChange={handleFilter}
-            name="filteredProduct"
-            id="filteredProduct"
-            className="block px-2 py-1 text-sm md:text-base  text-black bg-white border border-gray-300 rounded-lg shadow-sm appearance-none cursor-pointer"
+      <div className="mt-8 mb-4 flex items-center justify-between">
+        {/* mobile filter */}
+        <div className="md:hidden">
+          <Button
+            onClick={() => {
+              setFilterMobile(true);
+            }}
+            variant="ghost"
+            size="sm"
+            className="flex items-center gap-2"
           >
-            <option value="all">Theo giá</option>
-            <option value="d100">Dưới 100.000 VND</option>
-            <option value="t100-d500">Từ 100.000 - 500.000 VND</option>
-            <option value="t500-d1tr">Từ 500.000 - 1.000.000 VND</option>
-            <option value="t1tr">Trên 1.000.000 VND</option>
+            <Filter /> <p className="font-light">Bộ lọc</p>
+          </Button>
+
+          {filterMobile && (
+            <AnimatePresence>
+              <motion.div
+                initial={{ x: "100%" }}
+                animate={{ x: 0 }}
+                exit={{ x: "100%" }}
+                transition={{ duration: 0.3 }}
+                className="fixed top-0 right-0 h-full w-4/5 bg-white z-20 shadow-lg"
+              >
+                <div className="flex justify-end">
+                  <Button
+                    onClick={() => setFilterMobile(false)}
+                    variant="ghost"
+                    size="lg"
+                  >
+                    <X className="size-6" />
+                  </Button>
+                </div>
+
+                {/* giá */}
+                <div className="mt-18 px-4">
+                  <select
+                    value={priceFilter}
+                    onChange={(e) => {
+                      setPriceFilter(e.target.value);
+                    }}
+                    className="inline-block w-full px-2 py-1 text-sm md:text-md font-light  text-black bg-white border border-gray-300 rounded-lg shadow-sm appearance-none cursor-pointer"
+                  >
+                    {arrPrice.map((prop) => (
+                      <option key={prop} value={prop}>
+                        {prop}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                {/* theo kiểu */}
+                <div className="mt-2 px-4">
+                  <select
+                    value={selectedCategory}
+                    onChange={(e) => {
+                      setSelectedCategory(e.target.value);
+                    }}
+                    className="w-full inline-block px-4 py-1 text-sm md:text-md font-light text-black bg-white border border-gray-300 rounded-lg shadow-sm appearance-none cursor-pointer"
+                  >
+                    {category.map((prop) => (
+                      <option key={prop} value={prop}>
+                        {prop}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+          )}
+        </div>
+
+        {/* md filter */}
+        <div className="hidden md:block space-x-2">
+          <p className="inline-block mr-2 text-sm md:text-md font-light">
+            Bộ lọc:
+          </p>
+
+          <select
+            value={priceFilter}
+            onChange={(e) => setPriceFilter(e.target.value)}
+            className="inline-block px-2 py-1 text-sm md:text-md font-light  text-black bg-white border border-gray-300 rounded-lg shadow-sm appearance-none cursor-pointer"
+          >
+            {arrPrice.map((prop) => (
+              <option key={prop} value={prop}>
+                {prop}
+              </option>
+            ))}
+          </select>
+          <select
+            value={selectedCategory}
+            onChange={(e) => setSelectedCategory(e.target.value)}
+            className="inline-block px-4 py-1 text-sm md:text-md font-light text-black bg-white border border-gray-300 rounded-lg shadow-sm appearance-none cursor-pointer"
+          >
+            {category.map((prop) => (
+              <option key={prop} value={prop}>
+                {prop}
+              </option>
+            ))}
           </select>
         </div>
 
@@ -172,6 +255,7 @@ const ProductsPage = ({ data, name, title, link, title2, link2 }) => {
           </li>
         ))}
       </ul>
+
       <div className="flex items-center justify-center my-12 w-full">
         <Pagination
           currentPage={currentPage}

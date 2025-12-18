@@ -9,14 +9,71 @@ import {
 
 import { Button } from "../components/ui/button";
 import { Link } from "react-router";
+import { Input } from "../components/ui/input";
 
 const Footer = () => {
   return (
-    <footer className="w-full lg:container mx-auto p-10 lg:p-20">
-      <div>
+    <footer className="w-full bg-[#124C90] text-white">
+      <div className="lg:container  mx-auto">
+        {/* liên hệ */}
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between border-b p-6 border-gray-500">
+          <div className="flex items-center gap-3">
+            <h1 className="font-bold text-base md:text-xl">
+              Đăng ký nhận thông tin
+            </h1>
+            <form className="relative" action="">
+              <Input
+                className="text-gray-500 bg-white pl-10 w-full"
+                type="email"
+                placeholder="Nhập email của bạn"
+              />
+
+              <Mail className="text-gray-500 absolute top-1/2 -translate-y-1/2 left-2" />
+            </form>
+            <Button
+              variant="ghost"
+              className="bg-black text-lg px-8 py-4 rounded-full cursor-pointer hover:opacity-85"
+            >
+              Đăng ký
+            </Button>
+          </div>
+          <div className="mt-4 flex items-center gap-x-3">
+            <Button
+              size="icon"
+              variant="outline"
+              className="border-white hover:opacity-80"
+            >
+              <a href="https://facebook.com" target="_blank">
+                <Facebook className="size-5 text-white" />
+              </a>
+            </Button>
+            <Button
+              size="icon"
+              variant="outline"
+              className="border-white hover:opacity-80"
+            >
+              <a href="https://instagram.com" target="_blank">
+                <Instagram className="size-5 text-white" />
+              </a>
+            </Button>
+            <Button
+              size="icon"
+              variant="outline"
+              className="border-white hover:opacity-80"
+            >
+              <a href="https://twitter.com" target="_blank">
+                <Twitter className="size-5 text-white" />
+              </a>
+            </Button>
+          </div>
+        </div>
+      </div>
+
+      {/* main */}
+      <div className="lg:container p-10 mx-auto lg:p-20">
         <div className="flex flex-col md:flex-row md:justify-between items-start gap-10">
           <div className="flex flex-col gap-y-4 w-full">
-            <Link to="/" className="flex items-center gap-x-3 mb-2">
+            <Link to="/" className="flex items-center mb-2">
               <p className="text-3xl font-extrabold">M O D A</p>
             </Link>
             <div className="flex items-center gap-x-3">
@@ -36,36 +93,6 @@ const Footer = () => {
               <p className="font-medium text-white/80 text-md">
                 contact@modashop.com
               </p>
-            </div>
-
-            <div className="mt-4 flex items-center gap-x-3">
-              <Button
-                size="icon"
-                variant="outline"
-                className="bg-blue-600 border-white hover:opacity-80"
-              >
-                <a href="https://facebook.com" target="_blank">
-                  <Facebook className="size-5 text-white" />
-                </a>
-              </Button>
-              <Button
-                size="icon"
-                variant="outline"
-                className="bg-pink-600 border-white hover:opacity-80"
-              >
-                <a href="https://instagram.com" target="_blank">
-                  <Instagram className="size-5 text-pink-200" />
-                </a>
-              </Button>
-              <Button
-                size="icon"
-                variant="outline"
-                className="bg-sky-500 border-white hover:opacity-80"
-              >
-                <a href="https://twitter.com" target="_blank">
-                  <Twitter className="size-5 text-white" />
-                </a>
-              </Button>
             </div>
           </div>
 

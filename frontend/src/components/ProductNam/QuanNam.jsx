@@ -2,6 +2,7 @@ import ProductsPage from "../ProductPage";
 import { quanNam } from "../../lib/data";
 
 const QuanNam = () => {
+  const category = ["Theo kiểu", "Jean", "Short", "Quần tây"];
   return (
     <ProductsPage
       data={quanNam}
@@ -9,7 +10,8 @@ const QuanNam = () => {
       title="Sản phẩm nam"
       link="/do-nam"
       title2="Quần nam"
-      link2="/do-nu/quan-nam"
+      link2="/do-nam/quan-nam"
+      category={category}
     />
   );
 };

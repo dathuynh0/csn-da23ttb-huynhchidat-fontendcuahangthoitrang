@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
-import { ChevronDown, Shirt, X } from "lucide-react";
+import { ChevronDown, X } from "lucide-react";
 import { NavLink } from "react-router";
 
 const ResponsiveMenu = ({ open, openMenu }) => {
@@ -21,11 +21,11 @@ const ResponsiveMenu = ({ open, openMenu }) => {
               onClick={openMenu}
             />
             <motion.div
-              initial={{ x: "-100%" }}
+              initial={{ x: "100%" }}
               animate={{ x: 0 }}
-              exit={{ x: "-100%" }}
+              exit={{ x: "100%" }}
               transition={{ duration: 0.3 }}
-              className="absolute top-0 left-0 right-[30%] inset-0 z-20"
+              className="fixed top-0 right-0 h-full w-4/5 bg-white z-20 shadow-lg"
             >
               <div className="text-xl uppercase font-medium bg-gray-300 text-black w-full h-full pt-10 pb-10 px-10">
                 <div className="flex justify-end">

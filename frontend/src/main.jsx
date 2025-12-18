@@ -10,7 +10,7 @@ import NotFound from "./pages/NotFound";
 import Signin from "./components/NavBar/Signin";
 import Signup from "./components/NavBar/Signup";
 import Sale from "./pages/Sale";
-import { Context, ContextProvider } from "./Context";
+import { ContextProvider } from "./Context";
 import ProductDetail from "./components/ProductDetail";
 import Other from "./pages/Other";
 import BanChay from "./pages/BanChay";
