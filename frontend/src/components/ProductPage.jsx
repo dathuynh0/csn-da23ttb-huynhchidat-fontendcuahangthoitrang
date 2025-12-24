@@ -2,18 +2,24 @@ import { useEffect, useState } from "react";
 import { Link, useOutletContext } from "react-router";
 import ProDuctItem from "./ProductItems";
 import { Button } from "./ui/button";
-import { ArrowDownUp, ChevronRight, Filter, X } from "lucide-react";
+import { ChevronRight, Filter, X } from "lucide-react";
 import Pagination from "./Pagination";
 import { AnimatePresence, motion } from "framer-motion";
+import Banner from "./Banner";
 
-const ProductsPage = ({ data, category, name, title, link, title2, link2 }) => {
+const ProductsPage = ({
+  data,
+  category,
+  title,
+  link,
+  title2,
+  link2,
+  banner,
+}) => {
   const { handleAddToCart } = useOutletContext();
-
   const [filterMobile, setFilterMobile] = useState(false);
-
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
-
   //loc theo kieu
   const [selectedCategory, setSelectedCategory] = useState(category[0]);
 
@@ -24,10 +30,12 @@ const ProductsPage = ({ data, category, name, title, link, title2, link2 }) => {
     "Từ 500.000 - 1.000.000 VND",
     "Tren 1.000.000 VND",
   ];
+
+  const sortPrice = ["Mới nhất", "Giá tăng dần", "Giá giảm dần"];
+  const [isSort, setIsSort] = useState(sortPrice[0]);
+
   //loc theo giá
   const [priceFilter, setPriceFilter] = useState(arrPrice[0]);
-
-  const [sort, setSort] = useState(0);
 
   const [currentPage, setCurrentPage] = useState(1);
   const itemPerPage = 12;
@@ -51,7 +59,7 @@ const ProductsPage = ({ data, category, name, title, link, title2, link2 }) => {
     setFilteredProducts(data);
   }, [data]);
 
-  const clearPrice = (price) => price.replace(/\./g, "") || 0;
+  const clearPrice = (price) => price.replace(/\./g, "");
 
   useEffect(() => {
     let result = [...products];
@@ -60,9 +68,7 @@ const ProductsPage = ({ data, category, name, title, link, title2, link2 }) => {
       selectedCategory === "Theo kiểu"
         ? result
         : result.filter((product) => product.category === selectedCategory);
-
     // filter theo giá
-
     if (priceFilter === "Dưới 100.000 VND") {
       result = result.filter((item) => {
         const price = clearPrice(item.priceSale || item.price);
@@ -84,32 +90,23 @@ const ProductsPage = ({ data, category, name, title, link, title2, link2 }) => {
       );
     }
 
-    //set lai state
-    setFilteredProducts(result);
-  }, [products, priceFilter, selectedCategory]);
-
-  const handleSort = () => {
-    const sortProducts = [...filteredProducts];
-
-    if (sort % 2 === 0) {
-      // sắp xếp tăng dần
-      sortProducts.sort(
+    //sort
+    if (isSort === "Giá tăng dần") {
+      result = result.sort(
         (a, b) =>
           clearPrice(a.priceSale || a.price) -
           clearPrice(b.priceSale || b.price)
       );
-    } else {
-      // sắp xếp giảm dần
-      sortProducts.sort(
+    } else if (isSort === "Giá giảm dần") {
+      result = result.sort(
         (a, b) =>
           clearPrice(b.priceSale || b.price) -
           clearPrice(a.priceSale || a.price)
       );
     }
-
-    setSort((prevSort) => prevSort + 1);
-    setFilteredProducts(sortProducts);
-  };
+    //set lai state
+    setFilteredProducts(result);
+  }, [products, priceFilter, selectedCategory, isSort]);
 
   const show = getCurrentProducts();
 
@@ -123,13 +120,19 @@ const ProductsPage = ({ data, category, name, title, link, title2, link2 }) => {
         <Link to={link} className="hover:underline">
           {title}
         </Link>
-        <ChevronRight className="inline-block mx-2 h-4 w-4" />
-        <Link to={link2} className="hover:underline">
-          {title2}
-        </Link>
+        {link2 ? (
+          <div>
+            <ChevronRight className="inline-block mx-2 h-4 w-4" />
+            <Link to={link2} className="hover:underline">
+              {title2}
+            </Link>
+          </div>
+        ) : (
+          ""
+        )}
       </div>
 
-      <h2 className="text-4xl font-bold mt-12">{name}</h2>
+      <Banner image={banner} link={"#"} />
 
       <div className="mt-8 mb-4 flex items-center justify-between">
         {/* mobile filter */}
@@ -232,14 +235,21 @@ const ProductsPage = ({ data, category, name, title, link, title2, link2 }) => {
           </select>
         </div>
 
-        <Button
-          onClick={handleSort}
-          variant="outline"
-          size="icon"
-          className="cursor-pointer hover:opacity-85"
-        >
-          <ArrowDownUp />
-        </Button>
+        {/* sort */}
+        <div className="flex items-center gap-2">
+          <p className="font-light text-sm md:text-md">Sắp xếp theo:</p>
+          <select
+            value={isSort}
+            onChange={(e) => setIsSort(e.target.value)}
+            className="inline-block px-4 py-1 text-sm md:text-md font-light text-black bg-white border border-gray-300 rounded-lg shadow-sm appearance-none cursor-pointer"
+          >
+            {sortPrice.map((prop) => (
+              <option value={prop} index={prop}>
+                {prop}
+              </option>
+            ))}
+          </select>
+        </div>
       </div>
 
       <hr />

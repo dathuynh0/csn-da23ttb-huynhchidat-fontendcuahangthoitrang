@@ -22,7 +22,7 @@ const LienHe = () => {
         </Link>
       </div>
 
-      <div className="mt-8 w-full lg:w-4xl mx-auto p-6 lg:p-8 bg-white inset-ring-2 rounded-lg my-8">
+      <div className="mt-8 w-full lg:container mx-auto p-6 lg:p-8 bg-white rounded-lg my-8">
         <h1 className="text-2xl lg:text-4xl font-bold">Liên hệ</h1>
 
         <h4 className="mt-4 text-xl font-medium">

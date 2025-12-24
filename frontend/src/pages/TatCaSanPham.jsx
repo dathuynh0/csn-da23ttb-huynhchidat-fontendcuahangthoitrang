@@ -8,6 +8,7 @@ import {
   dam,
   phukien,
 } from "../lib/data";
+import banner_tatcasanpham from "../assets/banner_tatcasanpham.png";
 
 const TatCaSanPham = () => {
   const allProducts = [
@@ -54,6 +55,7 @@ const TatCaSanPham = () => {
       link={"/tat-ca-san-pham"}
       title={"Tất cả sản phẩm"}
       category={category}
+      banner={banner_tatcasanpham}
     />
   );
 };

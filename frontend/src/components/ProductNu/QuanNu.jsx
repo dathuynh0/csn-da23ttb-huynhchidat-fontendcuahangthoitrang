@@ -1,5 +1,6 @@
 import ProductsPage from "../ProductPage";
 import { quanNu } from "../../lib/data.js";
+import banner_quannu from "../../assets/banner_quannu.png";
 
 const QuanNu = () => {
   const category = [
@@ -17,7 +18,7 @@ const QuanNu = () => {
       link2="/do-nu/quan-nu"
       title="Sản phẩm nữ"
       title2="Quần nữ"
-      name="Quần nữ"
+      banner={banner_quannu}
       category={category}
     />
   );

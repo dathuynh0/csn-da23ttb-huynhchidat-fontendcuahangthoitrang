@@ -16,10 +16,12 @@ const BanChay = () => {
   return (
     <ProductsPage
       data={bestseller}
-      name={"Sản phẩm bán chạy"}
       title="Sản phẩm bán chạy"
       link="/san-pham-ban-chay"
       category={category}
+      banner={
+        "https://file.hstatic.net/1000253775/file/h_ng_b_n_ch_y_6__2_.jpg"
+      }
     />
   );
 };

@@ -88,6 +88,11 @@ const ProductDetail = () => {
     return filtered.slice(randomStartIndex, randomStartIndex + itemsPerPage);
   }, [checknam, checknu, checkother, nam, nu, best, id]);
 
+  // tính % giảm giá
+  const finalPriceSale = findProduct.priceSale?.replace("/./g", "");
+  const finalPrice = findProduct.price.replace("/./g", "");
+  const finalPercent = Math.ceil(100 - (finalPriceSale / finalPrice) * 100);
+
   //nếu không tìm thấy sản phẩm
   if (!findProduct) {
     return (
@@ -169,6 +174,15 @@ const ProductDetail = () => {
 
           {/* hinh */}
           <ul className="flex items-center gap-4 mt-4 w-full overflow-x-auto scroll-smooth">
+            {findProduct.priceSale ? (
+              <div className="absolute top-2 left-2 h-10 w-10 bg-red-500 rounded-full flex items-center justify-center">
+                <span className="text-xs lg:text-base text-white">
+                  -{finalPercent}%
+                </span>
+              </div>
+            ) : (
+              ""
+            )}
             {findProduct.images.map((image, index) => (
               <li key={index} className="flex-shrink-0">
                 <img

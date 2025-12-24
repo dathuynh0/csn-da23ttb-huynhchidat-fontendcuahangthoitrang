@@ -15,7 +15,7 @@ import SearchBar from "./SearchBar.jsx";
 import Cart from "./Cart.jsx";
 import { Context } from "../../Context.jsx";
 import { Button } from "../ui/button.jsx";
-import Info from "./Info.jsx";
+import logo from "../../assets/logo.png";
 
 const NavBar = ({
   data,
@@ -49,17 +49,15 @@ const NavBar = ({
     setCheckCart(!checkCart);
   };
 
-  const findUser = accounts.find((account) => account.userName === name);
+  const user = accounts.find((account) => account.username === name);
 
   return (
     <>
-      <nav className="px-2 flex flex-col py-6 flex-wrap w-full lg:container mx-auto">
+      <nav className="px-2 py-2 md:py-4 flex flex-col flex-wrap w-full lg:container mx-auto">
         <div className="flex items-center justify-between flex-wrap w-full">
           {/* logo */}
           <Link to="/">
-            <p className="text-3xl font-extrabold bg-gradient-to-b from-white/20 to-black inline-block text-transparent bg-clip-text">
-              M O D A
-            </p>
+            <img src={logo} alt="Logo" className="size-15 object-cover" />
           </Link>
 
           {/* item */}
@@ -75,7 +73,7 @@ const NavBar = ({
                   className="hover:opacity-85 hover:underline"
                   to="/tat-ca-san-pham"
                 >
-                  Tất cả sản phẩm
+                  Sản phẩm
                 </NavLink>
               </li>
               <li>
@@ -202,7 +200,7 @@ const NavBar = ({
                 {showInfo && (
                   <div className="absolute flex flex-col items-start w-50 top-10 left-0  p-6 rounded-lg bg-white">
                     {/* neu la tk admin */}
-                    {findUser.auth === "admin" ? (
+                    {user.auth === "admin" ? (
                       <Button className="hover:underline">
                         <Link to="/admin">Admin</Link>
                       </Button>

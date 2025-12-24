@@ -11,12 +11,13 @@ const QuanLyTaiKhoan = () => {
 
   const [editId, setEditID] = useState("");
   const [isEdit, setIsEdit] = useState(false);
+
+  const [addAccount, setAddAccount] = useState(false);
   const [userName, setUserName] = useState("");
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
   const [auth, setAuth] = useState("");
-
-  const [addAccount, setAddAccount] = useState(false);
 
   useEffect(() => {
     fetchUser();
@@ -32,10 +33,12 @@ const QuanLyTaiKhoan = () => {
   };
 
   const [formData, setFormData] = useState({
-    name: "",
-    userName: "",
+    username: "",
     password: "",
-    confirmPassword: "",
+    email: "",
+    firstName: "",
+    lastName: "",
+    auth: "admin",
   });
 
   const handleChange = (e) => {
@@ -51,9 +54,10 @@ const QuanLyTaiKhoan = () => {
       setIsEdit(false);
       await axios.put(`http://localhost:8080/api/users/${editId}`, {
         name: name,
-        userName: userName,
-        password: password,
-        auth: auth,
+        userName,
+        password,
+        email,
+        auth,
       });
       fetchUser();
       toast.success("Doi thanh cong!");
@@ -68,12 +72,21 @@ const QuanLyTaiKhoan = () => {
     }
   };
 
-  const addUser = async (userName, password, name) => {
+  const addUser = async (
+    firstName,
+    lastName,
+    username,
+    password,
+    email,
+    auth
+  ) => {
     try {
       await axios.post("http://localhost:8080/api/users", {
-        name: name,
-        userName: userName,
-        password: password,
+        name: `${firstName} ${lastName}`,
+        username,
+        password,
+        email,
+        auth,
       });
 
       fetchUser();
@@ -85,35 +98,29 @@ const QuanLyTaiKhoan = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const { name, userName, password, confirmPassword } = formData;
+    const { firstName, lastName, username, password, email, auth } = formData;
 
-    if (!name || !userName || !password || !confirmPassword) {
-      alert("Vui lòng điền đầy đủ thông tin.");
+    if (!firstName || !lastName || !username || !password || !email || !auth) {
       toast.error("Vui lòng điền đầy đủ thông tin.");
       return;
     }
 
-    if (password !== confirmPassword) {
-      alert("Mật khẩu nhập lại không đúng");
-      toast.error("Mật khẩu nhập lại không đúng.");
-      return;
-    }
-
-    const checkAccount = accounts.find((acc) => acc.userName === userName);
+    const checkAccount = accounts.find((acc) => acc.username === username);
     if (checkAccount) {
-      alert("Tài khoản đã tồn tại không thể tạo mới");
       toast.error("Tài khoản đã tồn tại không thể tạo mới");
       return;
     }
 
     console.log(checkAccount);
 
-    addUser(userName, password, name);
+    addUser(firstName, lastName, username, password, email, auth);
     setFormData({
-      name: "",
-      userName: "",
+      firstName: "",
+      lastName: "",
+      username: "",
       password: "",
-      confirmPassword: "",
+      email: "",
+      auth: "admin",
     });
     toast.success("Tạo tài khoản thành công");
   };
@@ -157,20 +164,38 @@ const QuanLyTaiKhoan = () => {
         <form onSubmit={handleSubmit}>
           <h2 className="mt-4 text-2xl font-bold text-center">Tạo tài khoản</h2>
           <div className="max-w-lg mx-auto">
-            <Input
-              className="mt-4 w-full text-lg p-5"
-              type="text"
-              placeholder="Họ và tên"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-            />
+            <div className="grid grid-cols-2 gap-2">
+              <Input
+                className="mt-4 w-full text-lg p-5"
+                type="text"
+                placeholder="Họ"
+                name="firstName"
+                value={formData.firstName}
+                onChange={handleChange}
+              />
+              <Input
+                className="mt-4 w-full text-lg p-5"
+                type="text"
+                placeholder="Tên"
+                name="lastName"
+                value={formData.lastName}
+                onChange={handleChange}
+              />
+            </div>
             <Input
               className="mt-4 w-full text-lg p-5"
               placeholder="Tên tài khoản"
               type="text"
-              name="userName"
-              value={formData.userName}
+              name="username"
+              value={formData.username}
+              onChange={handleChange}
+            />
+            <Input
+              className="mt-4 w-full text-lg p-5"
+              type="email"
+              placeholder="Email"
+              name="email"
+              value={formData.email}
               onChange={handleChange}
             />
             <Input
@@ -181,14 +206,17 @@ const QuanLyTaiKhoan = () => {
               value={formData.password}
               onChange={handleChange}
             />
-            <Input
-              className="mt-4 w-full text-lg p-5"
-              type="password"
-              placeholder="Nhập lại mật khẩu"
-              name="confirmPassword"
-              value={formData.confirmPassword}
+            <select
+              className="mt-4 py-2 w-[10rem]"
+              value={formData.auth}
               onChange={handleChange}
-            />
+              name="auth"
+              id="auth"
+            >
+              <option value="admin">Quản trị</option>
+              <option value="user">Người dùng</option>
+            </select>
+
             <div className="w-full mt-4">
               <Button
                 type="submit"
@@ -210,6 +238,7 @@ const QuanLyTaiKhoan = () => {
                 <th className="px-4 py-2 text-center">Tên hiển thị</th>
                 <th className="px-4 py-2 text-center">Tên tài khoản</th>
                 <th className="px-4 py-2 text-center">Mật khẩu</th>
+                <th className="px-4 py-2 text-center">Email</th>
                 <th className="px-4 py-2 text-center">Chức vụ</th>
                 <th className="px-4 py-2 text-center">Tùy chỉnh</th>
               </tr>
@@ -233,18 +262,20 @@ const QuanLyTaiKhoan = () => {
                   <td>
                     {isEdit && editId === account._id ? (
                       <Input
+                        type="text"
                         onKeyPress={handleKeyPress}
                         value={userName}
                         onChange={(e) => setUserName(e.target.value)}
                         placeholder="Nhập tên tài khoản"
                       />
                     ) : (
-                      account.userName
+                      account.username
                     )}
                   </td>
                   <td>
                     {isEdit && editId === account._id ? (
                       <Input
+                        type="password"
                         onKeyPress={handleKeyPress}
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
@@ -257,6 +288,20 @@ const QuanLyTaiKhoan = () => {
                   <td>
                     {isEdit && editId === account._id ? (
                       <Input
+                        type="email"
+                        onKeyPress={handleKeyPress}
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        placeholder="Email"
+                      />
+                    ) : (
+                      account.email
+                    )}
+                  </td>
+                  <td>
+                    {isEdit && editId === account._id ? (
+                      <Input
+                        type="text"
                         onKeyPress={handleKeyPress}
                         value={auth}
                         onChange={(e) => setAuth(e.target.value)}
@@ -271,8 +316,10 @@ const QuanLyTaiKhoan = () => {
                       onClick={() => {
                         setEditID(account._id);
                         setIsEdit(true);
-                        setUserName(account.userName);
+
+                        setUserName(account.username);
                         setPassword(account.password);
+                        setEmail(account.email);
                         setName(account.name);
                         setAuth(account.auth);
                       }}

@@ -2,9 +2,9 @@ import { Link } from "react-router";
 
 const Banner = ({ link, image }) => {
   return (
-    <div className="w-full lg:container mx-auto object-cover">
+    <div className="w-full lg:container mx-auto my-8">
       <Link to={link}>
-        <img src={image} alt="Banner" />
+        <img className="object-cover rounded-lg" src={image} alt="Banner" />
       </Link>
     </div>
   );

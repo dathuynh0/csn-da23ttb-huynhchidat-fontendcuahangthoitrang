@@ -33,7 +33,7 @@ const Checkout = () => {
 
       <div className="grid grid-cols-1 lg:grid-cols-10 my-10 rounded-lg shadow-lg">
         {/* form điền */}
-        <div className="p-6 col-span-6 border-r border-gray-300">
+        <from className="p-6 col-span-6 border-r border-gray-300">
           {/* heading */}
           <div>
             <h2 className="text-2xl font-semibold mb-1">Thanh toán</h2>
@@ -246,7 +246,6 @@ const Checkout = () => {
                 </div>
 
                 <Button
-                  type="submit"
                   variant="ghost"
                   className="mt-6 w-full p-4 bg-black text-white hover:opacity-85 cursor-pointer"
                 >
@@ -255,7 +254,7 @@ const Checkout = () => {
               </form>
             </div>
           </div>
-        </div>
+        </from>
 
         {/* đơn hàng */}
         <div className="h-full mt-4 col-span-4 p-4">
@@ -269,16 +268,12 @@ const Checkout = () => {
           <div className="mt-6">
             <div className="flex items-center justify-between">
               <p className="text-gray-600 text-lg">Tạm tính:</p>
-              <span className="font-bold">{formattedTotal}</span>
+              <span className="font-bold">{formattedTotal} đ</span>
             </div>
             <div className="mt-4 flex items-center justify-between">
               <p className="text-gray-600 text-lg">Phí vận chuyển:</p>
               <span className="font-medium">
-                {shippingPrice.toLocaleString("vi-VN", {
-                  style: "currency",
-                  currency: "VND",
-                  currencyDisplay: "code",
-                })}
+                {shippingPrice.toLocaleString()}đ
               </span>
             </div>
           </div>
@@ -288,11 +283,7 @@ const Checkout = () => {
           <div className="mt-6 pb-8 flex items-center justify-between">
             <p className="font-bold text-lg">Tổng cộng:</p>
             <span className="font-extrabold text-lg">
-              {finalTotal.toLocaleString("vi-VN", {
-                style: "currency",
-                currency: "VND",
-                currencyDisplay: "code",
-              })}
+              {finalTotal.toLocaleString()}đ
             </span>
           </div>
         </div>

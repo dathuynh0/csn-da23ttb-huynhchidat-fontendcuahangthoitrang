@@ -1,5 +1,6 @@
 import { sale } from "../lib/data";
 import ProductsPage from "../components/ProductPage";
+import banner_sale from "../assets/banner_sale.png";
 
 const Sale = () => {
   const category = [
@@ -25,8 +26,8 @@ const Sale = () => {
       data={sale}
       title={"Sale"}
       link="/sale"
-      name="Sản phẩm khuyến mại"
       category={category}
+      banner={banner_sale}
     />
   );
 };

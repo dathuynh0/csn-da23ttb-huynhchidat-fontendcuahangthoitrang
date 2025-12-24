@@ -12,13 +12,15 @@ const Info = () => {
   const [isName, setIsName] = useState(false);
   const [isUserName, setIsUserName] = useState(false);
   const [isPassword, setIsPassWord] = useState(false);
+  const [isEmail, setIsEmail] = useState(false);
 
-  const findUser = accounts.find((account) => account.userName === name);
-  const [userAccount, setUserAccount] = useState(findUser);
+  const user = accounts.find((account) => account.username === name);
+  const [userAccount, setUserAccount] = useState(user);
 
-  const [nameDisplay, setNameDisplay] = useState(findUser.name);
-  const [userName, setUserName] = useState(findUser.userName);
-  const [password, setPassWord] = useState(findUser.password);
+  const [nameDisplay, setNameDisplay] = useState(user.name);
+  const [username, setUsername] = useState(user.username);
+  const [password, setPassWord] = useState(user.password);
+  const [email, setEmail] = useState(user.email);
 
   const fetchUser = async () => {
     try {
@@ -35,12 +37,14 @@ const Info = () => {
     try {
       await axios.put(`http://localhost:8080/api/users/${userAccount._id}`, {
         name: nameDisplay,
-        userName: userName,
-        password: password,
+        username,
+        password,
+        email,
       });
       setIsName(false);
       setIsUserName(false);
       setIsPassWord(false);
+      setIsEmail(false);
       fetchUser();
       toast.success("Doi thanh cong");
     } catch (error) {
@@ -89,12 +93,12 @@ const Info = () => {
             {isUserName ? (
               <Input
                 placeholder="Nhập tên tài khoản"
-                value={userName}
-                onChange={(e) => setUserName(e.target.value)}
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
                 onKeyPress={handleKeyPress}
               />
             ) : (
-              <span>{userAccount.userName}</span>
+              <span>{userAccount.username}</span>
             )}
             <Button
               onClick={() => setIsUserName(true)}
@@ -123,6 +127,31 @@ const Info = () => {
             )}
             <Button
               onClick={() => setIsPassWord(true)}
+              variant="ghost"
+              size="icon"
+              className="bg-black hover:opacity-85 cursor-pointer text-white"
+            >
+              <Pen />
+            </Button>
+          </div>
+        </div>
+
+        {/* email */}
+        <div className="flex items-center justify-between">
+          <span className="font-medium">Email:</span>
+          <div className="flex items-center gap-2">
+            {isEmail ? (
+              <Input
+                placeholder="Nhập email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                onKeyPress={handleKeyPress}
+              />
+            ) : (
+              <span>{userAccount.email}</span>
+            )}
+            <Button
+              onClick={() => setIsEmail(true)}
               variant="ghost"
               size="icon"
               className="bg-black hover:opacity-85 cursor-pointer text-white"

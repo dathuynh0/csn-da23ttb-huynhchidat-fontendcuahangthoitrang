@@ -1,5 +1,6 @@
 import ProductsPage from "../ProductPage";
 import { aoNu } from "../../lib/data.js";
+import banner_aonu from "../../assets/banner_aonu.png";
 
 const AoNu = () => {
   const category = [
@@ -17,7 +18,7 @@ const AoNu = () => {
       link2="/do-nu/ao-nu"
       title="Sản phẩm nữ"
       title2="Áo nữ"
-      name="Áo nữ"
+      banner={banner_aonu}
       category={category}
     />
   );

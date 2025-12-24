@@ -36,6 +36,7 @@ import QuanLyDanhMuc from "./components/Admin/QuanLyDanhMuc";
 import QuanLyTaiKhoan from "./components/Admin/QuanLyTaiKhoan";
 import ThemSanPham from "./components/Admin/ThemSanPham";
 import Checkout from "./components/Cart/Checkout";
+import GioiThieu from "./components/Footer/GioiThieu";
 
 const created = () => {
   AOS.init();
@@ -73,6 +74,7 @@ createRoot(document.getElementById("root")).render(
               element={<ChinhSachThanhToan />}
             />
             <Route path="/lien-he" element={<LienHe />} />
+            <Route path="/gioi-thieu" element={<GioiThieu />} />
 
             <Route path="/thong-tin" element={<Info />} />
 

@@ -15,7 +15,7 @@ const Cart = ({
   onDelete,
   formattedTotal,
 }) => {
-  const { setCheckCart } = useContext(Context);
+  const { setCheckCart, isSuccess } = useContext(Context);
 
   return (
     <AnimatePresence>
@@ -74,12 +74,14 @@ const Cart = ({
                 {formattedTotal}
               </span>
               <Button
-                onClick={() => setCheckCart(false)}
+                onClick={() => {
+                  isSuccess ? setCheckCart(false) : "";
+                }}
                 variant="outline"
                 size="lg"
                 className="w-full mt-2 text-lg bg-black text-white font-bold hover:opacity-85 cursor-pointer"
               >
-                <Link className="w-full" to="/checkout">
+                <Link className="w-full" to={isSuccess ? "/checkout" : "#"}>
                   Tiến hành đặt hàng
                 </Link>
               </Button>

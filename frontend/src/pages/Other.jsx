@@ -1,5 +1,6 @@
 import { phukien } from "../lib/data";
 import ProductsPage from "../components/ProductPage";
+import banner_phukien from "../assets/banner_phukien.jpg";
 
 const Other = () => {
   const category = [
@@ -18,10 +19,10 @@ const Other = () => {
   return (
     <ProductsPage
       data={phukien}
-      name="Phụ kiện"
       link="phu-kien"
       title={"Phụ kiện"}
       category={category}
+      banner={banner_phukien}
     />
   );
 };

@@ -1,6 +1,4 @@
 import User from "../models/User.js";
-import bcrypt from "bcrypt";
-
 export const getUser = async (req, res) => {
   try {
     const users = await User.find().sort();
@@ -29,13 +27,14 @@ export const getUserById = async (req, res) => {
 
 export const generateUser = async (req, res) => {
   try {
-    const { name, userName, password, auth } = req.body;
+    const { name, username, password, email, auth } = req.body;
 
     //tao user
     await User.create({
       name,
-      userName,
+      username,
       password,
+      email,
       auth,
     });
 
@@ -48,14 +47,15 @@ export const generateUser = async (req, res) => {
 
 export const updateUser = async (req, res) => {
   try {
-    const { name, userName, password, auth } = req.body;
+    const { name, username, password, email, auth } = req.body;
 
     const updateUser = await User.findByIdAndUpdate(
       req.params.id,
       {
         name,
-        userName,
+        username,
         password,
+        email,
         auth,
       },
       {

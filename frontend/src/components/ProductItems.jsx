@@ -26,11 +26,7 @@ const ProDuctItem = ({
   const finalPercent = Math.ceil(100 - percent);
 
   return (
-    <div
-      data-aos="fade-up"
-      data-aos-duration="1000"
-      className="group flex flex-col overflow-hidden border-none hover:shadow-lg hover:translate-y-[-0.5rem] transition-transform duration-300"
-    >
+    <div className="group flex flex-col overflow-hidden border-none hover:shadow-lg hover:translate-y-[-0.5rem] transition-transform duration-300">
       <div className="relative w-full aspect-square overflow-hidden">
         <Link onClick={handleLinkClick} to={`/products/chi-tiet/${product.id}`}>
           <img

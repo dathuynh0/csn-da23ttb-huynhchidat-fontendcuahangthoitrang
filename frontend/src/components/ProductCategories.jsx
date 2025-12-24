@@ -9,11 +9,7 @@ const ProductCategories = () => {
           Danh mục sản phẩm
         </h1>
       </div>
-      <div
-        data-aos="fade-up"
-        data-aos-duration="500"
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-10 p-4"
-      >
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-10 p-4">
         <Card
           title="Nam"
           description="Khám phá Thời trang nam tại MODA – nơi tinh thần hiện đại kết hợp với sự lịch lãm qua những thiết kế cao cấp, sang trọng."

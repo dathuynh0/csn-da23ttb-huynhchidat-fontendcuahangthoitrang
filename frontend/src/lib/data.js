@@ -2326,39 +2326,6 @@ export const sale = [
     number: 1,
   },
   {
-    id: "ao-so-mi-lua-satin-cao-cap-dang-suong-co-duc-cai-nut-phong-cach-cong-so-thanh-lich-mau-moi-2025",
-    images: [
-      "https://yame.vn/cdn/shop/files/ao-polo-the-minimalist-001-xanh-den-1174885416.jpg?v=1760774688&width=165",
-      "https://yame.vn/cdn/shop/files/ao-khoac-jean-the-original-m039-xanh-d-ng-1184461421.jpg?v=1760792443&width=360",
-      "https://yame.vn/cdn/shop/files/ao-thun-seventy-seven-13-den-1174883530.jpg?v=1760777397&width=324",
-    ],
-    name: "Áo Sơ Mi Lụa Satin Cao Cấp Dáng Suông, Cổ Đức Cài Nút, Phong Cách Công Sở Thanh Lịch Mẫu Mới 2025",
-    price: "550.000",
-    priceSale: "450.000",
-    sizes: [
-      {
-        size: "S",
-        inventory: 10,
-      },
-      {
-        size: "M",
-        inventory: 10,
-      },
-      {
-        size: "L",
-        inventory: 10,
-      },
-      {
-        size: "XL",
-        inventory: 10,
-      },
-    ],
-    warehouse: 200,
-    status: "Còn hàng",
-    category: "Áo sơ mi",
-    number: 1,
-  },
-  {
     id: "ao-gile-len-nu-soc-ngang-ao-kieu-sat-nach-cai-nut-phoi-vien-den-form-om-basic",
     images: [
       "https://minio.theciu.vn/theciu-beta/1000/images/SiSL9tDUGdw5Y8CSXTWHTCGiR3DSIjzWqIUwY8HL.jpg",

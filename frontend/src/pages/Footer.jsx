@@ -10,6 +10,7 @@ import {
 import { Button } from "../components/ui/button";
 import { Link } from "react-router";
 import { Input } from "../components/ui/input";
+import logo_footer from "../assets/logo-footer.png";
 
 const Footer = () => {
   return (
@@ -17,25 +18,24 @@ const Footer = () => {
       <div className="lg:container  mx-auto">
         {/* liên hệ */}
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between border-b p-6 border-gray-500">
-          <div className="flex items-center gap-3">
+          <div className="flex flex-col md:flex-row gap-4">
             <h1 className="font-bold text-base md:text-xl">
               Đăng ký nhận thông tin
             </h1>
-            <form className="relative" action="">
+            <form className="relative flex items-center gap-2" action="">
+              <Mail className="text-gray-500 absolute left-3 top-1/2 -translate-y-1/2" />
               <Input
-                className="text-gray-500 bg-white pl-10 w-full"
                 type="email"
                 placeholder="Nhập email của bạn"
+                className="w-full pl-10 text-gray-500 bg-white"
               />
-
-              <Mail className="text-gray-500 absolute top-1/2 -translate-y-1/2 left-2" />
+              <Button
+                variant="ghost"
+                className="bg-black text-lg px-6 py-3 rounded-full hover:opacity-85"
+              >
+                Đăng ký
+              </Button>
             </form>
-            <Button
-              variant="ghost"
-              className="bg-black text-lg px-8 py-4 rounded-full cursor-pointer hover:opacity-85"
-            >
-              Đăng ký
-            </Button>
           </div>
           <div className="mt-4 flex items-center gap-x-3">
             <Button
@@ -74,7 +74,11 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row md:justify-between items-start gap-10">
           <div className="flex flex-col gap-y-4 w-full">
             <Link to="/" className="flex items-center mb-2">
-              <p className="text-3xl font-extrabold">M O D A</p>
+              <img
+                src={logo_footer}
+                alt="Logo"
+                className="size-25 object-cover"
+              />
             </Link>
             <div className="flex items-center gap-x-3">
               <MapPin className="size-5 mt-1 flex-shrink-0" />
@@ -100,7 +104,7 @@ const Footer = () => {
             <h3 className="text-lg lg:text-2xl font-semibold mb-2">Về MODA</h3>
             <Link
               className="font-medium text-white/80 text-md hover:underline"
-              to="/gioithieu"
+              to="/gioi-thieu"
             >
               Giới thiệu
             </Link>

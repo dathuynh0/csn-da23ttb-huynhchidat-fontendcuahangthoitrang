@@ -36,7 +36,7 @@ const ResponsiveMenu = ({ open, openMenu }) => {
                     <NavLink to="/">Trang chủ</NavLink>
                   </li>
                   <li>
-                    <NavLink to="/tat-ca-san-pham">Tất cả sản phẩm</NavLink>
+                    <NavLink to="/tat-ca-san-pham">Sản phẩm</NavLink>
                   </li>
                   <li>
                     <NavLink to="/sale">Sale</NavLink>

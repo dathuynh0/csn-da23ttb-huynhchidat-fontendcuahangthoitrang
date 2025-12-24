@@ -1,5 +1,6 @@
 import { aoNu, quanNu, dam } from "../lib/data";
 import ProductsPage from "../components/ProductPage";
+import banner_nu from "../assets/banner_nu.png";
 
 const DoNu = () => {
   const nu = [...aoNu, ...quanNu, ...dam];
@@ -25,10 +26,10 @@ const DoNu = () => {
   return (
     <ProductsPage
       data={nu}
-      name="Sản phẩm nữ"
       link="/do-nu"
       title={"Sản phẩm nữ"}
       category={category}
+      banner={banner_nu}
     />
   );
 };
